@@ -1,0 +1,1245 @@
+@charset "UTF-8";
+
+* { box-sizing: border-box; }
+#wrap { width: 100%; min-height: 100%; overflow: hidden; background-color: #fff;}
+#header,
+#main,
+#footer { width: 100%; }
+#header { z-index: 30; position: relative; }
+#main { z-index: 20; position: relative; /* min-height: 100vh; */ }
+#footer { z-index: 10; position: relative; }
+
+/* ===========================================================
+[헤더]
+=========================================================== */
+/* --- 레이아웃 --- */
+#header { background-color: #fff; transition: all .3s ease-in-out;}
+#header > .conatiner { position: relative; width: 100%; max-width: 1240px; height: 100%; margin: 0 auto; }
+#header > .conatiner > .inner { width: 100%; height: 100%; padding: 50px 0; }
+/* --- 로고 --- */
+#header .conatiner .inner .logo-wrap { z-index: 32; position: relative; height: 30px; }
+#header .conatiner .inner .logo-wrap a { height: 100%; }
+#header .conatiner .inner .logo-wrap a img { height: 100%; }
+#header .conatiner .inner .logo-wrap .logo_m { display: inline-block; }
+#header .conatiner .inner .logo-wrap .logo_s { display: none; }
+#header .conatiner .inner .logo-wrap .logo_mb { display: none; }
+/* --- 모바일 버튼 --- */
+#header .conatiner .inner #navBtn { display: none; position: relative; width: 30px; height: 30px; background: transparent; }
+#header .conatiner .inner #navBtn::before,
+#header .conatiner .inner #navBtn::after { display: inline-block; position: absolute; left: 5px; width: 20px; height: 2px; content: ""; background: #7868e6; transition: all .4s ease-in-out; }
+#header .conatiner .inner #navBtn::before { top: 10px; }
+#header .conatiner .inner #navBtn::after { bottom: 10px; }
+#header .conatiner .inner #navBtn.on::before { top: 13.5px; transform: rotate(45deg);}
+#header .conatiner .inner #navBtn.on::after { bottom: 14px; transform: rotate(-45deg);}
+/* --- 메뉴 --- */
+#header .conatiner .inner .menu-wrap { float: right;  height: 30px; overflow: show; }
+#header .conatiner .inner .menu-wrap .gnb { float: right; position: relative; height: 100%; margin-right: 30px; line-height: 38px; }/*padding: 8px 0 3px 0;*/
+/* --- GNB --- */
+#header .conatiner .inner .menu-wrap .gnb .gnb-item {  z-index: 32; position: relative; width: auto; height: auto; padding: 0 15px; vertical-align: top; overflow: show; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item:last-child { margin-right: 0; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item > a { z-index: 33; font-family: "GmarketSansBold"; font-size: 19px; line-height:19px; color: #263646; }
+/* --- 유틸메뉴 --- */
+#header .conatiner .inner .menu-wrap .util { float: right; position: relative; height: auto; padding: 10px 0 5px 0; vertical-align: top; }
+#header .conatiner .inner .menu-wrap .util .util-item { color: #263646; }
+#header .conatiner .inner .menu-wrap .util .util-item a { color: #263646; }
+#header .conatiner .inner .menu-wrap .util .util-item:first-child::after { display: inline-block; position: relative; top: -3px; left: 0; width: 2px; height: 3px; margin: 0 4px 0 9px; content: ''; background-color: #263646; }
+#header .conatiner .inner .menu-wrap .util .util-user > a { font-family: "GmarketSansBold"; }
+/* --- 유틸 & 로그인 ON --- */
+#header .conatiner .inner .menu-wrap .util .util-user { display: none; }
+#header .conatiner .inner .menu-wrap .util.signined .util-item { display: none; }
+#header .conatiner .inner .menu-wrap .util.signined .util-user { display: block; position: relative; }
+#header .conatiner .inner .menu-wrap .util.signined .util-item:first-child::after { display: none; }
+
+/* --- 헤더 depth2 --- */
+#header .conatiner .inner .menu-wrap .menu_dp2 {  display: none; position: absolute; top: 100%; width: auto; left: -20px; height: auto; padding: 15px 28px 28px; font-size: 13px; line-height: 13px; transition: all .4s ease-in-out;}
+#header .conatiner .inner .menu-wrap .menu_dp2 li { position: relative; width: 100%; height: 100%; }
+#header .conatiner .inner .menu-wrap .menu_dp2 li.tit {  margin: 13px 0 12px; padding-left: 10px; font-family: "GmarketSansBold"; color: #7868e6;} 
+#header .conatiner .inner .menu-wrap .menu_dp2 li a { display: inline-block; width: auto; height: 30px; padding: 10px 8px; color: #1e1f25; white-space: nowrap; transition: all .1s ease-in-out; }
+#header .conatiner .inner .menu-wrap .menu_dp2 li.item:hover a { background-color: rgba(0,0,0,.1); opacity: .3;}
+#header .conatiner .inner .menu-wrap .menu_dp2 li.item:hover .icon { opacity: .3;}
+/* --- GNB depth2 --- */
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp.service .menu_dp2 { left: -10px; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 { left: -54px; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 li a { padding: 10px 8px 6px 33px; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 .icon { position: absolute; top: 10px; left: 10px; display: inline-block; width: 13px; height: 13px; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 .icon_medal { background: url(../images/common/icon_menu_medal.svg) 50% 50% no-repeat; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 .icon_pointing { background: url(../images/common/icon_menu_pointing.svg) 50% 50% no-repeat; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 .icon_globe { background: url(../images/common/icon_menu_globe.svg) 50% 50% no-repeat; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 .icon_heart { background: url(../images/common/icon_menu_heart.svg) 50% 50% no-repeat; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 .icon_card { background: url(../images/common/icon_menu_card.svg) 50% 50% no-repeat; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 .icon_handWaving { background: url(../images/common/icon_menu_handWaving.svg) 50% 50% no-repeat; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 .icon_mapPin { background: url(../images/common/icon_menu_mapPin.svg) 50% 50% no-repeat; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2 .icon_megaphone { background: url(../images/common/icon_menu_megaphone.svg) 50% 50% no-repeat; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp:hover .menu_dp2 { display: inline-block; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp > a::after { display: inline-block; position: relative; top: -4px; margin-left: 10px; width: 9px; height: 4px; content: ''; background: url('../images/common/icon_depth_vector.png') 50% 50% no-repeat; background-size: cover; }
+#header .conatiner .inner .menu-wrap .gnb .gnb-item_dp:hover > a::after { transform: rotate(180deg);}
+/* --- 유틸 depth2 --- */
+#header .conatiner .inner .menu-wrap .util.signined .util-user:first-child::after { display: none;  }
+#header .conatiner .inner .menu-wrap .util.signined .util-user .menu_dp2 { display: none; top: 20px; padding: 15px 10px; }
+#header .conatiner .inner .menu-wrap .util.signined:hover .util-user .menu_dp2 { display: inline-block; }
+/* --- [홈] 헤더 스타일 --- */
+.home #header { position: fixed; top: 0; left: 0; width: 100%; height: auto; background: transparent; }
+.home #header .conatiner .inner .menu-wrap .gnb .gnb-item > a { color: #fff; }
+.home #header .conatiner .inner .menu-wrap .util .util-item,
+.home #header .conatiner .inner .menu-wrap .util .util-item a { color: #fff; }
+.home #header .conatiner .inner .menu-wrap .util .menu_dp2 a { color: #1e1f25; }
+.home #header .conatiner .inner .menu-wrap .util .util-item:first-child::after { background-color: #fff; }
+/* --- scroll  --- */
+.home #header.scroll { box-shadow: 0 6px 5px rgba(38, 54, 70, 0.1); background-color: #fff;}
+.home #header.scroll .conatiner .inner { padding-top: 18px; padding-bottom: 14px; }
+.home #header.scroll .conatiner .inner .logo-wrap .logo_m { display: none; }
+.home #header.scroll .conatiner .inner .logo-wrap .logo_s { display: inline-block; }
+.home #header.scroll .conatiner .inner .menu-wrap .gnb .gnb-item > a ,
+.home #header.scroll .conatiner .inner .menu-wrap .gnb .gnb-item > a { color: #263646; }
+.home #header.scroll .conatiner .inner .menu-wrap .util .util-item,
+.home #header.scroll .conatiner .inner .menu-wrap .util .util-item a { color: #263646; }
+.home #header.scroll .conatiner .inner .menu-wrap .util .util-item:first-child::after { background-color: #263646; }
+/* --- mobile  --- */
+.home #header.mobile .conatiner .inner .menu-wrap .gnb .gnb-item > a ,
+.home #header.mobile .conatiner .inner .menu-wrap .gnb .gnb-item > a { color: #263646; }
+.home #header.mobile .conatiner .inner .menu-wrap .util .util-item,
+.home #header.mobile .conatiner .inner .menu-wrap .util .util-item a { color: #263646; }
+.home #header.mobile .conatiner .inner .menu-wrap .util .util-item:first-child::after { background-color: #263646; }
+
+/* --- [서브페이지] 헤더 스타일 --- */
+.sub #header .conatiner .inner .logo-wrap .logo_m { display: none; }
+.sub #header .conatiner .inner .logo-wrap .logo_s { display: inline-block; }
+.sub #header .conatiner .inner .menu-wrap .menu_dp2 { border: 1px solid rgba(0,0,0,.1);}
+.sub #header .conatiner .inner .menu-wrap .gnb .gnb-item_dp > a::after { top: -1px; background: url(../images/sub/icon_selectbox.png) 50% 50% no-repeat; }
+
+
+/* ===========================================================
+[메인]
+=========================================================== */
+#main { height: auto; min-height: 100%; }
+/* --- 메인 상단(타이틀) 영역 --- */
+#main .main-title {  position: relative; padding-bottom: 20px; }
+#main .main-title > .container { position: relative; width: 100%; max-width: 1240px; height: auto; margin: 0 auto; }
+#main .main-title > .container > .inner { width: 100%; height: 100%; padding: 0; }
+#main .main-title .container .inner .tit { height: 70px; font-family: "GmarketSansBold"; font-size: 18px; }
+/* --- 페이지 아이콘 --- */
+#main .main-title .container .inner .tit .tit-icon { position: relative; display: inline-block; width: 70px; height: 70px; margin-right: 20px; }
+#main .main-title .container .inner .tit .tit-icon::before { z-index: -1; display: inline-block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; content: ""; background-color: #263646;}
+#main .main-title .container .inner .tit .icon_user { background: url(../images/common/icon_tit_user.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_userSquare { background: url(../images/common/icon_tit_userSquare.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_globe { background: url(../images/common/icon_tit_globe.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_globeStand { background: url(../images/common/icon_tit_globeStand.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_shieldCheck { background: url(../images/common/icon_tit_shieldCheck.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_shieldSlash { background: url(../images/common/icon_tit_shieldSlash.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_key { background: url(../images/common/icon_tit_key.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_newsPaper { background: url(../images/common/icon_tit_newsPaper.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_note { background: url(../images/common/icon_tit_note.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_pencil { background: url(../images/common/icon_tit_pencil.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_receipt { background: url(../images/common/icon_tit_receipt.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_thumbUp { background: url(../images/common/icon_tit_thumbUp.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_flashLight { background: url(../images/common/icon_tit_flashLight.svg) 50% 50% no-repeat; }
+#main .main-title .container .inner .tit .icon_pin { background: url(../images/common/icon_tit_pin.svg) 50% 50% no-repeat; }
+
+#main .main-title .container .inner .tit .tit-wrap { display: inline-block; height: 100%; line-height: 70px; vertical-align: top; }
+#main .main-title .container .inner .tit .tit-wrap .tit { color: #263646; }
+#main .main-title .container .inner .tit .tit-wrap .tit.off { color: rgba(0,0,0,.5); }
+#main .main-title .container .inner .tit .tit-wrap .tit:nth-child(2):before { display: inline-block; width: 2px; height: 16px; margin: 0 14px 0 10px; vertical-align: middle; content: ''; background-color: #263646; opacity: 0.2; transform: translateY(-1px); }
+/* --- 메인 상단 바로가기 버튼 --- */
+#main .main-title .container .inner .tit .btn { float: right; position: relative; width: auto; height: 70px; padding: 27px 66px 27px 30px; color: #fff; }
+#main .main-title .container .inner .tit .btn_more::before,
+#main .main-title .container .inner .tit .btn_more::after { display: inline-block; position: absolute; top: 33px; right: 30px; width: 10px; height: 2px; content: ''; background-color: #fff; }
+#main .main-title .container .inner .tit .btn_more::after { transform: rotate(90deg); }
+/* --- 메인 컨텐츠 영역 --- */
+#main .main-content { position: relative; width: 100%; height: auto;}
+#main .main-content > .container { width: 100%; max-width: 1240px; height: 100%; margin: 0 auto; }
+#main .main-content > .container > .inner { width: 100%; padding: 0; }
+/* --- [홈] 메인 컨텐츠 영역 --- */
+.home #main .main-content > .container > .inner { padding: 80px 75px 0; }
+/* --- [서브페이지] 메인 컨텐츠 영역 --- */
+.sub #main .main-content > .container > .inner { padding: 80px 0 150px; }
+.sub-register #main .main-content > .container > .inner { position: relative; max-width: 1240px; padding: 30px 0 150px; }
+/* --- [마이페이지] 목록으로 돌아가기 영역 --- */
+.mp-item #main .main-content .btn_prev { display: inline-block; position: relative; padding-left: 32px; }
+.mp-item #main .main-content .btn_prev::before,
+.mp-item #main .main-content .btn_prev::after { display: inline-block; position: absolute; top: 4px; left: 0; width: 10px; height: 3px; content: ""; background-color: #263646; transform: rotate(-45deg);}
+.mp-item #main .main-content .btn_prev::after { top: 10px; transform: rotate(45deg);}
+/* --- 메인 하단 영역 --- */
+#main .main-bottom { position: relative; width: 100%; height: auto; margin: 0 auto; }
+#main .main-bottom .container { position: relative; width: 100%; max-width: 1240px; height: auto; margin: 0 auto; }
+#main .main-bottom .container .inner { padding: 0 0 12.0967%; }/* padding: 0 0 150px;*/
+/* --- [마이페이지 목록] 컨텐츠 영역 ---*/
+.mp_land #main .main-content > .container > .inner,
+.mp_faq #main .main-content > .container > .inner { padding-bottom: 100px; }
+
+/* --- [서브페이지 매물 목록] 메인 스타일 ---*/
+.sub-list #main .main-content > .container > .inner { padding-bottom: 60px; }
+/* --- [서브페이지 매물 목록] 탭 ---*/
+.sub-list #main .main-bottom .tab { width: calc(100% - 572px); height: 32px; line-height: 32px; text-align: right; }
+.sub-list #main .main-bottom .tab .btn { display: inline-block; width: auto; font-size: 18px;}
+.sub-list #main .main-bottom .tab .btn:first-child { margin-right: 9.4339%; }
+/* --- 전체목록 --- */
+.sub-list  #main .main-title .container .inner .tit.off { display: none; }
+.sub-list.common  #main .main-title .container .inner .tit.is-common { display: block; }
+.sub-list.common  #main .main-title .container .inner .tit.is-master { display: none; }
+.sub-list.common  #main .main-content .container .inner .mn-title.is-common { display: block; }
+.sub-list.common  #main .main-content .container .inner .mn-title.is-master { display: none; }
+.sub-list.common  #main .main-content .container .inner .card-wrap.is-common { display: block; }
+.sub-list.common  #main .main-content .container .inner .card-wrap.is-master { display: none; }
+.sub-list.common  #main .main-bottom .tab .btn.common { color: #263646; }
+.sub-list.common  #main .main-bottom .tab .btn.master { color: rgba(38, 54, 70, 0.5); }
+/* --- 마스터 추천 목록 --- */
+.sub-list.master #main .main-title .is-common { display: none; }
+.sub-list.master #main .main-title .is-master { display: block; }
+.sub-list.master #main .main-content .container .inner .mn-title.is-common { display: none; }
+.sub-list.master #main .main-content .container .inner .mn-title.is-master { display: block; }
+.sub-list.master #main .main-content .container .inner .card-wrap.is-common { display: none; }
+.sub-list.master #main .main-content .container .inner .card-wrap.is-master { display: block; }
+.sub-list.master  #main .main-bottom .tab .btn.common { color: rgba(38, 54, 70, 0.5); }
+.sub-list.master  #main .main-bottom .tab .btn.master { color: #263646; }
+
+/* ===========================================================
+[푸터]
+=========================================================== */
+#footer { height: auto; background-color: #263646; color: #fff; }
+#footer::after { display: none; z-index: 11; position: absolute; bottom: 0; left: 0; width: 100%; height: 310px; content: ''; background-color: #1b2936; }
+#footer .container { z-index: 12; position: relative; width: 100%; max-width: 1240px; height: 100%; margin: 0 auto; }
+#footer .container .inner { position: relative; width: 100%; }
+/* --- 상단 --- */
+#footer .container .inner .f-top { border-bottom: 1px solid rgba(255,255,255,.3); font-size: 13px; color: #fff; }
+#footer .container .inner .f-top .inner { padding: 106px 0 58px; }
+#footer .container .inner .f-top .inner .row02 { margin: 20px 0 32px 0; line-height: 26px; font-size: 22px; }
+#footer .container .inner .f-top .inner .row03 { width: 170px; height: 42px; font-family: "GmarketSansBold"; line-height: 42px; text-align: center; color: #263646; }
+/* --- 유틸 메뉴 --- */
+#footer .container .inner .f-mid { z-index: 13; position: absolute; top: 324px; right: 0; padding-top: 58px; } 
+#footer .container .inner .f-mid .col02 .f-util-wrap { margin-right: 30px; vertical-align: top; }
+#footer .container .inner .f-mid .col02 .f-util-wrap:last-child { margin-right: 0; }
+#footer .container .inner .f-mid .col02 .f-util-wrap a { font-size: 13px; color: #fff; line-height: 21px; }
+#footer .container .inner .f-tit { margin-bottom: 25px; }
+#footer .container .inner .f-util-wrap a { display: inline-block; width: 100%; height: auto; }
+/* --- 하단 --- */
+#footer .container .inner .f-btm .inner { padding: 58px 0; }
+#footer .container .inner .f-btm .inner .info-wrap .f-info { font-size: 13px; line-height: 16px; color: #fff; }
+#footer .container .inner .f-btm .inner .info-wrap .f-info.l-inline.bar::before { display: inline-block; width: 1px; height: 13px; margin-right: 8px; content: "|"; color: rgba(255, 255, 255, .3); }
+/* --- Coopyright --- */
+#footer .container .inner .f-copy-wrap { width: 100%; padding: 60px 0; }
+#footer .container .inner .f-copy-wrap .copyright { width: 100%; height: 58px; color: rgba(255, 255, 255, .2); }
+#footer .container .inner .f-copy-wrap .f-logo { float: right; width: 100px; height: 25px; padding: 5px 7px; }
+
+/* ===========================================================
+[메인 홈] 비주얼 섹션 
+=========================================================== */
+.main-visual { z-index: 21; position: relative; width: 100%; height: 600px; background: url("../images/common/img_home01.png") 50% 50% no-repeat; background-size: cover; }
+.main-visual::after { z-index: 22; position: absolute; top: 0; left: 0; width: 100%; height: 100%; content: ''; background: rgba(0, 0, 0, 0.2); }
+.main-visual .inner { z-index: 23; position: relative; width: 100%; /* padding: 160px 0 70px; */ padding-top: 160px; }
+/* --- [비주얼슬라이드] 슬라이드 영역  --- */
+.main-visual .inner .slide-area { position: relative; width: 100%; max-width: 2000px; height: 200px; margin: 0 auto; white-space: nowrap;  }
+.main-visual .inner .slide-area .slide-container { position: relative; width: 100%; height: 100%; }
+.main-visual .inner .slide-area .slide-container .slide-wrap { z-index: 24; position: relative; top: 0; left: 0; display: inline-block; width: auto; height: 100%; white-space: nowrap; }
+.main-visual .inner .slide-area .slide-container .slide-wrap .slide { position: relative; width: 520px; height: 100%; padding: 0 20px; }
+.main-visual .inner .slide-area .slide-container .slide-wrap .slide a { position: relative; display: block; width: 100%; height: 100%;}
+.main-visual .inner .slide-area .slide-container .slide-wrap .slide a img { z-index: 21; }
+.main-visual .inner .slide-area .slide-container .slide-wrap .slide a::after { display: inline-block; z-index: 22; position: absolute; top: 0; left: 0; width: 100%; height: 100%; content: ""; background-color: rgba(255, 255, 255, 0.1); }
+.main-visual .inner .slide-area .slide-container .slide-wrap .slide a .slide-num { z-index: 23; position: absolute; top: 10px; left: 10px; color: #263646; }
+.main-visual .inner .slide-area .slide-container .slide-wrap .slide a .slide-num .num::after { display: inline-block; width: 1px; height: 11px; margin: 0 3px 0 7px; content: ""; background-color: #000; transform: rotate(21deg); }
+/* --- [비주얼슬라이드] 슬라이드 버튼  --- */
+.main-visual .inner .slide-area .btn { z-index: 25; position: absolute; top: calc(50% - 15px); width: 30px; height: 30px; background-color: transparent; }
+.main-visual .inner .slide-area .btn_prev { left: 20px; border: 4px solid #fff; border-radius: 2px; border-right: 0; border-bottom: 0; transform: rotate(-45deg);} 
+.main-visual .inner .slide-area .btn_next { right: 20px; border: 4px solid #fff; border-radius: 2px; border-left: 0; border-top: 0; transform: rotate(-45deg); }
+/* --- [퀵서치] 입력 폼  --- */
+.main-visual .inner .search-area { position: relative; width: 100%; height: auto; padding-top: 48px; }
+.main-visual .inner .search-area .search-wrap { margin: 0 auto; text-align: center; }
+.main-visual .inner .search-area .search-wrap label { margin-bottom: 22px; color: #fff; }
+.main-visual .inner .search-area .search-wrap .input-wrap { z-index: 24; position: relative; width: 400px; }
+.main-visual .inner .search-area .search-wrap .input-wrap input { width: 100%; height: 70px; padding-left: 26px; border: 0; font-size: 18px; }
+.main-visual .inner .search-area .search-wrap .input-wrap input::placeholder { font-size: 18px; color: #000; }
+/* --- [퀵서치] 셀렉트 박스  --- */
+.main-visual .inner .search-area .search-wrap .input-wrap .addr-list.hide { display: none; overflow: hidden; }
+.main-visual .inner .search-area .search-wrap .input-wrap .addr-list { display: block;  height: 218px; padding: 20px 25px 0; background-color: #f5f5f7; overflow: scroll; }
+.main-visual .inner .search-area .search-wrap .input-wrap .addr-list::-webkit-scrollbar { width: 10px;}
+.main-visual .inner .search-area .search-wrap .input-wrap .addr-list::-webkit-scrollbar-thumb { background-color: #fff; border-radius: 100px; }
+.main-visual .inner .search-area .search-wrap .input-wrap .addr-list::-webkit-scrollbar-track { background-color: transparent; }
+.main-visual .inner .search-area .search-wrap .input-wrap .addr-list ul li { padding: 10px 20px; text-align: left; font-size: 18px; color: rgba(0, 0, 0, 0.2); cursor: pointer;}
+.main-visual .inner .search-area .search-wrap .input-wrap .addr-list ul li:hover { background-color: #fff; color: #000; }
+.main-visual .inner .search-area .search-wrap .btn { position: relative; display: inline-block; width: 70px; height: 70px; vertical-align: top; margin-left: 10px; padding: 25px 0; text-align: center; cursor: pointer; }
+/* ===========================================================
+[메인 홈] 컨텐츠
+=========================================================== */
+.home .inner .mn-row01,
+.home .inner .mn-row02,
+.home .inner .mn-row03 { width: 100%; height: auto; }
+.home .inner .mn-row03 { padding-bottom: 16.1290%; }/*200px*/
+/* ====== [메인 홈 : 섹션2] 바로가기 메뉴 ======  */
+.home .mn-row02 { margin: 90px 0 150px; }
+.home .mn-row02 .menu-wrap { width: 100%; height: auto; }
+.home .mn-row02 .menu-wrap .col { float: left; width: 200px; height: auto; }
+.home .mn-row02 .menu-wrap .col .col-item { position: relative; width: 100%; height: auto; }
+.home .mn-row02 .menu-wrap .col .col-item:first-child { margin-bottom: 30px; }
+.home .mn-row02 .menu-wrap .col .col-item::after { display: block; padding-bottom: 100%; content: ""; }
+/* --- [바로가기 메뉴] 아이콘 박스  --- */
+.home .mn-row02 .menu-wrap .col01 { margin-right: 2.7017%; }
+.home .mn-row02 .menu-wrap .col01 .col-item .wrap { position: absolute; top: 0; left: 0; width: 100%; padding: 62px 58px 68px; text-align: center; }
+.home .mn-row02 .menu-wrap .col01 .col-item .wrap .icon { margin-bottom: 14px; }
+.home .mn-row02 .menu-wrap .col01 .col-item .wrap .tit { display: block; width: 100%; height: auto; font-size: 20px; color: #fff; }
+/* --- [바로가기 메뉴] 링크 연결 박스  --- */
+.home .mn-row02 .menu-wrap .col02 .col02-item { position: relative; overflow: show; }
+.home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu { z-index: 21; position: absolute; top: 0; left: 0; width: 210%; height: 100%; padding: 87px 32.38px; transition: all .3s ease-in-out; }
+.home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu:hover { transform: scale(1.06); }
+.home .mn-row02 .menu-wrap .col02 .col02-item:first-child .mn-menu:first-child { background: url(../images/main/img_hm_menu01.png) 50% 50% no-repeat; background-size: cover; }
+.home .mn-row02 .menu-wrap .col02 .col02-item:first-child .mn-menu:last-child { background: url(../images/main/img_hm_menu02.png) 50% 50% no-repeat; background-size: cover; }
+.home .mn-row02 .menu-wrap .col02 .col02-item:last-child .mn-menu:first-child { background: url(../images/main/img_hm_menu03.png) 50% 50% no-repeat; background-size: cover; }
+.home .mn-row02 .menu-wrap .col02 .col02-item:last-child .mn-menu:last-child { background: url(../images/main/img_hm_menu04.png) 50% 50% no-repeat; background-size: cover; }
+.home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .wrap::after { z-index: 22; position: absolute; top: 0; left: 0; width: 100%; height: 100%; content: ""; background-color: rgba(0, 0, 0, 0.2); }
+.home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu:last-child { left: 220%; }
+.home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .tit { z-index: 23; position: relative; font-family: "GmarketSansBold"; font-size: 25px; color: #fff; }
+.home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .btn { float: right; z-index: 24; position: relative; margin-top: -8px;  padding: 10px 15px; font-size: 13px; color: #fff; transition: transform .3s ease-in-out; }
+.home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .btn:hover { transform: scale(1.17); }
+/* ======  [메인 홈 : 섹션1,3] 매물 리스트  ======  */
+.mn-row01 .recomm-wrap,
+.mn-row03 .latest-wrap { width: 100%; }
+.mn-title { position: relative; margin-bottom: 50px; font-size: 18px;}
+.mn-title .btn_more { position: absolute; top: 0; right: 0; }
+
+/* ===========================================================
+[서브 마이페이지] 마이메뉴 
+=========================================================== */
+/* --- [마이메뉴] 유저 정보  --- */
+.user-wrap { display: block; height: auto; font-size: 25px; color: #263646; }
+.user-wrap .name { font-family: "GmarketSansBold"; }
+/* --- [마이메뉴] 메뉴 리스트  --- */
+.mymenu-wrap {  margin: 68px 0 53px; }
+.mymenu-wrap ul { height: 200px; }
+.mymenu-wrap ul .menu { float: left; position: relative; /* width: 295px; */ width: 23.7903%; height: 100%; /* margin-right: 20px; */ margin-right: 1.6129%; }
+.mymenu-wrap ul .menu:last-child { margin-right: 0; }
+.mymenu-wrap ul .menu .wrap { position: relative; width: 100%; height: 100%; padding: 20px 30px; box-sizing:border-box;}
+.mymenu-wrap ul .menu .wrap .inner { position: relative; width: 100%; height: 100%;}
+.mymenu-wrap ul .menu .wrap .menu-tit { font-family: "GmarketSansBold"; font-size: 18px; color: #fff;  vertical-align: top;}
+.mymenu-wrap ul .menu .wrap .cnt { position: absolute; bottom: 0; left: 0; font-size: 18px; color: #fff; }
+.mymenu-wrap ul .menu .btn { position: absolute; bottom: 20px; right: 30px; width: 100px; height: 42px; line-height: 42px; font-size: 14px; text-align: center; white-space: nowrap; opacity: .3; background-color: #fff; transition: transform .3s ease-in-out; }
+.mymenu-wrap ul .menu .btn.on { background-color: #7868e6; opacity: 1.0; }
+.mymenu-wrap ul .menu .btn.on:hover { transform: scale(1.1); }
+/* --- [마이메뉴] 약관 이동  --- */
+.useinfo-wrap { position: relative; }
+.useinfo-wrap p { position: relative; padding-left: 40px; font-size: 18px; color: #263646; }
+.useinfo-wrap p { margin-bottom: 36px; }
+.useinfo-wrap p:last-child { margin-bottom: 0; }
+.useinfo-wrap p::before { display: inline-block; position: absolute; top: -5px; left: 0; width: 24px; height: 24px; content: ''; background: url(../images/sub/icon_newspaper_small.svg) 50% 50% no-repeat; background-size: cover; }
+.useinfo-wrap p:nth-child(2):before { background: url(../images/sub/icon_pencil_small.svg) 50% 50% no-repeat; background-size: cover; }
+.useinfo-wrap p:last-child:before { background: url(../images/sub/icon_user_small.svg) 50% 50% no-repeat; background-size: cover; }
+.useinfo-wrap p:last-child .btn_unsub:last-child { float: right; font-size: 13px; line-height: 18px; color: rgba(0, 0, 0, 0.3); }
+
+
+
+@media all and (max-width: 1240px) {
+
+    /* ====== [메인] ====== */
+    #header > .conatiner > .inner { padding: 50px 30px; }
+    #main .main-title > .container > .inner { padding: 0 30px 0; }
+    #main .main-bottom > .container > .inner { padding: 0 30px 12.0967%; }
+    /* --- 컨텐츠 영역 --- */
+    #main .main-content > .container > .inner { padding: 0 30px 0; }
+    .home #main .main-content > .container > .inner { padding: 80px 30px 0; }
+    .sub #main .main-content > .container > .inner { padding: 80px 30px 130px; }
+    .sub-register #main .main-content > .container > .inner { padding: 0 30px 150px; }
+    .mp_land #main .main-content > .container > .inner,
+    .mp_faq #main .main-content > .container > .inner { padding: 80px 30px 100px; }
+    
+    /* ====== [푸터] ====== */
+    #footer > .container > .inner { padding: 0 30px; }
+    #footer .container .inner .f-mid { margin-right: 30px; }
+
+    /* ====== [홈] 섹션2 : 바로가기 메뉴  ====== */
+    .home .mn-row02 .menu-wrap .col { width: 18.3486%;}
+    .home .mn-row02 .menu-wrap .col01 .col-item .wrap .tit { font-size: 15px; }
+    
+    /* ====== [토지분석]  ====== */
+    /* --- 아이템 정보 --- */
+    .an-card .row01 .info { width: calc(100% - 550px); }
+    .an-card .row02 { width: calc(100% + 30px); } 
+    /* --- 차트 안내 --- */
+    .an-charts .inform .wrap span:nth-child(1) { font-size: 0; z-index: 23; position: relative; right: -60px; }
+    .an-charts .inform .wrap span:nth-child(2) { font-size: 0; z-index: 23; position: relative; right: -30px; padding-left: 5px; }
+    .an-charts .inform .wrap span:last-child { z-index: 24; position: relative; padding-left: 5px;}
+
+    /* ====== [토지등록] 열람 버튼  ====== */
+    .rg-inform .btn_rg { top: -120px; right: 30px; }
+    /* ====== [팝업] 가격표  ====== */
+    .popup-price .container .inner {padding: 0 30px;}/*56px 120px*/
+    .popup-price .container .inner .card {padding: 4.7457% 10.1694%;}/*56px 120px*/
+
+    /* ====== [팝업 서비스 안내] ====== */
+    .popup-service,
+    .popup-inform { padding: 40px 16px; }
+    .popup-service .container .inner .pr-card-wrap .pr-card { width: 48.5981%; height: 360px; margin: 0 0 30px; text-align: center;}
+    .popup-service .container .inner .pr-card-wrap .pr-card:nth-child(odd) { margin-right: 2.8037%; }
+    .popup-service .container .inner .pr-card-wrap .pr-card .top { text-align: left;}
+    .popup-service .container .inner .pr-card-wrap .pr-card .info-wrap { display: inline-block; width: auto; margin: 0 auto; }
+    .popup-service .container .inner .pr-card-wrap .pr-card .info-wrap .info { text-align: left; }
+    .popup-service .container .inner .warn { margin-top: 0; }
+    .popup-inform .container .inner .inform-wrap.img-over .wrap { padding-bottom: 200px; }
+    .popup-inform .container .inner .inform-wrap.img-over .wrap img { max-width: 40%; }
+    
+    /* --- 서비스 안내 박스 --- */
+    .service-box .inner .title-wrap { padding: 7.7586% 0 9.4827% 10px;}
+    .service-box .inner .title-wrap .title { margin-bottom: 4.8275%;}
+    .service-box .inner .title-wrap .desc { display: inline-block; width: 71.5172%; padding-right: 10px; font-size: 20px; line-height: 26px;}
+    .service-box .inner .title-wrap .img_area { width: 25.21%; height: auto;}
+
+}
+
+@media all and (max-width: 1140px) {
+
+    /* ====== [마이페이지 목록] 토지목록 | 결제내역  ====== */
+    .mp_pay .mylist li .inner .wrap .btns,
+    .mp_land .mylist li .inner .wrap .btns { bottom: 40px; left: 180px; }
+    .mp_pay .mylist li .inner .wrap .content,
+    .mp_land .mylist li .inner .wrap .content { height: 160px; }
+
+}
+
+
+@media all and (max-width: 1080px) {
+
+    /* ====== [헤더] ====== */
+    #header .conatiner .inner .menu-wrap .gnb .gnb-item { padding: 0 10px; }
+    /* ====== [푸터] ====== */
+    #footer .container .inner .f-mid { position: relative; top: 0; left: 0; width: 100%; margin: 0; padding-top: 54px; }
+    #footer .container .inner .f-btm .inner { padding: 54px 0; }
+    #footer .container .inner .f-copy-wrap { padding: 48px 0 34px; }
+
+    /* ====== [홈] 섹션2 : 바로가기 메뉴 ====== */
+    .home .mn-row02 { margin: 8.8235% 0 14.7058%; }
+    .home .mn-row02 .menu-wrap .col { width: 100%; }
+    .home .mn-row02 .menu-wrap .col01 { display: none; }
+    .home .mn-row02 .menu-wrap .col .col-item  { width: 100%; white-space: nowrap;}
+    .home .mn-row02 .menu-wrap .col .col-item:first-child { margin-bottom: 2.7777%; }
+    .home .mn-row02 .menu-wrap .col .col-item::after { display: none; }
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu { display: inline-block; position: relative; width: 48.3333%; } /* width: 522px; */ 
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu:last-child { left: 0; margin-left: 2.7777%; } /* margin-left: 30px; */
+    
+    /* ====== 서브 페이지 매물목록 ====== */
+    .sub-list .card-wrap.col05 .mn-card { width: 22.9357%; margin-right: 2.7522%; margin-bottom: 5.5045%; }
+    .sub-list .card-wrap.col05 .mn-card:nth-child(5n) { margin-right: 2.7522%; }
+    .sub-list .card-wrap.col05 .mn-card:nth-child(4n) { margin-right: 0; }
+
+    /* ====== [마이페이지] 나의 메뉴  ====== */
+    .mymenu-wrap ul { height: 220px; }
+    .mymenu-wrap ul .menu { width: 49.0196%; height: 100px; margin: 0 1.9607% 1.9607% 0; }
+    .mymenu-wrap ul .menu:nth-child(even) { margin-right: 0; }
+    .mymenu-wrap ul .menu:nth-child(3),
+    .mymenu-wrap ul .menu:nth-child(4) { margin-bottom: 0; }
+
+    /* ====== [마이페이지] 내정보 수정  ====== */
+    .mypage_edit .signup form .row label { width: 100%; }
+    .mypage_edit .signup form .row .bx-input { width: 100%; }
+    .mypage_edit .signup form .row .check { float: none; position: absolute; top: 0; right: 0;}
+    .mypage_edit .signup form .row_sm .btn_sm { float: none; display: block; width: 100%; }
+    .mypage_edit .signup form .row_sm .btn_pop { margin-right: 0;}
+    .mypage_edit .signup form .row_sm .btn_cancel { float: left; }
+    .mypage_edit .signup form .row_sm a { margin-top: 20px; text-align: right;}
+    .mypage_edit .signup form .row_sm .check { float: none; position: absolute; top: 0; right: 0;}
+
+    /* ====== [토지등록] ====== */
+    /* --- 버튼 --- */
+    .rg-title { height: auto; margin: 50px 0 10px 0; }
+    .rg-title > .addr { display: inline-block; width: 40%; line-height: 28px; font-size: 18px; }
+    .rg-title > .addr > .value-wrap {  display: inline-block; width: 100%; }
+
+    /* ====== [토지분석]  ====== */
+    /* --- 아이템 정보 --- */
+    .an-card .row01 { height: 350px; } /* 0.8 */
+    .an-card .row01 .thumbnail { width: 438px;}
+    .an-card .row01 .info { width: calc(100% - 488px); }
+    .an-card .row01 .info .info-tit { font-size: 24px; line-height: 26px; }
+    .an-card .row01 .info .info-btns { margin-bottom: 28px; }
+    .an-card .row01 .info .info-btns .btn_pro { margin-right: 18px; }
+    .an-card .row01 .info .info-meta p { margin-bottom: 20px;}
+    .an-card .row02 { margin-top: 58px;}
+    .an-card .row02 .imgs .slide-wrap .slide { width: 262px; height: 210px; margin-right: 16px;}
+    /* --- 차트 영역 --- */
+    .an-charts .charts .chart { height: 600px;}
+    .an-charts .charts .chart01,
+    .an-charts .charts .chart02 { width: 48.0392%; } /* 490px*/
+    .an-charts .charts .chart01 .inner { padding: 6.1224% 6.1224% 8.1632%; } /* padding: 30px 30px 40px */
+    .an-charts .charts .chart02 .inner { padding: 6.1224% 6.1224% 30px; } /* padding: 30px 30px 40px */
+    .an-charts .charts .chart01 .inner .canvas { height: 390px; }
+    .an-charts .charts .chart02 .inner .canvas { height: 320px; }
+}
+
+@media all and (max-width: 980px){
+
+    /* ====== [토지분석] 아이템 정보  ====== */
+    .an-card { padding: 112px 0 40px; }
+    .an-card .row01  {  height: auto; }
+    .an-card .row01 .thumbnail { width: 100%; height: 600px; }
+    .an-card .row01 .info { float: none; width: 100%; margin: 20px 0; }
+    .an-card .row01 .info .info-tit { margin-bottom: 20px; }
+    .an-card .row01 .info .info-btns { position: absolute; top: -715px; left: 0; width:100%; }
+    .an-card .row01 .info .info-btns .btn_md { float: right; }
+    .an-card .row01 .info .info-meta { position: relative;  }
+    .an-card .row01 .info .info-meta li { width: 100%; margin-bottom: 10px;}
+    .an-card .row01 .info .info-meta li .wrap { padding: 10px 12px; background-color: #f4f5f6; border-radius: 5px;}
+    .an-card .row02 { margin-top: 20px;}
+    /* --- 차트 영역 --- */
+    .an-charts { margin-bottom: 0; }
+    .an-charts .charts .chart { height: auto;}
+    .an-charts .charts .chart01,
+    .an-charts .charts .chart02 { float: none; width: 100%; margin-bottom: 20px; }
+    .an-charts .charts .chart01 .inner, 
+    .an-charts .charts .chart02 .inner { padding: 30px 30px 60px; }
+    .an-charts .charts .chart01 .inner .canvas { height: 490px; }
+    .an-charts .charts .chart02 .inner .canvas { height: 400px; }
+    .an-charts .charts .chart02 .inner .label:nth-child(2) .btm .meta { left: 0; }
+
+    /* ====== [팝업] ====== */
+    /* --- 가격표 --- */
+    .popup-price .container .inner .card .left { width: 360px; }
+    .popup-price .container .inner .card .left .tit { display: block; font-size: 24px; line-height: 30px; margin-bottom: 10px; }
+    .popup-price .container .inner .card .left .tag { width: 150px; height: 24px; line-height: 24px; margin-left: 0;}
+    .popup-price .container .inner .card .left .desc { font-size: 18px; line-height: 24px; margin-top: 20px;}
+    .popup-price .container .inner .card .right .price { font-size: 48px; }
+    .popup-price .container .inner .card .right .btn { width: 160px; height: 42px; margin-top: 30px;  line-height: 42px; font-size: 16px; }
+    /* --- 줌 --- */
+    .popup-zoom .container .inner .slide-container .slide-wrap .slide { padding: 80px 80px; }
+    .popup-zoom .container .inner .btn_close { right: 60px;}
+    .popup-zoom .container .inner .btn_prev,
+    .popup-zoom .container .inner .btn_next { width: 80px; height: 80px; padding: 40px 30px; }
+
+    /* ====== [팝업 토지이용열람계획] ====== */
+    .popup-inform .container .inner .inform-wrap .wrap .txt { float: none; width: 100%;  }
+    .popup-inform .container .inner .inform-wrap .wrap img { float: none; max-width: 100%; margin-top: 30px; }
+    .popup-inform .container .inner .inform-wrap.img-over { overflow: hidden; }
+    .popup-inform .container .inner .inform-wrap.img-over .wrap { padding-bottom: 0;}
+    .popup-inform .container .inner .inform-wrap.img-over .wrap img { position: relative; top: 0; right: 0; left: 0; max-width: 100%; }
+
+    /* =======[서브페이지 오시는 길 안내] ======= */
+    .sub_map .cont-wrap .row { font-size: 20px; }
+    .sub_map .cont-wrap .row:first-child { margin-bottom: 70px;}
+    .sub_map .cont-wrap .row .tit { width: 120px; }
+    .sub_map .cont-wrap .row .cont { font-size: 18px; }
+    .sub_map .inform { font-size: 20px;}
+}   .sub_map .inform p { line-height: 28px;}
+
+
+@media all and (max-width: 890px) {
+
+    /* ====== [헤더] 모바일 모드 ====== */
+    #header .conatiner .inner #navBtn { display: block; float: right; z-index: 34; }
+    #header .conatiner .inner .menu-wrap { z-index: 32; position: fixed; top: 0; left: 100%; width: 100%; height: 100%; padding: 80px 40px 80px calc(100% - 335px); background-color: rgba(38, 54, 70, 0.9); overflow: scroll; transition: all .4s ease-in-out;}
+    #header .conatiner .inner .menu-wrap.on { left: 0}
+    #header .conatiner .inner .menu-wrap::before { position: fixed; top: 0; left: 100%; width: 100%; height: 100vh; content: ""; background-color: gba(38, 54, 70, 0.9); transition: none;}
+    #header .conatiner .inner .menu-wrap.on::before { left: 0; }
+    #header .conatiner .inner .menu-wrap::after { position: fixed; top: 0; left: 100%; width: 375px; height: 100%; content: ""; background-color: #fff; border-radius: 32px 0 0 32px; transition: all .4s ease-in-out; }
+    #header .conatiner .inner .menu-wrap.on::after { left: calc(100% - 375px);}
+    #header .conatiner .inner .menu-wrap .gnb { float: none; display: block; position: relative; width: 100%; height: auto; margin-right: 0; padding: 0;}
+    #header .conatiner .inner .menu-wrap .gnb .gnb-item { z-index: 31; position: relative; display: block; width: 100%; height: auto; padding: 20px 0; overflow: scroll; color: #263646; }
+    #header .conatiner .inner .menu-wrap .gnb .gnb-item > a { display: block;  }
+    #header .conatiner .inner .menu-wrap .util { float: none; z-index: 33; display: block; height: auto; padding: 0; }
+    #header .conatiner .inner .menu-wrap .util .util-item a { color: #263646; font-weight: 800; }
+    #header .conatiner .inner .menu-wrap .gnb .gnb-item_dp:hover .menu_dp2 { display: block; }
+    #header .conatiner .inner .menu-wrap .menu_dp2 { display: block; position: relative; height: auto;  padding: 0; background-color: transparent; }
+    #header .conatiner .inner .menu-wrap .gnb .gnb-item_dp .menu_dp2,
+    #header .conatiner .inner .menu-wrap .gnb .gnb-item_dp.service .menu_dp2 { top:8px; left: 12px;}
+    #header .conatiner .inner .menu-wrap .util.signined .util-user span { display: block; }
+    #header .conatiner .inner .menu-wrap .util.signined .util-user .menu_dp2 { display: inline-block; top: 0; left: 0; margin-top: 10px; }
+    #header .conatiner .inner .menu-wrap .gnb .gnb-item_dp > a::after { display: none; }
+    /* --- [헤더] 홈페이지 모바일 스타일 --- */
+    .home #header.transparent .conatiner .inner .menu-wrap .gnb .gnb-item > a,
+    .home #header.transparent .conatiner .inner .menu-wrap .util .util-item,
+    .home #header.transparent .conatiner .inner .menu-wrap .util .util-item a { color: #263646; }
+    /* --- [헤더] 서브페이지 모바일 스타일 --- */
+    .sub #header .conatiner .inner .menu-wrap .menu_dp2 { border: 0;}
+    .sub #header .conatiner .inner .menu-wrap .util .menu_dp2 { padding-bottom: 10px;}
+    /* ====== [메인] 서브페이지 스타일 ====== */
+    .sub-list #main .main-bottom .tab { display: none; }
+    .sub-list #main .main-title .container .inner .tit.off { display: inline-block; cursor: pointer; }
+    .sub-list #main .main-title .container .inner .tit .tit-wrap .tit:nth-child(2):before { opacity: 0;}
+
+    /* ====== [페이지네이션] 반응형 ====== */
+    .pagination { float: none; }
+    .pagination .wrap { width: auto; margin: 0 2.8915%;}
+    .pagination .wrap .pc01 { display: none; }
+
+    /* ====== [홈] 섹션 스타일  ====== */
+    /* --- 섹션1 추천 매물 리스트 --- */
+    .home .mn-row01 { overflow: show; }
+    .home .mn-row01 .slide-wrap { width: calc(100% + 30px); overflow-x: scroll; overflow-y: hidden;}
+    .home .mn-row01 .slide-wrap::-webkit-scrollbar { height: 10px; }
+    .home .mn-row01 .slide-wrap::-webkit-scrollbar-track { border-radius: 100px; background-color: #f6f3ff; }
+    .home .mn-row01 .slide-wrap::-webkit-scrollbar-thumb { border-radius: 100px; background-color: #7868e6;}
+    .home .mn-row01 .recomm-wrap { width: 830px; }
+    .home .mn-row01 .recomm-wrap .mn-card { width: 190px; }
+    /* --- 섹션3  매물 리스트 --- */
+    .home .mn-row03 .latest-wrap .mn-card { width: 30.9236%; /*(770/3)/830*/ margin-right: 3.6144%; /*30/830*/ margin-bottom: 7.2289%;/*60/830*/ }
+    .home .mn-row03 .latest-wrap .mn-card:nth-child(4n) { margin-right: 3.6144%; }
+    .home .mn-row03 .latest-wrap .mn-card:nth-child(3n) { margin-right: 0; }
+    /* --- 공통 매물 아이템 스타일  --- */
+    .mn-card .card-info { padding: 10px 0; }
+    .mn-card .card-info .info-wrap {position: absolute; top: -34px; left: 0px; padding: 0 8px; width: 100%; }
+    .mn-card .card-info .info-wrap::after { display: none; }
+    .mn-card .card-info .info-wrap .info-size { width: auto; padding: 6px 10px; border-radius: 4px; background-color: #fff; }
+    .mn-card .card-info .info-wrap .info-views { width: auto; padding: 6px 6px; border-radius: 4px; background-color: #fff; }
+    .mn-card .card-info .info-wrap .info-views .value { padding-left: 24px; }
+    .mn-card .card-info .info-price { position: relative; top: 0; left: 0; padding: 12px 0 12px 30px; }
+    .mn-card .card-info .info-price::before { top: 6px; }
+    .mn-card .card-info .info-size::before { display: none; }
+    .mn-card .card-info .info-tit { margin: 1px 0 24px; }
+    /* --- 섹션2 바로가기 메뉴 --- */
+    .home .mn-row02 { margin: 20px 0 125px; }
+    .home .mn-row02 .menu-wrap .col { width: 100%; height: 270px; }
+    .home .mn-row02 .menu-wrap .col .col-item { height: 130px; }
+    .home .mn-row02 .menu-wrap .col .col-item:first-child { margin-bottom: 10px;}
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu { position: relative; height: 100%; padding: 25px; }
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .tit { display: block;}
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .btn { float: none; margin-top: 0; position: absolute; bottom: 25px;}
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu { width: calc(50% - 10px); } 
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu:last-child { left: 0; margin-left: 10px; } 
+
+    /* ====== [서브] 매물 아이템 스타일  ====== */
+    .sub-list .card-wrap.col05 .mn-card { width: 30.9236%; /*(770/3)/830*/ margin-right: 3.6144%; /*30/830*/ }
+    .sub-list .card-wrap.col05 .mn-card:nth-child(4n) { margin-right: 3.6144%; }
+    .sub-list .card-wrap.col05 .mn-card:nth-child(3n) { margin-right: 0; }
+
+    /* ====== [서브] 토지 분석 데이터  ====== */
+    .rg-datas .map { width: 100%; height: 500px; }
+    .rg-datas .link-wrap { width: 100%; height: auto; text-align: center; line-height:70px; }
+    .rg-datas .link-wrap .btn_link { width: 100%; height: 70px; margin-bottom: 20px; }
+    .rg-datas .link-wrap .btn_more { width: 100%; height: 70px; }
+    .rg-datas .txt-wrap .tit { padding: 50px 0 27px;}
+    .rg-datas .txt-wrap .txt { margin: 26px 0 60px; }
+    .rg-datas .txt-wrap .img-wrap { padding: 0 40px; }
+    .rg-datas .txt-wrap .img-wrap img { margin-bottom: 40px; } 
+    /* ====== 토지목록 ===== */
+    .mylist li .inner .wrap .content .wrap .infos .wrap .sort,
+    .mylist li .inner .wrap .content .wrap .infos .wrap .addr { margin-right: 15px; }
+    .mylist li .inner .wrap .content .wrap .infos .wrap .addr .tit::after,
+.mylist li .inner .wrap .content .wrap .infos .wrap .sort .tit::after,
+.mylist li .inner .wrap .content .wrap .infos .wrap .date .tit::after {margin: 0 4px 0 5px; }
+}
+
+@media all and (max-width: 768px) {
+    /* ====== [메인] 서브페이지  ====== */
+    .sub #main .main-content > .container > .inner { padding: 30px 30px 100px; }
+    .sub-register #main .main-content > .container > .inner { padding: 0 30px 100px; }
+
+    /* ====== [푸터] 반응형 ====== */
+    #footer .container .inner .f-top .inner { padding: 14.9717% 0 7.6271%; }
+    #footer .container .inner .f-top .inner .row02 { margin: 2.8248% 0 6.7796% 0;}
+    #footer .container .inner .f-mid { padding-top: 7.6271%; }
+    #footer .container .inner .f-mid .col02 { width: 100%; }
+    #footer .container .inner .f-btm .inner { padding: 7.6271% 0; }
+    #footer .container .inner .f-btm .inner .info-wrap .f-info { line-height: 20px; color: #fff; }
+    #footer .container .inner .f-btm .inner .info-wrap .f-info.l-inline { display: block; }
+    #footer .container .inner .f-btm .inner .info-wrap .f-info.l-inline.bar::before { display: none;}
+
+    /* ====== [토지등록] ====== */
+    /* --- 버튼 --- */
+    .rg-title > .addr { display: block; width: 100%;}
+    .rg-title .btn { float: none; width: 100%; height: 56px; padding: 0; margin-top: 20px; text-align: center; }
+    .rg-title .btn > .addr { line-height: 56px; font-size: 15px;}
+    /* --- 토지 찾기 --- */
+    .search-form { padding: 25px 30px; }
+    .search-form .row { height: auto; }
+    .search-form .row fieldset label { width: 100%; line-height: 14px; font-size: 14px; margin-bottom: 10px;}
+    .search-form .row fieldset .input-wrap { width: calc(100% - 55px);/*890px*/ height: 50px; margin: 0 5px 0 0; }
+    .search-form .row fieldset .input-wrap input { padding-left: 8px; }
+    .search-form .row fieldset .input-wrap input::placeholder { font-size: 10px; }
+    .search-form .row fieldset .btn { width: 50px; height: 50px; padding: 0; font-size: 0; }
+    .search-form .row fieldset .btn::after { top: 15px; left: 15px; width: 20px; height:20px; }
+    /* --- 버튼 --- */
+    .rg-btns .btn { float: none; display: block; width: 320px; height: 56px; margin: 36px auto 0; padding: 20px 20px; font-size: 13px; font-family: "GmarketSansMedium"; }
+    /* --- 안내 영역 --- */
+    .rg-inform .btn_rg { display: none; }
+    .rg-inform { height: 56px; line-height:56px; font-size: 13px; color: #fff;  }
+    .rg-inform img { width: 20px; height: 20px; margin-right: 10px; transform: translateY(-2px); }
+    .rg-inform_txt { display: block; }
+    /* --- 입력 폼 --- */
+    .rg-form form fieldset .form-tit { font-size: 16px; margin: 25px 0 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    .rg-form form fieldset .form-wrap { margin-bottom: 0; padding: 5px 0 15px; background-color: #fff;}
+    .rg-form form fieldset .form-wrap .tit { margin-bottom: 5px; font-size: 14px; }
+    .rg-form form fieldset .form-wrap .tit .check { font-size: 10px;}
+    .rg-form form fieldset .form-wrap .tit .check::before { top: 2px; width: 10px; height: 10px; margin-right: 5px; background-size: cover;}
+    .rg-form form fieldset .form-wrap .input-wrap {  position: relative; height: 56px; border: 1px solid #263646; }
+    .rg-form form fieldset .form-wrap .input-wrap .cnt { position: absolute; top: 24px; right: 16px; font-size: 10px; }
+    /* --- 입력 폼 열 정렬 --- */
+    .rg-form form fieldset .col-wrap .form-wrap { float: none; width: 100%; }
+    /* --- 입력 폼[type="file"] --- */
+    .rg-form form fieldset .form-wrap_t .input-wrap { height: 270px; max-height: 270px;}
+    .rg-form form fieldset .form-wrap_f .btn_thumb,
+    .rg-form form fieldset .form-wrap_f .btn_imgs { position: relative; width: auto; padding-right: 20px; background-color: #fff; font-family: "GmarketSansBold"; font-size: 14px; color: #7868e6; }
+    .rg-form form fieldset .form-wrap_f .btn .pc { display: none;}
+    .rg-form form fieldset .form-wrap_f .btn_thumb::before,
+    .rg-form form fieldset .form-wrap_f .btn_imgs::before,
+    .rg-form form fieldset .form-wrap_f .btn_thumb::after,
+    .rg-form form fieldset .form-wrap_f .btn_imgs::after { display: inline-block; position: absolute; top: 22px; right: 2px; width: 10px; height: 3px; content: ""; background-color: #7868e6;}
+    .rg-form form fieldset .form-wrap_f .btn::after { transform: rotate(90deg); }
+    .rg-form form fieldset .form-wrap_f .input-wrap { height:30px; margin-top: 0; }
+    .rg-form form fieldset .form-wrap_f .input-wrap >  .btn_del { top: 9px; right: 12px; width: 11px; }
+    .rg-form form fieldset .form-wrap_f .file-wrap  { margin-top: 0;}
+    .rg-form form fieldset .form-wrap_f .file-wrap > i { width: 30px; height: 30px; margin-right: 5px; padding: 11px 12px; margin: 10px 5px 0 0; font-size: 10px; color: #fff; }
+    .rg-form form fieldset .form-wrap_f .file-wrap > .input-wrap { width: calc(100% - 35px); height: 30px; margin-top: 10px; }
+    .rg-form form fieldset .form-wrap_f .file-wrap > .input-wrap:last-child { width: calc(100% - 35px); height: 30px; margin-bottom: 20px; }
+    .rg-form form fieldset > .btn_del, 
+    .rg-form form fieldset > .btn_sm { height: 56px; font-size: 15px;}
+    .rg-form form fieldset > .btn_del { line-height: 56px; }
+
+
+    /* ====== [마이페이지 목록]  ====== */
+    /* --- 공통 스타일 --- */
+    .mylist-tab { display: block; font-size: 17px; }
+    .mylist-tab .wrap .tit_txt { margin-right: 2.8248%; }/*20px*/
+    .mylist { padding: 30px 0 0; }
+    .mylist li .inner { padding: 10px; }
+    .mylist li .inner .wrap .thumbnail { position: relative; display: inline-block; margin-right: 10px;}
+    .mylist li .inner .wrap .btns { position: relative; display: inline-block; width: auto; vertical-align: top;}
+    .mylist li .inner .wrap .btns .btn { height: 42px; padding: 16px 10px; font-size: 12px;}/*padding: 15px 10px;*/
+    .mylist li .inner .wrap .btns .btn_more { padding: 16px 57px 15px 10px; }/*166px : padding: 15px 57px 15px 10px;*/
+    .mylist li .inner .wrap .btns .btn_more::before,
+    .mylist li .inner .wrap .btns .btn_more::after { width: 42px; height: 42px;}
+    .mylist li .inner .wrap .btns .btn_more::after { top: 11px; right: 11px; width: 20px; height: 20px; }
+    .mylist li .inner .wrap .content { position: relative; top: 0; left: 0; width: 100%; height: auto; padding: 10px 0 0 0; }
+    .mylist li .inner .wrap .content .wrap .title { position: relative; width: 100%; height: auto; padding: 8px 10px; background-color: #fff; border-radius: 4px; font-size: 15px; line-height: 17px;}
+    .mylist li .inner .wrap .content .wrap .infos { position: relative; height: auto; margin-top: 5px;}
+    .mylist li .inner .wrap .content .wrap .infos > .wrap { display: block; width: 100%; height: 30px; margin-top: 5px; }
+    .mylist li .inner .wrap .content .wrap .infos .wrap .sort,
+    .mylist li .inner .wrap .content .wrap .infos .wrap .addr,
+    .mylist li .inner .wrap .content .wrap .infos .wrap .date { position: relative; width: auto; padding: 8px; background-color: #fff; border-radius: 4px; }
+    /* --- [문의내역] --- */
+    .mp_faq #main > .main-content > .container > .inner { padding: 30px 30px 40px;}
+    .mp_faq .mylist li .inner .wrap .thumbnail { width: 52px; height: 42px;}
+    .mp_faq .mylist li .inner .wrap .content{ height: 86px; margin-bottom: 10px;}
+    .mp_faq .mylist li .inner .wrap .content .wrap .title { text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+    .mp_faq .mylist li .inner .wrap .content .wrap .infos { bottom: 10px; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms  { margin-top: 20px; padding-bottom: 20px; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .imgs { margin-bottom: 20px; overflow-y: scroll; white-space: nowrap; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .imgs img { width: 112px; height: 90px; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .quest { margin-bottom: 20px;}
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .answer { margin-bottom: 20px; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap { padding-bottom: 30px; }
+
+    /* --- [토지목록] --- */
+    .mp_land #main > .main-content > .container > .inner { padding: 30px 30px 40px;}
+    .mp_land #main .main-title .container .inner .tit .btn { display: none; }
+    .mp_land .mylist li .inner .wrap .thumbnail { width: 112px; height: 90px;}
+    .mp_land .mylist li .inner .wrap .btns { bottom: 0; left: 0; }
+    .mp_land .mylist li .inner .wrap .btns .btn:last-child { display: block; margin-top: 6px; }
+    .mp_land .mylist li .inner .wrap .content { height: auto; }
+    .mp_land .mylist li .inner .wrap .content .wrap .infos { padding-top: 5px;}
+    .mp_land .mylist li.pro-analysized .inner .wrap .btns .status{ width: 42px;  }
+    .mp_land .mylist li.pro-analysized .inner .wrap .btns .status::after { top: 12px; left:11px; width: 20px; height: 20px; }
+
+    
+
+    /* --- [결제 내역] --- */
+    .mp_pay #main > .main-content > .container > .inner { padding: 0 30px 40px;}
+    .mp_pay .mylist li .inner .wrap .thumbnail { width: 52px; height: 42px;}
+    .mp_pay .mylist li .inner .wrap .btns { bottom: 0; left: 0; }
+    .mp_pay .mylist li .inner .wrap .content { height: auto; }
+    .mp_pay .mylist li .inner .wrap .content .wrap .infos { padding-top: 5px;}
+
+
+
+    /* ====== [결제 완료] ======= */
+    .mp_paid .inform-box .wrap p { line-height: 28px; font-size: 20px;}
+    .mp_paid table { font-size: 15px; }
+    .mp_paid table thead tr th { padding: 20px 0; }
+    .mp_paid table tbody tr td { padding: 58px 0; }
+
+    /* ====== [토지분석] ====== */
+    /* --- 아이템 정보 --- */
+    .an-card .row01 .thumbnail { width: 100%; height: 480px; }
+    .an-card .row01 .info .info-btns { position: absolute; top: -595px; left: 0; }
+    /* --- 무료 분석 안내 영역 ---*/
+    .an-inform .wrap .mobile { display: block; font-size: 13px; line-height: 16px; }
+    .an-inform .wrap .pc { display: none; }
+    /* --- 차트 안내 영역 --- */
+    .an-charts .inform .tit { display: block; text-align: center; margin-right: 10px;}
+    .an-charts .inform .wrap { float: none; text-align: center; transform: translateX(-30px); }
+
+    /* ====== [팝업] ====== */
+    /* --- 가격표 --- */
+    .popup-price .container .inner .logo { margin-bottom: 122px; }
+    .popup-price .container .inner .card .left { float: none; width: 100%; margin-bottom: 40px; }
+    .popup-price .container .inner .card .right { float: none; width: 100%; text-align: center;}
+    /* --- 줌 --- */
+    .popup-zoom .container .inner .slide-container .slide-wrap .slide { padding: 80px 50px; }
+    .popup-zoom .container .inner .btn_close { right: 30px; }
+    .popup-zoom .container .inner .btn_prev,
+    .popup-zoom .container .inner .btn_next { width: 50px; height: 80px; padding: 40px 15px; }
+    .popup-zoom .container .inner .slide-container .slide-wrap .slide .slide-num { padding: 8px 10px; font-size: 11px; }
+    /* --- 계정 체크 --- */
+    .popup-acc .container .inner { padding: 20px; }
+    .popup-acc .container .inner .box { width: 100%; left: 0; padding: 60px 40px; }
+    .popup-acc .container .inner .box .tit { font-size: 20px; margin-bottom: 44px; }
+    .popup-acc .container .inner .box .txt { padding: 44px 0; font-size: 16px; }
+    .popup-acc .container .inner .box .btn_close { right: 40px; }
+}
+
+@media all and (max-width: 674px) {
+
+    /* ====== [홈]  ====== */
+    /* --- 섹션3 매물 목록 --- */
+    .mn-title { margin-bottom: 27px; }
+    .home .mn-title .tit .mobile { display: block; width: 100%; margin-bottom: 4px;}
+    .home .mn-title .btn_more { top: calc(100% - 14px);}
+    .home .mn-row02 { z-index: 23; position: relative; }
+    .home .mn-row03 { z-index: 22; position: relative; padding-bottom: 100px; }
+    .home .mn-row03::after { display: block; z-index: 21; position: absolute; bottom: 0; left: -30px; width: calc(100% + 60px); height: calc(100% + 50px); content: ""; background-color: #f5f5f7; border-radius: 30px 30px 0 0; }
+    .home .mn-row03 .mn-title { z-index: 24; }
+    .home .mn-row03 .latest-wrap { z-index: 24; position: relative; }
+    .home .mn-row03 .latest-wrap .mn-card { width: 47.619%;/*(770/3)/830*/ margin-right: 0;/*30/830*/ background-color: #fff; }
+    .home .mn-row03 .latest-wrap .mn-card:nth-child(n) {  margin-right: 0; }
+    .home .mn-row03 .latest-wrap .mn-card:nth-child(odd) { margin-right: 4.451%; }
+    .home .mn-row03 .latest-wrap .mn-card:nth-child(even) { margin-right: 0; }
+    .home .mn-row03 .latest-wrap .mn-card .card-info { padding: 10px; }
+
+    /* ====== [서브페이지 매물 목록] ====== */
+    /* --- 매물 아이템 스타일  --- */
+    .sub-list #main { overflow: hidden;}
+    .sub-list .mn-title  { margin-bottom: 70px; }
+    .sub-list .mn-title .mobile { display: block; margin-bottom: 5px; }
+    .sub-list .card-wrap.col05::before { display: block; z-index: -1; position: absolute; top: -30px; left: -30px; width: calc(100% + 60px); height: calc(100% + 500px); content: ""; background-color: #f5f5f7; border-radius: 20px 20px 0 0; }
+    .sub-list .card-wrap.col05 { z-index: 24; position: relative; }
+    .sub-list .card-wrap.col05 .mn-card { z-index: 25; width: 47.619%;/*(770/3)/830*/ margin-right: 0;/*30/830*/ background-color: #fff; } 
+    .sub-list .card-wrap.col05 .mn-card:nth-child(n) {  margin-right: 0; }
+    .sub-list .card-wrap.col05 .mn-card:nth-child(odd)  { margin-right: 4.451%; }
+    .sub-list .card-wrap.col05 .mn-card:nth-child(even){ margin-right: 0; }
+    .sub-list .card-wrap.col05 .mn-card .card-info { padding: 10px; }
+    .sub-list #main .main-bottom { z-index: 24; }
+
+    /* ====== [계정]  ====== */
+    /* --- 공통 입력 폼 --- */
+    .signup form { width: 100%; }
+    .signup form .row { margin-bottom: 25px; }
+    .signup form .row_tit { margin-bottom: 40px; font-size: 16px; }
+    .signup form .row label { display: block; width: 100%; height: 18px; line-height: 18px; margin-bottom: 15px; font-size: 14px; }
+    .signup form .row label .details { font-size: 12px; }
+    .signup form .row .bx-input { font: none; display: block; width: 100%; height: 56px; border: 1px solid #263646; }
+    .signup form .row .bx-input input { padding-left: 16px; font-size: 14px;}
+    .signup form .row_pwd .bx-input input { padding: 0 54px 0 16px; }
+    .signup form .row .bx-input input::placeholder { font-size: 12px;}
+    /* ---  패스워드 입력 폼 --- */
+    .signup form .row_pwd .bx-input .pwdBtns { position: absolute; top: 49px; right: 18px; }
+    .signup form .row_pwd .bx-input .pwdBtns i { width: 24px; height: 24px; background-size: cover;}
+    .signup form .row_pwd .bx-input .pwdBtns i::before { top: -8px; left: -8px; width: 40px; height: 40px; } 
+
+    /* ---  입력 완료 폼 --- */
+    .signup form.completed .bx-input { border: 1px solid rgba(38, 54, 70, 0.1); }
+    /* --- [입력 폼] submit 버튼 --- */
+    .signup form > .btn { height: 56px; line-height: 56px; font-size: 15px; }
+    /* --- 회원가입 안내  --- */
+    .signup form .row_tit .join_info { font-size: 0;}
+    .sub-join .signup form .row_tit .join_info::before { display: none; }
+    .signup form .row_tit .join_info a { font-size: 13px;}
+    .signup form .row_tit .join_icon { width: 16px; height: 16px; margin: 0 8px 0 0; background-size: cover; transform: translateY(3px); }
+    .signup form .row_tit .join_icon svg { width: 16px; height: 16px; }
+    .signup form .row_tit .join_tit .txt { display: block; margin-top: 10px; }
+    .signup form .row .bx-input.email { width: calc(100% - 130px); }
+    .signup form .row .btn_mcheck { height: 56px; line-height: 56px; font-size: 13px; }
+    .signup form .row_check { margin: 0 0 24px;}
+    .signup form .row_check .checkbox { width: 17px; height: 12px; margin-right: 10px; }
+    .signup form .row_check .txt { font-size:14px; }
+    /* --- 바로가기 버튼  --- */
+    .signup form > .row.btn { margin-bottom: 10px; font-size: 15px;}
+    .signup form > .row.btn:last-child{ margin: 0; }
+    /* --- 로그인 --- */
+    .signup form .row.loginfo { font-size: 12px; }
+    /* --- 계정 탈퇴 --- */
+    .signup form.unsub .row_inform p { margin-top: 20px; font-size: 13px;}
+    .signup form.unsub .row_inform .unsub_icon { width: 37px; height: 40px; }
+    .signup form.unsub .row_tit .warn_icon { width: 18px; height: 18px; margin: 0 8px 0 0; transform: translateY(3px); background-size: cover;}
+    .signup form.unsub .row_tit .join_info { width: 100%; height: 40px; margin-top: 15px; line-height: 40px; border-radius: 4px; background-color: rgba(38, 54, 70, 0.1); text-align: center;}
+    /* --- 내 정보 수정 --- */
+    .mypage_edit .signup { padding-top: 40px;}
+    .mypage_edit .signup form .row label { width: 100%; height:45px; font-size: 14px; }
+    .mypage_edit .signup form .row .bx-input { height: 56px; }
+    .mypage_edit .signup form .row .bx-input input::placeholder { font-size: 13px;}
+    .mypage_edit .signup form .row .check { float: right; height: 45px; padding: 20px 0; font-size: 13px;}
+    .mypage_edit .signup form .row .check::before { transform: translateY(4px); }
+    .mypage_edit .signup form .row_pwd .bx-input .pwdBtns { top: 7px; }
+    .mypage_edit .signup form .row_sm a { height: 56px; line-height: 56px; font-size: 12px;}
+    .mypage_edit .signup form .row_sm .btn { height: 56px; padding: 21px 0; font-size: 15px; }
+
+    /* ====== [마이페이지] 메인메뉴 ====== */
+    .user-wrap { font-size: 16px; }
+    .mymenu-wrap {  margin: 40px 0 45px; }
+    .mymenu-wrap ul { height: auto; }
+    .mymenu-wrap ul .menu { float: none; display: block; width: 100%; margin: 0 0 10px 0; }
+    .mymenu-wrap ul .menu:nth-child(3),
+    .mymenu-wrap ul .menu:nth-child(4) { margin-bottom: 10px; }
+    .mymenu-wrap ul .menu .wrap { padding: 15px; }
+    .mymenu-wrap ul .menu .wrap .menu-tit {font-size: 14px; }
+    .mymenu-wrap ul .menu .wrap .cnt { font-size: 14px; }
+    .mymenu-wrap ul .menu .btn { bottom: 15px; right: 15px; height: 35px; line-height: 35px; font-size: 13px; }
+    .useinfo-wrap p { font-size: 13px; }
+    .useinfo-wrap p:last-child { margin-bottom: 92px; }
+    .useinfo-wrap p:last-child::after { display: block; position: absolute; top: 0; left: 0; left: 0; width: 100%; height: 1px; margin-top: 60px; content: ""; background-color: rgba(0, 0, 0, 0.05);}
+    .useinfo-wrap .btn_unsub { float: none; position: absolute; top: 90px; right: 0; } 
+
+    /* ===========================================================
+    [서브페이지 오시는 길 안내] 
+    =========================================================== */
+    .sub_map .cont-wrap { padding: 30px 0; border: 0;}
+    .sub_map .cont-wrap .row { font-size: 18px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #c4c4c4; }
+    .sub_map .cont-wrap .row:first-child { margin-bottom: 40px;}
+    .sub_map .cont-wrap .row .tit { width: 100%; margin-bottom: 14px; }
+    .sub_map .cont-wrap .row .cont { font-size: 15px; }
+    .sub_map .map { width: 100%; height: auto; } 
+    .sub_map .map > div { width: 100%; height: auto; } 
+    .sub_map .inform { margin-top: 40px; padding-top: 20px; font-size: 15px;}
+    .sub_map .inform p { line-height: 20px; }
+    .sub_map .inform p:first-child { margin-bottom: 16px; }
+    /* ====== [팝업 토지이용열람계획] ====== */
+    .popup-inform .container .inner { height: 100%; padding: 56px 30px 40px; }
+    .popup-inform .container .inner .title-wrap { padding-bottom: 20px; margin-bottom: 30px;}
+    .popup-inform .container .inner .title-wrap .title { font-size: 24px; margin-bottom: 22px; }
+    .popup-inform .container .inner .title-wrap .desc { font-size: 16px; line-height: 24px; }
+    .popup-inform .container .inner .inform-wrap { margin-bottom: 60px;} 
+    .popup-inform .container .inner .inform-wrap h3 { font-size: 18px;}
+    .popup-inform .container .inner .inform-wrap h3 i { width: 30px; height: 30px; margin-right: 10px; border-radius: 50%; padding: 8px 0; font-size: 16px;}
+    .popup-inform .container .inner .inform-wrap .wrap { padding: 20px 0 0 38px;}
+    .popup-inform .container .inner .inform-wrap .wrap .txt { font-size: 15px; line-height: 22px; }
+
+    /* ====== [팝업 서비스 안내] ====== */
+    .popup-service .container .inner .pr-card-wrap .pr-card { float: none; width: 100%; height: 360px; margin: 0 0 30px; }
+    .popup-service .container .inner .warn { font-size: 12px; }
+    .popup-service .container .inner .warn .icon { width: 12px; height: 12px; margin-right: 4px; background-size: cover;}
+    /* ====== [서비스 안내 박스] ====== */
+    .service-box .inner .title-wrap {  padding: 40px 0 60px; text-align: center;}
+    .service-box .inner .title-wrap .title { font-size: 24px; margin-bottom: 36px; }
+    .service-box .inner .title-wrap .desc { width: 100%; font-size: 18px;}
+    .service-box .inner .title-wrap .img_area { display: none; }
+    /* --- 서비스 안내 페이지 --- */
+    .sub_service .box-wrap .top-box { padding: 80px 0 40px; background: none; text-align: center;}
+    .sub_service .box-wrap .top-box .title { margin-bottom: 26px; font-size: 38px; line-height: 48px; }
+    .sub_service .box-wrap .top-box .desc { font-size: 24px; line-height: 34px; }
+    .sub_service .box-wrap .text-box { width: 100%; height: auto; padding: 45px 0 40px;  }
+    .sub_service .box-wrap .text-box .title { font-size: 28px; line-height: 32px; margin-bottom: 18px;}
+    .sub_service .box-wrap .text-box .desc { font-size: 18px; line-height: 24px; }
+    .sub_service .box-wrap .service-box { padding: 0 10px; }
+    /* --- 토지 선택 목록 --- */
+    .popup-service .container .inner .form .select ~ input { position: absolute; z-index: -1; width: 1px; height: 1px; opacity: 0; }
+    .popup-service .container .inner .form .select { width: 100%; height: 148px; }
+    .popup-service .container .inner .form .select::-webkit-scrollbar { width: 5px; }
+    .popup-service .container .inner .form .select .option { padding: 8px 10px; margin: 4px; font-size: 14px;}
+    .popup-service .container .inner .form .btn-wrap { width: 100%; margin-top: 25px; text-align: right; }
+    .popup-service .container .inner .form .btn-wrap .btn_sm { padding: 8px 20px; font-size: 14px; }
+    /* --- 전문분석 대행  --- */
+    .popup-service .container .inner .form  {  width: 100%; padding: 0; }
+    .popup-service .container .inner .form .tit { margin-bottom: 24px; font-size: 18px; }
+    /* --- 토지 선택 텍스트 입력 폼 --- */
+    .popup-service .container .inner .form label {  margin-bottom: 14px; font-size: 15px; }
+    .popup-service .container .inner .form .info { text-align: left; margin-top: 16px; font-size: 12px; line-height: 16px; color:rgba(38, 54, 70, 0.7);}
+    .popup-service .container .inner .form .info:first-child { margin-top: 20px; }
+    .popup-service .container .inner .form .info .icon { opacity: 0.5; }
+    /* --- 토지 없음 안내 --- */
+    .popup-service .container .inner .inform-box { padding: 0; }
+    .popup-service .container .inner .inform-box .icon { display: inline-block; margin-bottom: 36px; }
+    .popup-service .container .inner .inform-box .txt { font-size: 15px;}
+}   
+
+@media all and (max-width: 520px){
+
+    /* ====== [헤더] ====== */
+    #header .conatiner .inner .logo-wrap .logo_m { display: none; }
+    #header .conatiner .inner .logo-wrap .logo_mb { display: inline-block; }
+    .home #header .conatiner .inner { padding: 30px 30px; }
+    .home #header .conatiner .inner .logo-wrap { height: 20px; }
+    .home #header.scroll .conatiner .inner .logo-wrap .logo_s { display: none; }
+    .home #header .conatiner .inner #navBtn { position: relative; top: -5px; }
+    .sub #header .conatiner .inner { padding: 25px 30px; }
+    .sub #header .conatiner .inner .logo-wrap .logo_s { display: none; }
+
+    /* ====== [메인] ====== */
+    /* --- 타이틀 --- */
+    #main .main-title { padding-bottom: 5px; }
+    #main .main-title .container .inner .tit { height: 40px; font-size: 16px; }
+    #main .main-title .container .inner .tit .tit-icon { width: 40px; height: 40px; background-size: 54.7418%; }
+    #main .main-title .container .inner .tit .tit-wrap { display: inline-block; height: 100%; line-height: 40px; }
+    #main .main-title .container .inner .tit .tit-wrap .tit:nth-child(2):before { margin: 0 9px 0 3px; }
+    /* --- 타이틀 바로가기 링크 ---*/
+    #main .main-title .container .inner .tit .btn {height: 40px; padding: 14px 43px 14px 23px; font-size: 12px; }
+    #main .main-title .container .inner .tit .btn_more::before,
+    #main .main-title .container .inner .tit .btn_more::after { top: 18px; right: 23px; }
+    #main .main-title .container .inner .tit .btn .pc { display: none; }
+    /* --- 컨텐츠 영역 ---*/
+    .home #main .main-content > .container > .inner { padding: 70px 30px 0; }
+    /* --- 하단 | 페이지네이션 ---*/
+    #main .main-bottom .container .inner { padding: 0 0 100px; }
+    /* --- [메인 - 마이페이지 | 내 토지] 타이틀 링크 버튼 ---*/
+    .mp_land #main .main-title .container .inner .tit .btn { display: none; }
+    .sub #main .main-content > .container > .inner { padding: 30px 30px 100px; }
+    .pagination .wrap .pc02 { display: none; }
+
+    /* ====== [홈] ====== */
+    /* --- 비주얼 영역 --- */
+    .main-visual { height: 400px; }
+    .main-visual .inner { padding-top: 80px; }
+    .main-visual .inner .slide-area { height: 180px; }
+    .main-visual .inner .slide-area .btn { top: calc(50% - 9px); width: 18px; height: 18px; }
+    .main-visual .inner .slide-area .btn_prev { border: 3px solid #fff; border-radius: 2px; border-right: 0; border-bottom: 0; } 
+    .main-visual .inner .slide-area .btn_next { border: 3px solid #fff; border-radius: 2px; border-left: 0; border-top: 0; }
+    .main-visual .inner .slide-area .slide-container .slide-wrap .slide { width: 230px; }
+    .main-visual .inner .slide-area .slide-container .slide-wrap .slide a .slide-num { top: 146px; left: 5px; padding: 7px 8px; border-radius: 4px; background-color: #7868e8; font-size: 7px; color: #fff; }
+    .main-visual .inner .slide-area .slide-container .slide-wrap .slide a .slide-num .num::after { height: 8px; margin: 0 2px 0 4px; background-color: #fff; transform: rotate(21deg) translateY(1px); }
+    .main-visual .inner .search-area { padding-top: 30px; }
+    .main-visual .inner .search-area .search-wrap label { margin-bottom: 15px; font-size: 15px;}
+    .main-visual .inner .search-area .search-wrap .input-wrap { width: calc(100% - 105px); }
+    .main-visual .inner .search-area .search-wrap .input-wrap input { height: 50px; font-size: 13px; }
+    .main-visual .inner .search-area .search-wrap .input-wrap input::placeholder { font-size: 13px; }
+    .main-visual .inner .search-area .search-wrap .input-wrap .addr-list { padding: 14px 20px; }
+    .main-visual .inner .search-area .search-wrap .input-wrap .addr-list::-webkit-scrollbar-thumb { width: 5px; }
+    .main-visual .inner .search-area .search-wrap .input-wrap .addr-list ul li { padding: 14px 10px; font-size: 12px; color: #000; }
+    .main-visual .inner .search-area .search-wrap .btn { width: 50px; height: 50px; margin-left: 5px; padding: 0; }
+    .main-visual .inner .search-area .search-wrap .btn .icon { width: 20px; height: 20px; transform: translateY(4px); }
+
+    /* --- 매물목록 --- */
+    .mn-title { font-size: 20px; }
+    .sub-list .mn-title  { font-size: 16px; }
+    .mn-title .btn_more { font-size: 12px; }
+    .mn-card .card-info .info-price { font-size: 15px; }
+    .mn-card .card-info .info-tit {font-size: 13px; line-height: 15px; }
+    .mn-card .card-img .img-label-wrap { padding: 1.0869%; }
+    .mn-card .label-wrap .label { height: 26px; margin-right: 1.0869%; padding: 9px 10px; font-size: 10px; }
+    /* --- 섹션2 바로가기 메뉴 --- */
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu { position: relative; height: 100%; padding: 10px; }
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu:hover { transform: scale(1.04); }
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .tit { display: block; line-height: 110px; text-align: center; font-size: 17px; }
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .btn { bottom: 10px; width: calc(100% - 20px); font-size: 12px; text-align: center; }
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .btn:hover { transform: scale(1.08); }
+    .home .mn-row02 .menu-wrap .col02 .col02-item .mn-menu .btn .pc { display: none; }
+
+    /* ====== [토지분석] ====== */
+    /* --- 아이템 정보 --- */
+    .an-card .row01 .thumbnail { width: 100%; height: 336px; }
+    .an-card .row01 .info .info-btns { position: absolute; top: -446px; left: 0; width: 100%; margin-bottom: 0; }
+    /* ====== [약관|공지사항] ====== */
+    .terms ul li { position: relative; width: 100%; height: auto; padding: 10px 10px 10px 10px; margin-bottom: 20px; }
+    .terms ul li .tit { height: 40px; line-height: 40px; font-size:15px; }
+    .terms ul li .wrap { padding: 20px 0 60px;}
+    .terms ul li .wrap .txt {  margin-bottom: 20px; font-size: 13px; }
+    .terms ul li .wrap .date {  font-size: 13px; }
+    .terms ul li .btn {  bottom: 10px; right: 10px; width: 96px; height: 40px; padding: 5px 32px 5px 8px; font-size: 13px; }
+    .terms ul li .btn::after { top: 13px; right: 8px; }
+    .terms ul li .btn.on::after { top: 10px; }
+
+    /* ====== [팝업] ====== */
+    /* --- 계정 체크 --- */
+    .popup-acc .container .inner .box { padding: 40px 20px 30px;/*40px/480*/ }
+    .popup-acc .container .inner .box .tit { font-size: 16px; margin-bottom: 30px; }
+    .popup-acc .container .inner .box .txt { padding: 24px 0; font-size: 14px;}
+    .popup-acc .container .inner .box .hr { margin: 22px 0; }
+    .popup-acc .container .inner .box .btn_sm,
+    .popup-acc .container .inner .box .btn_accept {height: 56px; line-height: 56px;}
+    .popup-acc .container .inner .box .btn_close { top: 40px; right: 30px; width: 14px; height: 14px; background-size: cover; }
+    /* --- 비밀번호 변경 --- */
+    .popup-acc .container .inner .box .btn_sm { margin-bottom: 10px; }
+    .popup-acc .container .inner .box .btn_cancel { font-size: 12px; }
+}
+
+@media all and (max-width: 480px) {
+
+    /* ====== [헤더] ====== */
+    #header .conatiner .inner .menu-wrap { padding: 19.0476% 40px 19.0476% calc(100% - 335px);}
+    #header .conatiner .inner .menu-wrap .gnb .gnb-item { padding: 4.7619% 0; }
+
+    /* ====== [푸터] ====== */
+    #footer::after { display: block; }
+    #footer .container .inner .f-top { border-bottom: 0; }
+    #footer .container .inner .f-top .inner { padding: 10.9523% 0 11.9047%; }/*46px 0 50px;*/
+    #footer .container .inner .f-top .inner .row02 { margin: 4.7619% 0 11.4285%; }/*20px 0 48px 0;*/
+    #footer .container .inner .f-mid { padding-top: 0; }
+    #footer .container .inner .f-mid .col02 { margin-top: 11.9047%; }
+    #footer .container .inner .f-mid .col02 .f-util-wrap { width: 100%; margin: 0 0 7.1428% 0;/*0 0 30px 0*/ border-bottom: 1px solid rgba(255, 255, 255, .2); }
+    #footer .container .inner .f-mid .col02 .f-util-wrap:last-child { border-bottom: 0; }
+    #footer .container .inner .f-mid .col02 .f-util-wrap p { z-index: 14; position: relative; color: rgba(255, 255, 255, .2); font-size: 13px; }
+    #footer .container .inner .f-mid .col02 .f-util-wrap p::after { display: inline-block; z-index: 15; position: absolute; top: 5px; right: 0; width: 10px; height: 4px; content: ''; background: url(../images/common/icon_foot_fold.svg) 50% 50% no-repeat; transition: .2s ease-in-out;}
+    #footer .container .inner .f-mid .col02 .f-util-wrap .l-slide-wrap { display: none; z-index: 16; position: relative; width: calc(100% + 30px); overflow-x: scroll; overflow-y: hidden; }
+    #footer .container .inner .f-mid .col02 .f-util-wrap .l-slide-wrap::-webkit-scrollbar { display: none !important;  -ms-overflow-style: none; }
+    #footer .container .inner .f-mid .col02 .f-util-wrap .l-slide-wrap ul { display: inline-block; width: auto; padding-bottom:  7.1428%; margin-bottom:  7.1428%; white-space: nowrap; }/*mb, pb 30px*/
+    #footer .container .inner .f-mid .col02 .f-util-wrap .l-slide-wrap ul:last-child { margin-bottom: 0;}
+    #footer .container .inner .f-mid .col02 .f-util-wrap .l-slide-wrap ul li { display: inline-block; margin-right: 10px; padding: 10px 20px; border-radius: 8px; background-color: #1b2936; }
+    #footer .container .inner .f-btm .inner { padding: 12.8571% 0 0; }/*54px 0 0 */
+    #footer .container .inner .f-copy-wrap .f-logo { display: none; }
+    #footer .container .inner .f-copy-wrap .copyright,
+    #footer .container .inner .f-btm .inner .info-wrap .f-info { font-size: 12px; }
+    /* --- [푸터] 유틸메뉴 ON --- */
+    #footer .container .inner .f-mid .col02 .f-util-wrap.on .l-slide-wrap { display: block; }
+    #footer .container .inner .f-mid .col02 .f-util-wrap.on p { color: #fff; }
+    #footer .container .inner .f-mid .col02 .f-util-wrap.on p::after { transform: rotate(180deg);}
+    
+    /* ====== [매물목록] ====== */
+    .mn-card .card-info .info-wrap .info-size { padding: 6px 4px; }
+    .mn-card .card-info .info-wrap .info-views { padding: 6px 4px; }
+    .mn-card .card-info .info-wrap .info-views .value { padding-left: 20px; font-size: 12px; }
+    .mn-card .card-info .info-wrap .info-views .value::before { width: 16px; height: 16px; top: -1px; }
+
+    /* --- [마이페이지] 목록으로 돌아가기 영역 --- */
+    .mp-item #main .main-content .btn_prev { padding-left: 18px; font-size: 13px; }
+    .mp-item #main .main-content .btn_prev::before,
+    .mp-item #main .main-content .btn_prev::after { top: 3px; left: 0; width: 8px; height: 1px;}
+    .mp-item #main .main-content .btn_prev::after { top: 8px; }
+
+    /* ====== [마이페이지] 내정보수정 ====== */
+    .mypage_edit .user-wrap { padding-top: 0;}
+    .mypage_edit .signup { padding-top: 20px;}
+    .mypage_edit .signup form .row .check::before { width: 10px; height: 10px; background-size: cover; margin-right: 5px; transform: translateY(2px);}
+    .mypage_edit .signup form .row .check.mobile { display: inline-block; }
+    .mypage_edit .signup form .row .check.pc { display: none; }
+    .mypage_edit .signup form .row .check { font-size: 10px; padding: 24px 0 0;}
+    /* ====== [계정] 회원가입 ====== */
+    .signup form .row .bx-input.email { width: calc(100% - 80px); }
+    .signup form .row .btn_mcheck { width: 75px; margin-left: 5px; }
+    /* ====== [토지등록] ====== */
+    /* --- 토지 찾기 --- */
+    .inform-box { margin: 20px 0 0; }
+    .inform-box_res { margin: 30px 0 60px; }
+    .inform-box_res .icon { margin-right: 6px; }
+    .inform-box_res .icon svg { width: 20px; height: 20px; }
+    .inform-box_res .result { padding-left: 32px; font-size: 16px; line-height: 24px; }
+    .inform-box_res .result::before { top: -2px; width: 22px; height: 22px; background-size: cover; }
+    .inform-box .wrap { height: 305px; padding: 111px 14px 41px; }
+    .inform-box .wrap .icon_smile { width: 40px; height: 40px; margin-bottom: 20px; }
+    .inform-box .wrap p { font-size: 13px;}
+    .inform-box .wrap p .btn { top: 6px; width: 23px; height: 23px; padding: 0; margin: 0 8px; font-size: 0;}
+    .inform-box .wrap p .btn::after { top: 6px; left: 6px; }
+    /* --- 입력 폼 --- */
+    .rg-form form fieldset > .btn_sm { width: 100%; }
+    .rg-form form fieldset > .btn_del { margin: 10px 0;}
+
+    /* ====== [마이페이지] 목록  ====== */
+    /* --- 공통 --- */
+    .mylist li .inner .wrap .content .wrap .title { font-size: 10px; line-height: 12px;}
+    .mylist li .inner .wrap .content .wrap .infos { font-size: 10px; }
+    .mylist li .inner .wrap .content .wrap .infos .wrap .addr .tit::after,
+    .mylist li .inner .wrap .content .wrap .infos .wrap .date .tit::after { height: 10px; margin: 0 5px 0 5px; transform: translateY(-1px); }
+    .mylist li .inner .wrap .btns .btn { font-size: 12px;}
+    .mylist li .inner .wrap .btns .btn_more .pc { display: none; }
+    .mylist li .inner .wrap .btns .btn_more .mobile { display: inline; }
+     /* --- [문의내역] ---*/
+    .mp_faq .mylist li .inner .wrap .content{ height: 76px;}
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms form textarea { padding: 10px; font-size: 10px; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap { padding-bottom: 24px; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap li { height: auto; margin: 0; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap .tit { margin-bottom: 8px; font-size: 10px; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap .file { margin-top: 3px; }
+    .mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap .file a { padding: 6px 6px; font-size: 10px;}
+
+    /* ====== [결제 완료] ======= */
+    .mp_paid .inform-box .wrap { padding: 40px 10px; }
+    .mp_paid .inform-box .wrap p { line-height: 20px; font-size: 16px;}
+    .mp_paid table { clear: both; }
+    .mp_paid table::after { clear: both; }
+    .mp_paid table thead { float: left; width: 100px; }
+    .mp_paid table thead tr { display:block; width: 100%; }
+    .mp_paid table thead tr th { display:block; width: 100%; }
+    .mp_paid table thead tr th:last-child { border-right: 1px solid #c4c4c4; border-bottom: 0; }
+    .mp_paid table tbody { display: inline-block; width: calc(100% - 100px); height: 200px;}
+    .mp_paid table tbody tr { display:inline-block; width: 100%; height: 100%; }
+    .mp_paid table tbody tr td { display:block; height: 50px; width: 100%; padding: 20px 0; border-right: 0; border-bottom: 1px solid #c4c4c4;}
+    .mp_paid table tbody tr td:last-child {  border-bottom: 0; }
+
+    /* ====== [토지분석] ====== */
+    /* --- 아이템 정보 --- */
+    .an-card .row01 .thumbnail .btn { height: 42px; padding: 15px 10px; font-size: 12px; }
+    .an-card .row01 .thumbnail .status_p { padding: 15px 10px; }
+    .an-card .row01 .info .info-btns { top: -440px; }
+    .an-card .row01 .info .info-btns .btn { padding: 16px 10px; height: 42px; }
+    .an-card .row01 .info .info-btns .btn_pro { padding-right: 52px; margin-right: 0; font-size: 12px;}
+    .an-card .row01 .info .info-btns .btn_md { float: right; width: auto; margin-right: 0; background-color: #fff; font-size: 12px; font-weight: 800; color: #7868e6;} 
+    .an-card .row01 .info .info-btns .icon_pro { width: 42px; height: 42px; }
+    .an-card .row01 .info .info-btns .btn_pro::before {  width: 42px;  }
+    .an-card .row01 .info .info-btns .btn_pro::after { top: 11px; right: 11px; width: 20px; height: 20px; }
+    .an-card .row01 .info .info-btns .icon_pro::before {  top: 9px; left: 8px; width: 25px; height: 25px; background-size: cover;}
+    .an-card .row01 .info .info-btns .status { line-height: 42px; font-size: 12px; }
+    .an-card .row01 .info .info-btns .status::before { width: 10px; height: 10px; margin-right: 5px;  background-size: cover; transform: translateY(0);}
+    .an-card .row01 .info .info-tit { font-size: 15px; line-height: 20px; }
+    .an-card .row01 .info .info-meta li .wrap { padding: 12px; }
+    .an-card .row01 .info .info-meta li .wrap .tit { width: 90px; font-size: 12px; line-height: 14px;}
+    .an-card .row01 .info .info-meta li .wrap .tit { padding-left: 24px; background-size: 14px; }
+    .an-card .row01 .info .info-meta li .wrap .value { font-size: 12px; line-height: 14px; vertical-align: top;}
+    .an-card .row02 .imgs .slide-wrap .slide { width: 130px; height: 104px; margin-right: 10px; }
+    /* --- 안내 영역 --- */
+    .an-inform { padding: 53px 10px;}
+    .an-inform .icon { width: 40px; height: 40px; margin-bottom: 20px; background-size: cover;}
+    /* --- 차트 영역 --- */
+    .an-charts .charts .chart01 .inner { padding: 7.1428% 7.1428% 10.5%; }
+    .an-charts .charts .chart02 .inner { padding: 7.1428% 7.1428% 30px; }
+    .an-charts .charts .chart01 .inner .canvas { height: 390px; }
+    .an-charts .charts .chart02 .inner .canvas { height: 320px; }
+    .an-charts .charts .chart .inner .title { padding: 14px 0 20px; font-size: 15px; }
+    .an-charts .charts .chart .inner .title::before { top: 6px; width: 20px; height: 20px; margin-right: 14px; }
+    /* --- 차트 안내 영역 --- */
+    .an-charts .inform { padding: 6px 0; text-align: center;} 
+    .an-charts .inform .tit { line-height: 15px; font-size: 13px; margin-bottom: 5px; }
+    .an-charts .inform .tit::before { top: 3px; width: 15px; height: 15px; margin-right: 8px;  }
+    .an-charts .inform .wrap span { height: 20px; padding: 5px 20px 5px 8px; font-size: 10px; }
+    .an-charts .inform .wrap span::before { width: 8px; height: 8px; }
+    /* --- 차트02 라벨 영역 --- */
+    .an-charts .charts .chart02 .inner .label .top span { display: inline-block; width: 46.619%; font-size: 12px;}
+    .an-charts .charts .chart02 .inner .label .btm {  width: 100%; height: auto; margin-top: 4px;}
+    .an-charts .charts .chart02 .inner .label .btm .tit { font-size: 13px; padding-bottom: 10px; }
+    .an-charts .charts .chart02 .inner .label .btm .tit::before { top: 8px; width: 22px; height: 22px; margin-right: 4px; }
+    .an-charts .charts .chart02 .inner .label .btm .meta { font-size: 12px;}
+    .an-charts .charts .chart02 .inner .label:nth-child(2) .btm .meta { left: -50%; }
+
+    /* ====== [서브] 토지 분석 데이터  ====== */
+    .rg-datas .map { width: 100%; height: 330px; }
+    .rg-datas .link-wrap { width: 100%; height: auto; text-align: center; font-size: 14px; line-height:50px; }
+    .rg-datas .link-wrap .btn_link { width: 100%; height: 50px; margin-bottom: 20px; }
+    .rg-datas .link-wrap .btn_more { width: 100%; height: 50px; }
+    .rg-datas .txt-wrap .tit { padding: 30px 0 14px; font-size: 18px; line-height: 24px;}
+    .rg-datas .txt-wrap .tit .value::before { height: 12px; margin: 0 10px; }
+    .rg-datas .txt-wrap .txt { margin: 20px 0 40px; font-size: 15px; line-height: 20px;}
+    .rg-datas .txt-wrap .img-wrap { padding: 0; }
+    .rg-datas .txt-wrap .img-wrap img { margin-bottom: 20px; } 
+
+    /* ====== [팝업 토지이용열람계획] ====== */
+    .popup-inform .container .inner { padding: 26px 30px 40px; }
+    .popup-inform .container .inner .title-wrap { padding-bottom: 20px; margin-bottom: 30px;}
+    .popup-inform .container .inner .title-wrap .title { font-size: 18px; margin-bottom: 22px; }
+    .popup-inform .container .inner .title-wrap .desc { font-size: 14px; line-height: 24px; }
+    .popup-inform .container .inner .inform-wrap { margin-bottom: 60px;} 
+    .popup-inform .container .inner .inform-wrap h3 { font-size: 16px;}
+    .popup-inform .container .inner .inform-wrap h3 i { width: 26px; height: 26px; margin-right: 10px; border-radius: 50%; padding: 8px 0; font-size: 14px;}
+    .popup-inform .container .inner .inform-wrap .wrap { padding: 20px 0 0 38px;}
+    .popup-inform .container .inner .inform-wrap .wrap .txt { font-size: 14px; line-height: 20px; }
+
+    /* --- 서비스 안내 페이지 --- */
+    .sub_service .box-wrap .top-box { padding: 80px 0 40px; background: none; text-align: center;}
+    .sub_service .box-wrap .top-box .title { margin-bottom: 26px; font-size: 38px; line-height: 48px; }
+    .sub_service .box-wrap .top-box .desc { font-size: 24px; line-height: 34px; }
+    .sub_service .box-wrap .text-box { width: 100%; height: auto; padding: 45px 0 40px;  }
+    .sub_service .box-wrap .text-box .title { font-size: 28px; line-height: 32px; margin-bottom: 18px;}
+    .sub_service .box-wrap .text-box .desc { font-size: 18px; line-height: 24px; }
+    .sub_service .box-wrap .service-box { padding: 0 10px; }
+    /* --- 팝업 서비스 페이지 안내 --- */
+    .popup-service .container .inner .warn { text-align: left; }
+    .popup-service .container .inner .inform-box { margin-bottom: 14px;}
+}
+
+@media all and (max-width: 375px) {
+
+    /* ====== [토지분석] ====== */
+    /* --- 아이템 정보 --- */
+    .an-card .row01 .thumbnail { width: 100%; height: 252px; }
+    .an-card .row01 .info .info-meta li .wrap .tit { width: 80px; }
+    .an-card .row01 .info .info-btns { top: -348px;}
+    .an-card .row01 .info .info-meta li .wrap .tit { font-size: 10px; line-height: 13px;}
+    .an-card .row01 .info .info-meta li .wrap .tit { padding-left: 22px; background-size: 13px; }
+    .an-card .row01 .info .info-meta li .wrap .value { font-size: 10px; line-height: 13px; }
+    /* --- 차트 영역 --- */
+    .an-charts .charts .chart01 .inner .canvas { height: 290px; }
+    .an-charts .charts .chart02 .inner .canvas { height: 220px; }
+    .an-charts .charts .chart02 .inner .label:nth-child(2) .btm .meta { left: -80%; }
+}
+
+@media all and (max-width: 320px){
+
+    /* --- [헤더]  --- */
+    #header .conatiner .inner .menu-wrap { padding: 40px 0 40px 12.6984%; }
+    /* --- [메인] 타이틀 ---*/
+    #main .main-title .container .inner .tit .tit-icon { margin-right: 4.8253%; }
+    /* --- [메인] 매물 목록 --- */
+    .mn-card .label-wrap .label { width: 100%; text-align: center;}
+    /* --- [마이페이지] 내정보수정 --- */
+    .mypage_edit .signup form .row_sm .btn .pc { display: none; }
+    /* ====== [토지분석] ====== */
+    /* --- 아이템 정보 --- */
+    .an-card .row01 .info .info-meta li .wrap .tit { width: 100%; }
+    .an-card .row01 .info .info-meta li .wrap .value { padding-left: 20px; margin-top: 4px; }
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="토지 중개 플랫폼 랜드마킹입니다.">
+    <meta name="keywords" content="랜드마킹, 토지중개, 토지분석">
+    <meta name="author" content="랜드마킹">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="url">
+    <meta property="og:image" content="../images/common/icon_logo01.png">
+    <meta property="og:title" content="랜드마킹">   
+    <meta property="og:site_name" content="랜드마킹">   
+    <meta property="og:description" content="토지 중개 플랫폼 랜드마킹"> 
+    <meta property="og:locale" content="ko_KR"> 
+    <title>랜드마킹</title>
+    <!-- FAVICON-->
+
+    <!-- STYLE LINK-->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css" >
+
+    <!-- SCRIPT -->
+    <script src="../js/lib/jquery-3.6.0.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../js/lib/IE9.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <script src="../js/lib/html5shiv.min.js"></script>    
+    <script src="../js/lib/jqPIE.js"></script>    
+    <script src="../js/lib/PIE.js"></script> 
+    <![endif]-->
+</head>
+<body>
+    <div class="popup popup-inform" data-popup="inform_use">
+        <div class="dim"></div>
+        <div class="container bx-round_m">
+            <div class="inner">
+                <div class="title-wrap">
+                    <h2 class="title">토지 이용 계획 열람</h2>
+                    <p class="desc">
+                        -토지이용계획은 특정 필지의 지역지구 지정현황, 행위제한내용(관련 법령)을 열람하실 수 있습니다.
+                        <br>
+                        -또한 복잡한 토지이용규제 내용을 분석하여 보기 편리하게 구축한 [행위제한내용 분석결과] 서비스가 있습니다.
+                    </p>
+                </div>
+                <div class="inform-wrap">
+                    <h3><i>1</i>열람하고자 하는 필지의 지번 조회</h3>
+                    <div class="wrap clear">
+                        <p class="txt l-fleft">
+                            -필지의 지번 또는 도로명 검색
+                            <br>
+                            -대상 필지의 지번을 선택하여 입력
+                            <br>
+                            -지도를 확인하면 조회대상 필지 선택     
+                        </p>
+                        <img class="l-fright" src="../images/sub/img_use_inform01.png" alt="지번조회이미지">
+                    </div>
+                </div>
+                <div class="inform-wrap">
+                    <h3><i>2</i>필지 기본 정보 및 지역, 지구 지정 현황</h3>
+                    <div class="wrap clear">
+                        <p class="txt l-fleft">
+                            - 필지의 지목, 면적 및 공시지가 조회
+                            <br>
+                            - 지역·지구 지정현황 조회
+                            <br>
+                            - 10년간 개별공시지가 변동 내역 조회  
+                        </p>
+                        <img class="l-fright" src="../images/sub/img_use_inform02.png" alt="필지정보이미지">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn_close"></button>
+        </div>
+    </div>
+    <div class="popup popup-service" data-popup="service_an01">
+        <div class="dim"></div>
+        <div class="container service-box bx-round_m">
+            <div class="inner">
+                <div class="title-wrap">
+                    <h2 class="title">전문 분석 대행</h2>
+                    <p class="desc">
+                        등록된 토지를 중심으로 전문적인 분석을 받고 싶은 분들에게
+                        <br>
+                        국내 최고의 토지 전문가들이 1:1 상담을 해 드립니다.
+                    </p>
+                    <div class="img_area">
+                        <img src="../images/sub/img_service04.png" alt="전문분석대행">
+                    </div>
+                </div>
+                <section class="pr-card-wrap clear">
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">전화 분석</h3>
+                            <span class="price l-fright">30,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info">주소지 만으로 토지 등록</li>
+                            <li class="info">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info on">전화를 통한 토지 전문 분석</li>
+                            <li class="info">방문을 통한 심층 상담</li>
+                            <li class="info">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="#none" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">방문 분석</h3>
+                            <i class="tip-icon"></i>
+                            <span class="tip">방문 분석시 최고의 분석 서비스를 제공합니다.</span>
+                            <span class="price l-fright">200,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info">주소지 만으로 토지 등록</li>
+                            <li class="info">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info">전화를 통한 토지 전문 분석</li>
+                            <li class="info on">방문을 통한 심층 상담</li>
+                            <li class="info on">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="#none" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">등록 + 전화 분석</h3>
+                            <i class="tip-icon"></i>                            
+                            <span class="tip">전화 분석시 최고의 분석 서비스를 제공합니다.</span>
+                            <span class="price l-fright">160,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info on">주소지 만으로 토지 등록</li>
+                            <li class="info on">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info on">전화를 통한 토지 전문 분석</li>
+                            <li class="info">방문을 통한 심층 상담</li>
+                            <li class="info">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="#none" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">등록 + 방문 분석</h3>
+                            <i class="tip-icon"></i>
+                            <span class="tip">방문 분석시 최고의 분석 서비스를 제공합니다.</span>
+                            <span class="price l-fright">160,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info on">주소지 만으로 토지 등록</li>
+                            <li class="info on">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info on">전화를 통한 토지 전문 분석</li>
+                            <li class="info on">방문을 통한 심층 상담</li>
+                            <li class="info on">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="#none" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                </section>
+                <p class="warn">
+                    <i class="icon"></i>
+                    등록 또는 분석이 불가능하다고 판단되는 경우, 개별 안내 후 환불 처리 됩니다.
+                </p>
+            </div>
+            <button type="button" class="btn btn_close"></button>
+        </div>
+    </div>
+    <div class="popup popup-zoom hide" data-popup="zoomSlide">
+        <div class="dim"></div>
+        <div class="container">
+            <div class="inner">
+                <div class="slide-container">
+                    <ul class="slide-wrap clear">
+                        <li class="slide">
+                            <img src="../upload/img_land02.jpg" alt="토지">
+                            <span class="slide-num bg_v bx-round_l"></span>
+                        </li>
+                        <li class="slide">
+                            <img src="../upload/img_land01.png" alt="토지">
+                            <span class="slide-num bg_v bx-round_l">
+                                <em class="num"></em>&nbsp;/&nbsp;<em class="nums"></em>
+                            </span>
+                        </li>
+                        <li class="slide">
+                            <img src="../upload/img_land01.png" alt="토지">
+                            <span class="slide-num bg_v bx-round_l">
+                                <em class="num"></em>&nbsp;/&nbsp;<em class="nums"></em>
+                            </span>
+                        </li>
+                        <li class="slide">
+                            <img src="../upload/img_land01.png" alt="토지">
+                            <span class="slide-num bg_v bx-round_l">
+                                <em class="num"></em>&nbsp;/&nbsp;<em class="nums"></em>
+                            </span>
+                        </li>
+                        <li class="slide">
+                            <img src="../upload/img_land01.png" alt="토지">
+                            <span class="slide-num bg_v bx-round_l">
+                                <em class="num"></em>&nbsp;/&nbsp;<em class="nums"></em>
+                            </span>
+                        </li>
+                        <li class="slide">
+                            <img src="../upload/img_land01.png" alt="토지">
+                            <span class="slide-num bg_v bx-round_l">
+                                <em class="num"></em>&nbsp;/&nbsp;<em class="nums"></em>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn_prev" type="button"></button>
+                <button class="btn btn_next" type="button"></button>
+                <button class="btn btn_close"></button>
+            </div>
+        </div>
+    </div>
+    <div id="wrap" class="sub mp-item">
+        <header id="header">
+            <div class="conatiner">
+                <div class="inner clear">
+                    <h1 class="logo-wrap l-inline">
+                        <a href="../html/index.html" class="logo l-box">
+                            <img class="logo_img logo_s" src="../images/common/icon_logo_s.svg" alt="랜드마킹">
+                            <img class="logo_img logo_m" src="../images/common/icon_logo_m.svg" alt="랜드마킹">
+                            <img class="logo_img logo_mb" src="../images/common/icon_logo_mobile.svg" alt="랜드마킹">
+                        </a>
+                    </h1>
+                    <button id="navBtn" class="btn"></button>
+                    <div class="menu-wrap Clear l-inline">
+                        <div class="util l-inline signined">
+                            <span class="util-item"><a href="../html/sub_acc_login.html">로그인</a></span>
+                            <span class="util-item"><a href="../html/sub_acc_join.html">회원가입</a></span>
+                            <div class="util-item util-user l-inline">
+                                <span><a href="../html/sub_mp_menu.html">김토지&nbsp;</a>님,&nbsp;안녕하세요!</span>
+                                <ul class="menu_dp2 bx-round_xl bg_w">
+                                    <li class="item"><a class="bx-round_m" href="../html/sub_mp_menu.html">마이 메뉴</a></li>
+                                    <li class="item"><a class="bx-round_m" href="../html/sub_mp_list.html">내 토지 분석</a></li>
+                                    <li class="item"><a class="bx-round_m" href="../html/sub_mp_faq.html">문의하기</a></li>
+                                    <li class="item"><a class="bx-round_m" href="#none">로그아웃</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <nav class="gnb l-inline">
+                            <span class="gnb-item gnb-item_dp service l-inline">
+                                <a href="#none">서비스 소개</a>
+                                <ul class="menu_dp2 bx-round_xl bg_w">
+                                    <li class="item">
+                                        <i class="icon icon_handWaving"></i>
+                                        <a class="bx-round_m" href="../html/sub_service.html">서비스 소개</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_mapPin"></i>
+                                        <a class="bx-round_m" href="../html/sub_service_map.html">오시는 길</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_megaphone"></i>
+                                        <a class="bx-round_m" href="../html/sub_notice.html">공지사항</a>
+                                    </li>
+                                </ul>
+                            </span>
+                            <div class="gnb-item gnb-item_dp l-inline">
+                                <a href="#none" class="">토지</a>
+                                <ul class="menu_dp2 bx-round_xl bg_w">
+                                    <li class="item tit">목록</li>
+                                    <li class="item">
+                                        <i class="icon icon_medal"></i>
+                                        <a class="bx-round_m" href="../html/sub_list.html">마스터 추천 토지</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_globe"></i>
+                                        <a class="bx-round_m" href="../html/sub_list.html">등록된 토지</a>
+                                    </li>
+                                    <li class="item tit">등록</li>
+                                    <li class="item">
+                                        <i class="icon icon_pointing"></i>
+                                        <a class="btn_pop bx-round_m" href="#none" data-popup="service_register">토지 직접 등록</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_card"></i>
+                                        <a class="bx-round_m btn_pop" href="#none" data-popup="service_rg01">토지 등록 대행</a>
+                                    </li>
+                                    <li class="item tit">분석</li>
+                                    <li class="item">
+                                        <i class="icon icon_heart"></i>
+                                        <a class="btn_pop bx-round_m" href="#none" data-popup="service_analysis">토지 무료 분석</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_card"></i>
+                                        <a class="bx-round_m btn_pop" href="#none" data-popup="service_an01">토지 전문 분석</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div class="main-title">
+                <div class="container">
+                    <div class="inner">
+                        <div class="tit">
+                            <i class="tit-icon icon_user bx-round_l bg_n"></i>
+                            <h2 class="tit-wrap l-inlinebox">
+                                <span class="tit ft_b">마이 페이지</span>
+                                <span class="tit ft_b">내 토지</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="container">
+                    <div class="inner">
+                        <a href="../html/sub_mp_list.html" class="btn btn_prev ft_m_l">목록으로 돌아가기</a>
+                        <div class="an-card">
+                            <div class="row01 clear">
+                                <div class="thumbnail l-inline bx-round_l">
+                                    <img src="../upload/img_land01.png" class="img_f" alt="썸네일">
+                                    <span class="btn status_b bx-round_l bg_w"><span class="ft_m_m">무료 분석 대기중</span></span>
+                                    <a class="zoom btn_pop" href="#none" data-popup="zoomSlide"><span>확대보기</span></a>
+                                </div>
+                                <div class="info l-inline">
+                                    <div class="info-btns clear">
+                                        <a href="#none" class="btn btn_pro btn_pop bx-round_l ft_m_m" data-popup="service_an01">전문 분석 요청하기</a>
+                                        <a href="../html/sub_rg_form.html" class="btn btn_md bx-round_l ft_m_m">수정하기</a>
+                                        <span class="status ft_m_m hide">무료분석 중입니다.</span>
+                                    </div>
+                                    <h3 class="info-tit">
+                                        <span>산 속에 주말 집 지을 수 있는 땅 산기슭에 위치 조망뷰 굿</span>
+                                        <span>/수도권, 서울 경기 지역</span>
+                                        <span>/원주시 문막읍 취병리</span>
+                                        <span>/고속도로 문막 IC.7 KM 10분</span>
+                                        <span>/경기 남부 서울 강남권 40분대</span>
+                                    </h3>
+                                    <ul class="info-meta">
+                                        <li class="addr">
+                                            <span class="wrap">
+                                                <em class="tit icon_nav">지번주소</em>
+                                                <em class="value">서울특별시 마포구 합정동 386-2</em>
+                                            </span>
+                                        <li>
+                                        <li class="size">
+                                            <span class="wrap">
+                                                <em class="tit icon_corner">면적</em>
+                                                <em class="value">55,5555<i class="unit">&nbsp;m<sup>2</sup></i></em>
+                                            </span>
+                                        <li>
+                                        <li class="price">
+                                            <span class="wrap">
+                                                <em class="tit icon_tag">금액</em>
+                                                <em class="value"><i class="unit">&#8361;&nbsp;</i>199,9999,00</em>
+                                            </span>
+                                        </li>
+                                        <li class="tel">
+                                            <span class="wrap">
+                                                <em class="tit icon_chat">연락처</em>
+                                                <em class="value">김토지 010-4013-8502</em>
+                                            </span>
+                                        </li>
+                                        <li class="date">
+                                            <span class="wrap">
+                                                <em class="tit icon_calendar">작성일시</em>
+                                                <em class="value">2021년 1월 15일 7:14</em>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row02">
+                                <div class="imgs">
+                                    <ul class="slide-wrap">
+                                        <li class="slide l-inline bx-round_l">
+                                            <img src="../upload/img_land02.jpg" class="img_f" alt="토지이미지">
+                                            <a class="zoom btn_pop" href="#none" data-popup="zoomSlide"><span>확대보기</span></a>
+                                        </li>
+                                        <li class="slide l-inline bx-round_l">
+                                            <img src="../upload/img_land01.png" class="img_f" alt="토지이미지">
+                                            <a class="zoom btn_pop" href="#none" data-popup="zoomSlide"><span>확대보기</span></a>
+                                        </li>
+                                        <li class="slide l-inline bx-round_l">
+                                            <img src="../upload/img_land01.png" class="img_f" alt="토지이미지">
+                                            <a class="zoom btn_pop" href="#none" data-popup="zoomSlide"><span>확대보기</span></a>
+                                        </li>
+                                        <li class="slide l-inline bx-round_l">
+                                            <img src="../upload/img_land01.png" class="img_f" alt="토지이미지">
+                                            <a class="zoom btn_pop" href="#none" data-popup="zoomSlide"><span>확대보기</span></a>
+                                        </li>
+                                        <li class="slide l-inline bx-round_l">
+                                            <img src="../upload/img_land01.png" class="img_f" alt="토지이미지">
+                                            <a class="zoom btn_pop" href="#none" data-popup="zoomSlide"><span>확대보기</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="an-inform bx-round_l bg_g">
+                            <div class="wrap">
+                                <i class="icon"></i>
+                                <p class="pc">무료 등록 중입니다. 무료 등록은 관리자가 순차적으로 해 드립니다.</p>
+                                <p class="mobile">관리자가 순차적으로 무료 분석을 해 드립니다.</p>
+                            </div>
+                        </div>
+                        <section class="rg-datas">
+                            <div class="map bx-round_l bg_g">
+                                map 영역입니다.
+                            </div>
+                            <div class="link-wrap clear">
+                                <a href="#none" class="btn_link l-fleft bx-round_l bg_g">토지 이음 바로 가기</a>
+                                <a href="#none" class="btn_more btn_pop l-fright bx-round_l bg_g" data-popup="inform_use">토지 이음에서 봐야 하는 정보 자세히 보기</a>
+                            </div>
+                            <div class="txt-wrap">
+                                <p class="txt">
+                                    안녕하십니까.
+                                    <br>
+                                    창업진흥원 창업교육부입니다.
+                                    <br>
+                                    2021년 청소년 비즈쿨 운영학교(센터) 최종선정 결과를 붙임과 같이 안내드립니다.
+                                    <br>
+                                    최종 선정된 학교(센터)를 대상으로 협약체결 안내 공문을 보내드렸사오니 확인 바랍니다.
+                                    <br>
+                                    감사합니다. 
+                                </p>
+                                <div class="img-wrap">
+                                    <img src="../upload/sub_rg_img01.png" alt="토지 이미지">
+                                    <img src="../upload/sub_rg_img02.png" alt="토지 이미지">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container">
+                <div class="inner">
+                <div class="f-top">
+                    <div class="inner">
+                        <p class="row01 ft_b_s">최고의 토지 거래를 원하시나요?</p>
+                        <p class="row02">랜드마킹의 토지 분석은<br>전국 최고 수준입니다.</p>
+                        <a href="../html/sub_rg_search.html" class="row03 l-box bg_w bx-round_xs">토지 등록하기</a>
+                    </div>
+                </div>
+                <div class="f-mid l-inline clear">
+                    <div class="col02 l-inline">
+                        <div class="f-util-wrap l-inline">
+                            <p class="f-tit ft_b_s">서비스 소개</p>
+                            <div class="l-slide-wrap">
+                                <ul>
+                                    <li><a href="../html/sub_rg_search.html">토지 직접 등록</a></li>
+                                    <li><a class="btn_pop" href="#none" data-popup="service_rg01">토지 등록 대행</a></li>
+                                    <li><a href="../html/sub_service.html#sFree">무료 분석</a></li>
+                                    <li><a href="../html/sub_service.html#sPro">전문 분석</a></li>
+                                    <li><a href="../html/sub_service.html#sTotal">종합 분석</a></li>
+                                    <li><a href="../html/sub_service_map.html">오시는 길</a></li>
+                                    <li><a href="../html/sub_notice.html">공지사항</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="f-util-wrap l-inline">
+                            <p class="f-tit ft_b_s">토지</p>
+                            <div class="l-slide-wrap">
+                            <ul>
+                                <li><a href="../html/sub_list.html">마스터 추천 토지</a></li>
+                                <li><a href="../html/sub_list.html">등록된 토지</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div class="f-util-wrap l-inline">
+                            <p class="f-tit ft_b_s">약관</p>
+                            <div class="l-slide-wrap">
+                            <ul>
+                                <li><a href="../html/sub_terms_use.html">이용약관</a></li>
+                                <li><a href="../html/sub_terms_privacy.html">개인정보처리방침</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f-btm">
+                    <div class="inner">
+                        <div class="info-wrap ft_m_m">
+                            <p class="f-tit ft_b_s">주식회사 알에이에스</p>
+                            <ul>
+                                <li class="f-info">대표 : 최영준</li>
+                                <li class="f-info l-inline">사업자등록번호 : 809-86-01924</li>
+                                <li class="f-info l-inline bar">통신판매업 신고번호 : 제 2021-대구중구-0434 호</li>
+                                <li class="f-info">주소 : (41951)대구광역시 중구 달구벌대로 2204, 2층 (대봉동)</li>
+                                <li class="f-info l-inline">고객센터 : 053-234-5678</li>
+                                <li class="f-info l-inline bar">contact@landmaster.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+                <div class="f-copy-wrap clear">
+                    <span class="copyright">&copy;LANDMARKING</span>
+                    <span class="f-logo"><img src="../images/common/icon_foot_logo.svg" alt="토지"></span> 
+                </div>
+            </div>
+            </div>
+        </footer>
+    </div>
+    <!-- script -->
+    <script src="../js/main.js"></script>
+    <script>
+        window.addEventListener("load", handleImgSize);
+        window.addEventListener("resize", handleImgSize);
+
+        function handleImgSize(){
+
+            var $imgWrap = document.querySelectorAll('.thumbnail, .an-card .slide');
+
+            $imgWrap.forEach(function(el){
+                if(el.childElementCount <= 0) return;
+                var $wrapW = el.clientWidth,
+                    $wrapH = el.clientHeight,
+                    $img = el.querySelector('img'),
+                    $imgW = $img.naturalWidth,
+                    $imgH = $img.naturalHeight;
+                var $ratio = $wrapW / $imgW;
+                var $resizedH = $ratio*$imgH;
+            
+                if($resizedH - $wrapH > 0){
+                    var $moveY = ($resizedH - $wrapH)/2; 
+                    $img.style.transform = 'translateY(-' + $moveY + 'px)';
+                }else {
+                    var $gapRatio = ($wrapH - $resizedH) / $resizedH;
+                    var $resizedW = $wrapW + ($wrapW * $gapRatio);
+                    var $moveX = ($resizedW - $wrapW)/2;
+                    $img.style.height = $wrapH + 'px';
+                    $img.style.width = $resizedW + 'px';
+                    $img.style.transform = 'translateX(-' + $moveX + 'px)';
+                }
+            
+            });
+
+        };
+    </script>
+</body>
+</html>

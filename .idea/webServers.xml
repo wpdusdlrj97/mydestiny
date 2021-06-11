@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="83fea5c5-430e-4dc2-8eec-15effb613d3d" name="test_server" url="http://lllloooo.shop">
+        <fileTransfer host="lllloooo.shop" port="22" rootFolder="/home/funidea_pe" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="2c4c1156-8e40-421a-9fca-b2fde62fab13" name="ON_PE" url="http://49.247.132.31/">
+        <fileTransfer host="49.247.132.31" port="22" rootFolder="/home/ON_PE" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="c594b1f7-f500-4d69-9f8a-f762b34d12f5" name="myluck" url="http://myluck.kr">
+        <fileTransfer host="myluck.kr" port="22" rootFolder="/home/mydestiny" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="c8a3ce95-86ef-4610-a039-483ab1dba64e" name="jeyeon-aws" url="http://3.35.1.211/">
+        <fileTransfer host="3.35.1.211" port="22" privateKey="C:\Users\wpdus\OneDrive\바탕 화면\AWS\jeyeon-aws.ppk" rootFolder="/var/www/html" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="e5c9f365-dc51-490f-b101-25c86a1e83aa" name="funidea_benefit" url="http://13.209.27.219">
+        <fileTransfer host="13.209.27.219" port="22" privateKey="C:\Users\wpdus\OneDrive\바탕 화면\AWS\funidea_benefit.ppk" rootFolder="/var/www/html" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="c399742b-8468-4e9d-b24c-1a3077208d37" name="land" url="http://49.247.148.200">
+        <fileTransfer host="49.247.148.200" port="22" rootFolder="/home/client/web" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

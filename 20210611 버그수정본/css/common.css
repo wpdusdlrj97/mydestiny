@@ -1,0 +1,651 @@
+@charset "UTF-8";
+
+/* ===========================================================
+[메인 홈 | 매물 찾기 | 매물 목록] 
+=========================================================== */
+.card-wrap { position: relative; width: 100%; height: auto; }
+.mn-card { float: left; width: 22.9357%; /* 250px / 1090 */ margin-right: 2.7522%; /*30px*/ margin-bottom: 5.5045%; /*60px*/ }
+.mn-card:nth-child(4n) { margin-right: 0; }
+.mn-card .card-img { position: relative; width: 100%; background-color: rgba(0,0,0,.03); }
+.mn-card .card-img::after { display: block; padding-bottom: 100%; content: ''; }
+.mn-card .card-img img { display: inline-block; position: absolute; top: 0; left: 0; width: 100%; border-radius: 8px; }
+.mn-card .card-img .img-label-wrap { position: absolute; top: 0; left: 0; width: 100%; padding: 5px; }
+.mn-card .label-wrap .label { height: 33px; margin-right: 5px; padding: 11px 15px; background-color: #7868e6; font-size: 13px; color: #fff; }
+.mn-card .label-wrap .info-label { position: relative; background-color: #263646; }
+.mn-card .card-info { position: relative; width: 100%; padding: 5px 0; }
+.mn-card .card-info .info-price,
+.mn-card .card-info .info-wrap { position: relative; width: auto; padding: 6px 0; font-size: 13px; }
+.mn-card .card-info .info-price { position: absolute; bottom: 0; left: 0; padding-left: 38px; }
+.mn-card .card-info .info-price::before { display: inline-block; width: 20px; height: 20px; position: absolute; top: 0; left: 0; content: ""; background: url(../images/sub/icon_currency.svg) 50% 50% no-repeat; }
+.mn-card .card-info .info-size { position: relative; padding-left: 38px; }
+.mn-card .card-info .info-size::before { display: inline-block; width: 20px; height: 20px; position: absolute; top: -4px; left: 0; content: ""; background: url(../images/sub/icon_cross_simple.svg) 50% 50% no-repeat; }
+.mn-card .card-info .info-views { text-align: right; padding: 0; background-color: transparent;}
+.mn-card .card-info .info-views .value { position: relative; padding-left: 30px; }
+.mn-card .card-info .info-views .value::before { display: inline-block; width: 20px; height: 20px; position: absolute; top: -3px; left: 0;  margin-right: 10px; content: ""; background: url(../images/sub/icon_eye_open_nv.svg) 50% 50% no-repeat; background-size: cover; }
+.mn-card .card-info .info-tit { margin: 20px 0 24px; font-size: 15px; line-height: 16px; height: 40px;}
+.mn-card .card-info .info-wrap::after { display: block; position: relative; width: 100%; height: 25px; content: ''; }
+.mn-card .card-info sup { font-size: 6px; vertical-align: top; }
+/* --- 서브페이지 매물 목록 --- */
+.sub-list .card-wrap.col05 .mn-card { width: 17.7419%;/*220/1240*/ margin-right: 2.8225%;/*35/1240*/ margin-bottom: 4.8387%;/*60/1240*/ }
+.sub-list .card-wrap.col05 .mn-card:nth-child(4n) { margin-right: 2.8225%; }
+.sub-list .card-wrap.col05 .mn-card:nth-child(5n) { margin-right: 0; }
+
+/* ===========================================================
+[서브 계정] 회원가입, 로그인, 정보 수정
+=========================================================== */
+/* --- [입력폼] 라벨 --- */
+.signup form { width: 600px; height: auto; margin: 0 auto ; }
+.signup form .row { position: relative; width: 100%; height: auto; margin-bottom: 30px;  }
+.signup form .row label { font-size: 18px; line-height: 70px; color: #263646;}
+.signup form .row label .details { margin-left: 15px; font-size: 14px; color: rgba(0, 0, 0, 0.25); }
+/* --- [입력 폼] Input 박스 스타일  --- */
+.signup form .row .bx-input { float: right; border: 2px solid #263646; }
+.signup form .row .bx-input:hover { box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); border: 0; }
+.signup form .row .bx-input.typing { background-color: #263646;}
+.signup form .row .bx-input input { width: 100%; height: 100%; padding: 0 10px 0 30px; line-height: 70px; border: 0; background-color: transparent; font-size: 18px; }
+.signup form .row .bx-input input::placeholder { color: rgba(0, 0, 0, .25); }
+.signup form .row .bx-input.typing input { color: #fff; }
+/* --- [입력 폼] 패스워드 입력 스타일  --- */
+.signup form .row_pwd .bx-input input { padding: 0 60px 0 30px; }
+.signup form .row_pwd .bx-input .pwdBtns { position: absolute; top: 19px; right: 19px; }
+.signup form .row_pwd .bx-input .pwdBtns i { z-index: 21; position: relative; display: inline-block; width: 32px; height: 32px; cursor: pointer; } 
+.signup form .row_pwd .bx-input .pwdBtns i::before { z-index: 20; position: absolute; top: -9px; left: -9px; display: inline-block; content: ""; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; } 
+.signup form .row_pwd .bx-input .pwdBtns i:hover::before { background-color: rgba(0, 0, 0, 0.05); } 
+.signup form .row_pwd .bx-input.typing .pwdBtns i:hover::before { background-color: rgba(0, 0, 0, 0.2); } 
+/* --- [입력 폼] 패스워드 버튼 스타일  --- */
+.signup form .row_pwd .bx-input .pwdBtns .btn_closed { display: inline-block; background: url(../images/sub/icon_eye_closed_nv.svg); background-size: cover; }
+.signup form .row_pwd .bx-input .pwdBtns .btn_open { display: none; background: url(../images/sub/icon_eye_open_nv.svg); background-size: cover; }
+.signup form .row_pwd .bx-input .pwdBtns.unlock .btn_closed { display: none; }
+.signup form .row_pwd .bx-input .pwdBtns.unlock .btn_open { display: inline-block; }
+.signup form .row_pwd .bx-input.typing .pwdBtns .btn_closed { background: url(../images/sub/icon_eye_closed_wh.svg); background-size: cover; }
+.signup form .row_pwd .bx-input.typing .pwdBtns .btn_open { background: url(../images/sub/icon_eye_open_wh.svg); background-size: cover; }
+/* --- [입력 폼] hr 라인 스타일  --- */
+.signup form .row_hr:after { display: block; width: 100%; height: 30px; margin-bottom: 30px;  content: ""; border-bottom: 1px solid #c4c4c4;}
+/* --- [입력 폼] submit 버튼 스타일  --- */
+.signup form > .btn { display: block; width: 100%; height: 70px; margin-bottom: 10px; line-height: 70px; text-align: center; font-size: 18px; color: #fff; }
+.signup form > .btn:hover { opacity: 0.8; }
+/* --- [입력 폼] 바로가기 버튼 스타일  --- */
+.signup form .row:last-child .wrap { float: right; }
+.signup form .row:last-child .wrap a {  display: inline-block; margin-right: 35;}
+.signup form .row:last-child .wrap a:last-child { margin-right: 0;}
+
+/* ====== 회원가입 | 회원가입 완료 ======  */
+.signup form.completed .bx-input { border: 0; }
+.signup form.completed .bx-input:hover { box-shadow: 0 0 0; }
+.signup form .row_tit { margin-bottom: 68px; font-size: 25px; }
+.signup form .row_tit .join_icon { display: inline-block; width: 27px; height: 27px; margin: 0 20px 0 36px; background: url(../images/sub/icon_join_smile.svg); transform: translateY(6px); }
+.signup form .row_tit .join_info { float: right; padding: 3px 0;  font-size: 15px;}
+.signup form .row .bx-input.email { width: 333px; }
+.signup form .row .btn_mcheck { position: relative; float: right; width: 120px; height: 70px; margin-left: 10px; text-align: center; color: #fff; line-height:70px; font-size: 18px;}
+.signup form .row .btn_mcheck:hover { opacity: 0.8; }
+.signup form .row .btn_mcheck::before { display: none; position: absolute; top: calc(50% - 10px); left: calc(50% - 10px); width: 20px; height: 20px; content: ""; border-radius: 50%; background: linear-gradient(#fff, transparent); }
+.signup form .row .btn_mcheck::after { display: none; position: absolute; top: calc(50% - 8px); left: calc(50% - 8px); width: 16px; height: 16px; content: ""; border-radius: 50%; background: #7868e6; }
+.signup form .row .btn_mcheck.loading { font-size: 0;}
+.signup form .row .btn_mcheck.loading::before { display: inline-block; animation: loadingSpinner 2s infinite ease-in-out; }
+.signup form .row .btn_mcheck.loading::after { display: inline-block;}
+.signup form .row .btn_mcheck.loaded { font-size: 0; }
+.signup form .row .btn_mcheck.loaded::before { display: none; }
+.signup form .row .btn_mcheck.loaded::after { display: inline-block; top: calc(50% - 6px); left: calc(50% - 6px); width: 18px; height: 12px; background: url(../images/sub/icon_idcheck_check.png) 50% 50% no-repeat; }
+.sub-join .signup form .row_tit .join_info::before { display: inline-block; position: relative; top: 2px; width: 16px; height: 16px; margin-right: 10px; content: ""; background: url(../images/sub/icon_ellipse_nv.svg) 50% 50% no-repeat;}
+.signup form .row_tit .join_info > a { margin-left: 30px; font-family: "GmarketSansBold"; font-size: 15px; color: #7868e6; }
+.signup form .row_check { margin: 32px 0 62px; }
+.signup form .row_check .checkbox { display: inline-block; width: 20px; height: 14px; margin-right: 20px; background: url(../images/sub/icon_terms_check.svg) 50% 50% no-repeat; background-size: cover; opacity: .3; transition: .3s ease-in-out; cursor: pointer; }
+.signup form .row_check .checkbox:hover,
+.signup form .row_check .checkbox.checked { opacity: 1; transform: scale(1.2) }
+.signup form .row_check input[type="checkbox"] { width: 1px; height: 1px; opacity: 0;}
+.signup form .row_check .txt { vertical-align: top; font-size:18px; }
+.signup form .row_check .txt a { display: inline-block; width: auto; height: auto; padding-bottom: 1.5px; border-bottom: 1px solid #7868e6; color: #7868e6; font-weight: bold; }
+/* ====== 탈퇴 | 탈퇴 완료 ======  */
+.signup form.unsub .row_tit .warn_icon { display: inline-block; width: 28px; height: 28px; margin: 0 20px 0 0; background: url(../images/sub/icon_warn_ellipse.svg) 50% 50% no-repeat; background-size: cover; transform: translateY(6px); }
+.signup form.unsub .row_tit .join_info { float: right; padding: 3px 0; font-family: "GmarketSansBold"; font-size: 13px; color:rgba(0, 0, 0, 0.4);}
+.signup form.unsub .row_tit .join_info::before { display: none; }
+.signup form.unsub  span.btn { color: #263646; }
+.signup form.unsub .row_inform { width: 100%; height: 270px; padding: 78px 0; text-align: center; margin-bottom: 0; }
+.signup form.unsub .row_inform .unsub_icon { display: inline-block; width: 56px; height: 60px; margin: 0 20px 0 0; background: url(../images/sub/icon_basket.svg) 50% 50% no-repeat; background-size: cover; }
+.signup form.unsub .row_inform p { margin-top: 36px; font-size: 18px;}
+/* ====== 로그인 ======  */
+.signup form .row.loginfo { margin-top: 30px; }
+.signup form .row.loginfo a:first-child { margin-right: 35px; }
+/* ====== 내 정보 수정 ======  */
+.mypage_edit .user-wrap { padding-top: 0; }
+.mypage_edit .signup { width: 100%; height: auto; padding-top: 68px;}
+.mypage_edit .signup form { position: relative; width: 100%; height: auto; padding-top: 0; } 
+.mypage_edit .signup form .row { position: relative; width: 100%; height: auto; margin-bottom: 0; }
+.mypage_edit .signup form .row label { display: inline-block; width: 135px; height: 70px; vertical-align: top; line-height: 70px; }
+.mypage_edit .signup form .row .bx-input { float: none; position: relative; width: 463px; height: 70px; margin-right: 10px; }
+.mypage_edit .signup form .row .check { float: right; height: 70px; padding: 23px 0;}
+.mypage_edit .signup form .row .check.mobile { display: none; font-size: 10px; }
+.mypage_edit .signup form .row .check::before { display: inline-block; width: 15px; height: 15px; margin-right: 10px; content: ""; background: url(../images/sub/icon_ellipse_nv.svg) 50% 50% no-repeat; transform: translateY(3px); }
+/* --- 버튼 --- */
+.mypage_edit .signup form .row_sm .item { float: right;}
+.mypage_edit .signup form .row_sm .btn_sm { height: 70px; padding: 26px 30px; text-align: center; font-size: 18px; color: #fff; }
+.mypage_edit .signup form .row_sm .btn_pop,
+.mypage_edit .signup form .row_sm .btn_cancel { margin-right: 55px; color: #263646; line-height: 70px;}
+.mypage_edit .signup form .row_sm .btn_pop { font-weight: 800; color: #7868e6; opacity: 0.9; }
+/* ====== 아이디 찾기 ======  */
+.acc_check form .btn.status { display: none; position: relative; }
+.acc_check form .btn.status::before { display: none; position: absolute; top: calc(50% - 10px); left: calc(50% - 10px); width: 20px; height: 20px; content: ""; border-radius: 50%; background: linear-gradient(#fff, transparent);}
+.acc_check form .btn.status::after { display: none; position: absolute; top: calc(50% - 8px); left: calc(50% - 8px); width: 16px; height: 16px; content: ""; border-radius: 50%; background: #7868e6;}
+.acc_check.loading form .btn_sm { display: none; }
+.acc_check.loading form .status { display: inline-block; font-size: 0; }
+.acc_check.loading form .status::before { display: inline-block; animation: loadingSpinner 2s infinite ease-in-out;}
+.acc_check.loading form .status::after { display: inline-block;}
+.acc_check.failed form .btn_sm { display: none; }
+.acc_check.failed form .status { display: inline-block; background-color: #Ff5555; font-size: 18px; }
+.acc_check.failed form .status::before,
+.acc_check.failed form .status::after { display: none;}
+/* ====== 약관 | 공지사항 ======  */
+.terms { display: block; width: 100%; height: auto; }
+.terms .tit { width: 100%; height: 55px; line-height: 55px; font-size:22px; }
+.terms .wrap { display: block; width: 100%; height: auto;  padding: 20px 10px 20px;}
+.terms .wrap .txt { line-height: 26px; font-size: 14px; color: rgba(0, 0, 0, .6); }
+.terms .wrap .txt .num-txt { display: inline-block; width: 100%; padding-left: 16px; line-height: 24px; font-size: 12px; }
+.terms .wrap .txt strong { font-size: 16px; font-weight: 800; color: #000; }
+.terms .wrap .txt em { font-size: 14px; font-weight: 400; color: rgba(0, 0, 0, .8);;  font-style: italic; }
+/* --- 공지사항 펼쳐 보기 --- */
+.notice ul li .wrap { display: none; width: 100%; height: auto;  padding: 20px 0 20px;}
+.notice ul li { position: relative; width: 100%; height: auto; padding: 30px 30px 30px 20px; margin-bottom: 20px; }
+.notice ul li:last-child { margin-bottom: 0;}
+.notice ul li .wrap .txt { width: 100%; height: 140px; padding: 10px; margin-bottom: 60px; font-size: 13px; overflow-x: hidden; overflow-y: scroll; }
+.notice ul li .wrap .txt::-webkit-scrollbar { width: 10px; }
+.notice ul li .wrap .txt::-webkit-scrollbar-thumb { background-color: #263646; border-radius: 100px; }
+.notice ul li .wrap .txt::-webkit-scrollbar-track { background-color: rgba(0,0,0,.1); border-radius: 100px; }
+.notice ul li .btn { position: absolute; bottom: 30px; right: 30px; width: 140px; height: 55px; padding: 20px 56px 20px 26px;font-size: 15px;  color: #fff; }
+.notice ul li .btn .on { display: none; }
+.notice ul li .btn::after { display: inline-block; position: absolute; top: 20px; right: 18px; width: 20px; height: 15px; content: ""; background: url(../images/sub/icon_notice_fold.svg) 50% 50% no-repeat; }
+.notice ul li .btn.on .on { display: inline-block; }
+.notice ul li .btn.on .off { display: none; }
+.notice ul li .btn.on::after { transform: rotate(180deg); }
+.notice ul li .wrap .file-wrap { width: 100%; height: auto; margin-bottom: 40px; }
+.notice ul li .wrap .file-wrap li { padding: 0; }
+.notice ul li .wrap .file-wrap .tit { height: auto; line-height: 17px;}
+.notice ul li .wrap .file-wrap .file { padding: 0; margin-bottom: 10px;}
+.notice ul li .wrap .file-wrap .file a { display: inline-block; max-width: 100%; padding: 8px 14px; background-color: #fff; border-radius: 4px; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.notice ul li .wrap .date { color: rgba(0, 0, 0, 0.5);}
+.notice ul li .wrap .date .value::before { display: inline-block; position: relative; top: 2px; width: 1px; height: 13px; margin: 0 12px; content: ""; background-color: rgba(0, 0, 0, 0.5);}
+
+/* ===========================================================
+[서브 마이페이지] 토지분석 | 문의내역 | 결제내역 리스트
+=========================================================== */
+/* --- 목록 탭 전환 영역 --- */
+.mylist-tab { width: 100%; height: auto; font-size: 25px; }
+.mylist-tab > .wrap { width: 100%; height: 100%; }
+.mylist-tab .wrap .tit_txt { display: inline-block; margin-right: 40px; color: rgba(0, 0, 0, .3); }
+.mylist-tab .wrap .tit_txt:last-child { margin-right: 0; }
+.mylist-tab .wrap .tit_txt.on { color: #263646; }
+.mylist-tab .wrap .tit_cnt { float: right; color: #263646; }
+/* --- 목록 아이템 --- */
+.mylist { width: 100%; height: auto; padding: 50px 0 20px; }
+.mylist li { width: 100%; height: auto; margin-bottom: 20px; background-color: rgba(38, 54, 70, 0.05); transition: all .3s ease-in-out; }
+.mylist li:last-child { margin-bottom: 0;}
+.mylist li:hover { background-color: #fff; transform: scale(1.01); box-shadow: 0 0 13px rgba(38, 54, 70, 0.08); }
+.mylist li .inner { display: block; width: 100%; height: 100%; padding: 30px 20px; cursor: pointer;}
+.mylist li .inner > .wrap { z-index: 21; position: relative; width: 100%; height: 100%;  }
+/* --- 아이템 썸네일 --- */
+.mylist li .inner .wrap .thumbnail { z-index: 23; position: absolute; top: 0; left: 0; width: 150px; height: 120px; background-color: rgba(0, 0, 0, .1);}
+/* --- 아이템 상태 태그 | 버튼  --- */
+.mylist li .inner .wrap .btns { z-index: 24; position: absolute; bottom: 0; right: 0; }
+.mylist li .inner .wrap .btns .btn { height: 55px; vertical-align: bottom; margin-right: 10px; padding: 22px 30px; color: #fff;}
+.mylist li .inner .wrap .btns .btn:last-child { margin-right: 0; }
+.mylist li .inner .wrap .btns .status { background-color: rgba(0, 0, 0, .1); cursor: auto; }
+.mylist li .inner .wrap .btns .btn_more { position: relative; padding: 22px 85px 20px 30px; transition: all .3s ease-in-out; cursor: pointer; }
+.mylist li .inner .wrap .btns .btn_more .pc { display: inline; }
+.mylist li .inner .wrap .btns .btn_more .mobile { display: none; }
+.mylist li .inner .wrap .btns .btn_more:hover { transform: scale(1.06); }
+.mylist li .inner .wrap .btns .btn_more::before,
+.mylist li .inner .wrap .btns .btn_more::after { display: inline-block; position: absolute; top: 0; right: 0; width: 55px; height: 55px; content: " "; background-color: #263646; }
+.mylist li .inner .wrap .btns .btn_more::after { top: 12px; right: 12px; width: 32px; height: 32px; background: url(../images/sub/icon_cartline.png) 50% 50% no-repeat; background-size: cover; }
+/* --- 아이템 컨텐츠 --- */
+.mylist li .inner .wrap .content { z-index: 22; position: relative; width: 100%; height: 120px; padding-left: 180px; }
+.mylist li .inner .wrap .content .wrap { position: relative; width: 100%; height: 100%; }
+/* --- 아이템 타이틀(주소) --- */
+.mylist li .inner .wrap .content .wrap .title { font-size: 17px; line-height: 20px;}
+.mylist li .inner .wrap .content .wrap .infos { position: absolute; bottom: 0; left: 0; font-size: 13px; color: rgba(0, 0, 0, 0.3); }
+.mylist li .inner .wrap .content .wrap .infos > .wrap { position: relative; display: inline-block; width: auto; height: auto; }
+/* --- 아이템 메타인포 --- */
+.mylist li .inner .wrap .content .wrap .infos .wrap .sort,
+.mylist li .inner .wrap .content .wrap .infos .wrap .addr,
+.mylist li .inner .wrap .content .wrap .infos .wrap .date { box-sizing: border-box; height: 26px;}
+.mylist li .inner .wrap .content .wrap .infos .wrap .sort,
+.mylist li .inner .wrap .content .wrap .infos .wrap .addr { margin-right: 40px; }
+.mylist li .inner .wrap .content .wrap .infos .wrap .sort .tit,
+.mylist li .inner .wrap .content .wrap .infos .wrap .addr .tit { position: relative; }
+.mylist li .inner .wrap .content .wrap .infos .wrap .addr .tit::after,
+.mylist li .inner .wrap .content .wrap .infos .wrap .sort .tit::after,
+.mylist li .inner .wrap .content .wrap .infos .wrap .date .tit::after {display: inline-block; width: 1px; height: 13px; margin: 0 8px 0 10px; vertical-align: middle; content: ""; background-color: rgba(0, 0, 0, .3); }
+.mylist li .inner .wrap .content .wrap .infos .wrap .sort .value { font-family: "GmarketSansBold"; }
+/* ====== [토지 분석] 목록 스타일 ====== */
+.mp_land .mylist li .inner .wrap .btns .status.complete { width: auto; background-color: #000; }
+.mp_land .mylist li.analysized .inner .wrap .btns .status { width: auto; background-color: #000; }
+.mp_land .mylist li.pro-analysized .inner .wrap .btns .status { background-color: #ffa800; font-size: 0; }
+.mp_land .mylist li.pro-analysized .inner .wrap .btns .status::after {  display: inline-block; position: absolute; top: 11px; left: 14px; width: 32px; height: 32px; content: ""; background: url(../images/sub/icon_medal.png) 50% 50% no-repeat; background-size: cover; }
+.mp_land .mylist li.pro-analysized .inner .wrap .btns .btn_more { cursor: auto; }
+.mp_land .mylist li.pro-analysized .inner .wrap .btns .btn_more:hover { transform:scale(1.0); }
+/* ====== [결제 내역] 목록 스타일 ======= */
+.mp_pay .mylist { padding-top: 0; }
+.mp_pay .mylist li .inner .wrap .btns .status { background-color: #263646;}
+.mp_pay .mylist li .inner .wrap .btns .paid { background-color: rgba(0, 0, 0, .1); }
+.mp_pay .mylist li.paid .inner .wrap .btns .paid { background-color: #7868e6; }
+/* ====== [결제 완료] ======= */
+.mp_paid .inform-box .wrap { height: auto; padding: 70px 10px; background-color: #fff;}
+.mp_paid .inform-box .wrap p { line-height: 42px; font-size: 30px;}
+.mp_paid table { width: 100%; max-width: 780px; margin: 0 auto; border: 1px solid #c4c4c4; text-align: center; font-size: 24px; }
+.mp_paid table thead { background-color: #f3f3f3;}
+.mp_paid table thead tr th { height: 50px; padding: 13px 0; border: 1px solid #c4c4c4; border-top: 0; border-left: 0; }
+.mp_paid table thead tr th:last-child { border-right: 0; }
+.mp_paid table tbody tr td { height: 126px; padding: 50px 0; border-right: 1px solid #c4c4c4; }
+.mp_paid table tbody tr td:last-child {  border-right: 0; }
+/* ====== [문의 내역] 목록 스타일 ====== */
+.mp_faq .mylist li .inner .wrap .content .wrap .forms { display: none; margin-top: 38px; padding-bottom: 55px; text-align: left;}
+/* --- [문의내역] 이미지 ---*/
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .imgs { margin-bottom: 40px; }
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .imgs img { display: inline-block; width: 150px; height: 120px; margin-right: 10px;}
+.mp_faq .mylist li .inner .wrap .content .wrap .forms form { display: block; width: 100%; height: auto; }
+.mp_faq .mylist li .inner .wrap .content .wrap .forms form textarea { display: block; width: 100%; height: auto; border: 0; }
+
+
+/* --- [문의내역] 질의폼 ---*/
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .quest { margin-bottom: 40px;}
+/* --- [문의내역] 답변폼 ---*/
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .answer { display: none; position: relative; margin-bottom: 40px; }
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .answer .ans-info { position: absolute; top: 10px; left: 10px; font-size: 13px;}
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .answer .ans-info .btn { margin-bottom: 12px; padding: 10px 15px; color: #fff;  }
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .answer .ans-info .ans-date { color: rgba(0, 0, 0, .3); }
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .answer .ans-info .ans-date .tit::after { display: inline-block; width: 1px; height: 13px; margin: 0 8px 0 10px; vertical-align: middle; content: ""; background-color: rgba(0, 0, 0, .3);}
+/* --- [문의내역] 등록날짜 ---*/
+.mp_faq .mylist li .inner .wrap .content .wrap .infos { position: absolute; bottom: 0; left: 0; }
+.mp_faq .mylist li .inner .wrap .content .wrap .infos > .wrap { position: relative; display: inline-block; width: auto; height: auto; }
+.mp_faq .mylist li .inner .wrap .content .wrap .infos .wrap .date { box-sizing: border-box; height: 26px;}
+.mp_faq .mylist li .inner .wrap .content .wrap .infos .wrap .date .tit::after {display: inline-block; width: 1px; height: 13px; margin: 0 8px 0 10px; vertical-align: middle; content: ""; background-color: rgba(0, 0, 0, .3); }
+/* --- [문의내역] 이미지 없음 스타일 ---*/
+.mp_faq .mylist li.nonImg .inner .wrap .thumbnail { display: none; }
+.mp_faq .mylist li.nonImg .inner .wrap .content { padding-left: 0; }
+.mp_faq .mylist li.nonImg .inner .wrap .content .wrap .forms .imgs { display: none; }
+/* --- [문의내역] 내용보기 스타일 ---*/
+.mp_faq .mylist li.show:hover { background-color: rgba(38, 54, 70, 0.05); transform: scale(1.0); box-shadow: 0 0 0 rgba(38, 54, 70, 0.08);  }
+.mp_faq .mylist li.show .inner .wrap .thumbnail { display: none; }
+.mp_faq .mylist li.show .inner .wrap .content { height: auto;  padding-left: 0;}
+.mp_faq .mylist li.show .inner .wrap .content .wrap .forms { display: block; }
+/* --- [문의내역] 답변완료 스타일 ---*/
+.mp_faq .mylist li.answered .wrap .btns .btn { background-color: #263646; }
+.mp_faq .mylist li.answered.show .inner .wrap .content .wrap .forms .answer { display: block; }
+/* --- [문의내역] 첨부 파일 스타일 ---*/
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap { display: block; }
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap li { background-color: transparent; padding: 0;}
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap li:hover { transform: scale(1); box-shadow: 0 0 0 transparent; }
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap .tit { height: auto; line-height: 17px; margin-bottom: 16px;}
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap .file { margin-bottom: 6px; }
+.mp_faq .mylist li .inner .wrap .content .wrap .forms .file-wrap .file a { display: inline-block; max-width: 100%; padding: 8px 14px; background-color: #fff; border-radius: 4px; font-size: 13px; color: rgba(0, 0, 0, .7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* ===========================================================
+[서브 토지등록] 토지찾기 | 매물 찾기 | 검색결과
+=========================================================== */
+/* --- 토지|매물 찾기 입력 폼 --- */
+.search-form { padding: 50px 30px; }
+.search-form .row { width: 100%; height: 50px; }
+.search-form .row fieldset { display: inline-block; width:100%; height: 100%; }
+.search-form .row fieldset label { display: inline-block; width: 135px; height: 100%; line-height: 50px; font-size: 18px; color: #fff; }
+.search-form .row fieldset .form-item { position: relative; float: left; }
+.search-form .row fieldset .input-wrap { display: inline-block; width: calc(100% - 290px);/*890px*/ height: 100%; margin: 0 10px; }
+.search-form .row fieldset .input-wrap input { width: 100%; height: 100%; padding-left: 20px; }
+.search-form .row fieldset .btn { display: inline-block; position: relative; width: 135px; height: 100%; padding: 15px 0 12px 65px; text-align: left; font-size: 18px; color: #fff; }
+.search-form .row fieldset .btn::after { display: inline-block; position: absolute; top: 18px; left: 36px; width: 14px; height: 14px; content: ''; background: url(../images/sub/icon_search_m.png) 50% 50% no-repeat; background-size: cover; }
+.search-form button { cursor: pointer;}
+/* --- 토지|매물 찾기 안내 영역 --- */
+.inform-box { margin: 20px 0 100px; }
+.inform-box .wrap { width: 100%; height: 500px; padding: 196px 20px 184px; background-color: rgba(38, 54, 70, 0.1); text-align: center; }
+.inform-box .wrap .icon_smile { display: inline-block; width: 60px; height: 60px; margin-bottom: 20px; background: url(../images/sub/icon_smile.svg); background-size: cover; }
+.inform-box .wrap p { height: 30px; font-size: 18px; }
+.inform-box .wrap p .btn {  display: inline-block; position: relative; top: 8px; width: 81px; height: 30px; padding: 10px 20px 10px 41px; font-size: 9px; color: #fff; }
+.inform-box .wrap p .btn::after { display: inline-block; position: absolute; top: 9px; left: 20px; width: 11px; height: 11px; content: ""; background: url(../images/sub/icon_search_s.png) 50% 50% no-repeat; background-size: cover; }
+/* --- 토지|매물 결과 안내 영역 --- */
+.inform-box_res { margin: 66px 0; }
+.inform-box_res .result { position: relative; padding-left: 47px; font-size: 20px; line-height: 32px; }
+.inform-box_res .result::before { position: absolute; top: -6px; left: 0;  display: inline-block; width: 32px; height: 32px; content: ""; background: url(../images/sub/icon_search_MagnifyGlass.svg) 50% 50% no-repeat;}
+.inform-box_res .result .value { margin-right: 4px; font-weight: 800; color: #7868e6; }
+/* --- 토지 등록 안내 영역 --- */
+.rg-inform .btn_rg { z-index: 99; position: absolute; top: -80px; right: 0; width: auto; height: 70px; padding: 28px 100px 24px 30px; line-height: 18px; color: #fff; }
+.rg-inform .btn_rg::before { display: inline-block; position: absolute; top: 0; right: 0; width: 70px; height: 70px; content: ""; background-color: #263646; }
+.rg-inform .btn_rg::after { display: inline-block; position: absolute; top: 19px; right: 19px; width: 32px; height: 32px; content: ""; background: url(../images/sub/icon_browser02.png) 50% 50% no-repeat; background-size: cover;}
+.rg-inform_txt { display: none; margin-bottom: 20px; font-size: 16px; line-height: 24px;}
+.rg-inform_txt .addr { display: block; font-family: "GmarketSansBold"; }
+.rg-inform { width: 100%; height: 90px; line-height:90px; color: #fff; text-align: center; margin: 30px 0 50px; overflow: show;}
+.rg-inform img { position: relative; top: 8px; margin-right: 16px; }
+/* --- 토지 등록 입력 폼 --- */
+.rg-form { width: 100%; }
+.rg-form form fieldset .form-tit { font-family: "GmarketSansBold"; font-size: 25px; margin: 50px 0 30px; }
+.rg-form form fieldset .form-tit:first-child { margin-top: 0; }
+.rg-form form fieldset .form-wrap { width: 100%; margin-bottom: 20px; padding: 30px 20px; background-color: rgba(38, 54, 70, 0.05); }
+.rg-form form fieldset .form-wrap .tit { display: block; width: 100%; margin-bottom: 20px; font-size: 18px; }
+.rg-form form fieldset .form-wrap .tit .check { float: right; position: relative; width: auto; }
+.rg-form form fieldset .form-wrap .tit .check::before { display: inline-block; position: relative; top: 3px; width: 16px; height: 16px; margin-right: 10px; content: ""; background: url(../images/sub/icon_ellipse_nv.svg) 50% 50% no-repeat;}
+/* --- 입력 박스 스타일 --- */
+.rg-form form fieldset .form-wrap .input-wrap { position: relative; height: 50px; border: 1px solid rgba(38, 54, 70, 0.5); }
+.rg-form form fieldset .form-wrap .input-wrap input { width: 100%; height: 100%; padding: 0 64px 0 20px; font-size: 14px;}
+.rg-form form fieldset .form-wrap .input-wrap input::placeholder { font-size: 14px;}
+.rg-form form fieldset .form-wrap .input-wrap .unit,
+.rg-form form fieldset .form-wrap .input-wrap .cnt { position: absolute; top: 18px; right: 18px; font-size: 13px; }
+.rg-form form fieldset .form-wrap .input-wrap .unit sup { font-size: 8px; vertical-align: top; }
+/* --- 입력 박스 레이아웃(열 정렬) --- */
+.rg-form form fieldset .col-wrap { position: relative; width: 100%; height: auto; }
+.rg-form form fieldset .col-wrap .form-wrap { display: inline-block; width: 49.1935%; }/*610px*/
+/* --- 입력[type="textarea"] 박스 스타일 --- */
+.rg-form form fieldset .form-wrap_t .input-wrap { height: 400px; max-height: 400px; overflow-y: scroll; }
+.rg-form form fieldset .form-wrap_t .input-wrap textarea { width: 100%; height: 100%; resize: none; }
+/* --- 입력[type="file"] 박스 스타일 --- */
+.rg-form form fieldset .form-wrap_f .tit { display: inline-block; width: auto; line-height: 50px; margin-bottom: 0;}
+.rg-form form fieldset .form-wrap_f .btn { float: right; width: 135px; height: 50px; line-height: 50px; background-color: #7868e6; font-size: 18px; color: #fff; text-align: center; cursor: pointer; }
+.rg-form form fieldset .form-wrap_f > input { float: right; width: 0.1px; height: 0.1px; visibility: hidden; }
+.rg-form form fieldset .form-wrap_f .input-wrap { position: relative; margin-top: 20px; }
+.rg-form form fieldset .form-wrap_f .input-wrap input { width: 100%; height: 100%; }
+.rg-form form fieldset .form-wrap_f .input-wrap .btn_del { position: absolute; top: 20px; right: 20px; width: 11px; height: 11px; background: url(../images/sub/icon_del.png) 50% 50% no-repeat; background-size: cover; cursor: pointer;}
+/* --- 입력[type="file"] 파일 스타일 --- */
+.rg-form form fieldset .form-wrap_f .file-wrap { position: relative; }
+.rg-form form fieldset .form-wrap_f .file-wrap i { display: inline-block; width: 50px; height: 50px; margin: 20px 20px 0 0; padding: 20px; color: #fff; }
+.rg-form form fieldset .form-wrap_f .file-wrap > .input-wrap { display: inline-block; width: calc(100% - 75px); height: 50px; margin-top: 20px; vertical-align: top; }
+/* --- 입력[type="file"] 버튼 스타일 --- */
+.rg-form form fieldset > .btn_del,
+.rg-form form fieldset > .btn_sm  { float: right; height: 70px; font-size: 18px; }
+.rg-form form fieldset > .btn_del { width: auto; margin-right: 40px; line-height:70px; color: rgba(0, 0, 0, .2); }
+.rg-form form fieldset > .btn_sm {width: 200px; color: #fff;}
+
+/* ====== 토지 검색 결과 ====== */
+.rg-title { width: 100%; height: 70px; margin: 50px 0 10px 0; }
+.rg-title .addr { line-height: 70px; font-size: 18px; }
+.rg-title .addr .value-wrap .value { font-family: 'GmarketSansBold'; }
+.rg-title .btn { float: right; width: 342px; height: 100%; padding: 0 30px; color: #fff; }
+
+.rg-datas { position: relative; margin-top: 20px;}
+.rg-datas .inform { position: absolute; top:40px; left:40px; width: calc(100% - 80px); height: 90px; line-height: 90px; text-align: center; }
+.rg-datas .inform span { position: relative; display: inline-block; padding-left: 47px; color: #fff; }
+.rg-datas .inform span::before { display: inline-block; width: 32px; height: 32px; margin-right: 10px; content: ""; background: url(../images/sub/icon_mapPin_wh.svg) 50% 50% no-repeat; transform: translateY(8px); }
+.rg-datas .map { width: 100%; height: 500px; }
+.rg-datas .link-wrap { width: 100%; height: 124px; text-align: center; line-height:124px; margin: 20px 0; font-size: 18px; color: #263646; }
+.rg-datas .link-wrap .btn_link { width: 400px; background-color: #c4c4c4;}
+.rg-datas .link-wrap .btn_more { width: calc(100% - 420px); background-color: #c4c4c4;}
+.rg-datas .txt-wrap { width: 100%; height: auto; padding-top: 15px; }
+.rg-datas .txt-wrap .txt { width: 100%; margin: 33px 0 83px; font-size: 18px; line-height: 28px; }
+.rg-datas .txt-wrap .img-wrap { max-width: 100%; height: auto; padding: 0 90px; text-align: center; }
+.rg-datas .txt-wrap .img-wrap img { margin: 0 auto; max-width: 100%; margin-bottom: 50px; } 
+.rg-datas .txt-wrap .img-wrap img:last-child { margin-bottom: 0 auto; } 
+/* --- 토지 등록 버튼 --- */
+.rg-btns .btn { float: right; width: auto; height: 70px; margin-top: 36px; padding: 28px 30px; color: #fff; }
+
+/* ===========================================================
+[서브 마이페이지] 토지 분석 결과
+=========================================================== */
+/* --- 토지 정보 영역 --- */
+.an-card { position: relative; padding: 70px 0; }
+.an-card .row01  { width: 100%; height: 400px; }
+/* --- 토지 썸네일 --- */
+.an-card .row01 .thumbnail { position: relative; width: 500px; height: 100%;}
+.an-card .row01 .thumbnail .btn { z-index: 21; position: absolute; top: 10px; left: 10px; width: auto; height: 55px; padding: 22px 30px;}
+.an-card .row01 .thumbnail .btn > span { z-index: 23; position: relative; color: #fff; }
+.an-card .row01 .thumbnail .status_b::after { z-index: 22; position: absolute; top: 0; left: 0; width: 100%; height: 100%; content: ""; background-color: rgba(38, 54, 70, 0.2);}
+.an-card .row01 .thumbnail .status_p { background-color: #1d242b;}
+/* --- 토지 태그 --- */
+.an-card .row01 .info {  float: right; position: relative; top: 0; right: 0;  width: 640px; height: 100%; }
+.an-card .row01 .info .info-btns { margin-bottom: 40px; }
+.an-card .row01 .info .info-btns .btn { padding: 21px 30px; height: 55px; vertical-align: top; background-color: #7868e6; color: #fff; }
+.an-card .row01 .info .info-btns .btn_pro { position: relative; padding-right: 85px; margin-right: 25px; cursor: pointer; }
+.an-card .row01 .info .info-btns .btn_pro::before { position: absolute; top: 0; right: 0; width: 55px; height: 100%; content:""; background: #263646; }
+.an-card .row01 .info .info-btns .btn_pro::after { position: absolute; top: 11px; right:12px; width: 32px; height: 32px; content:""; background: url(../images/sub/icon_cartline.png) 50% 50% no-repeat; background-size: cover; }
+.an-card .row01 .info .info-btns .status { float: right; line-height: 55px; color: #263646;}
+.an-card .row01 .info .info-btns .status::before { display: inline-block; width: 15px; height: 15px; margin-right: 10px; content:""; background: url(../images/sub/icon_ellipse.png) 50% 50% no-repeat; transform: translateY(3px); }
+.an-card .row01 .info .info-btns .icon_pro { position: relative; display: inline-block; margin-right: 10px; width: 55px; height: 55px; background-color: #ffa800; }
+.an-card .row01 .info .info-btns .icon_pro::before { display: inline-block; position: absolute; top: 11px; left: 11px; width: 32px; height: 32px; content:""; background: url(../images/sub/icon_medal.png) 50% 50% no-repeat; }
+/* --- 토지 타이틀 --- */
+.an-card .row01 .info .info-tit { font-size: 25px; line-height: 30px; }
+/* --- 토지 정보 영역 --- */
+.an-card .row01 .info .info-meta { position: absolute; bottom: 0; left: 0;  }
+.an-card .row01 .info .info-meta li { position: relative; width: 100%; margin-bottom: 8px; }
+.an-card .row01 .info .info-meta li:last-child { margin-bottom: 0; }
+.an-card .row01 .info .info-meta li .wrap { display: inline-block; position: relative; width: auto; height: auto; }
+.an-card .row01 .info .info-meta li .wrap .tit { position: relative; display: inline-block; width: 122px; padding-left: 42px; line-height: 24px; vertical-align: top; font-family: 'GmarketSansBold'; background: url(../images/sub/icon_info_navArrow.svg) 0 50% no-repeat;}
+.an-card .row01 .info .info-meta li .wrap .icon_corner { background: url(../images/sub/icon_info_cornersOut.svg) 0 50% no-repeat; }
+.an-card .row01 .info .info-meta li .wrap .icon_tag { background: url(../images/sub/icon_info_tag.svg) 0 50% no-repeat; }
+.an-card .row01 .info .info-meta li .wrap .icon_chat { background: url(../images/sub/icon_info_chatCircle.svg) 0 50% no-repeat; }
+.an-card .row01 .info .info-meta li .wrap .icon_calendar { background: url(../images/sub/icon_info_calendar.svg) 0 50% no-repeat;}
+.an-card .row01 .info .info-meta li .wrap .value { display: inline-block; width: auto; line-height: 24px; }
+.an-card .row01 .info .info-meta li .wrap .value .unit sup { font-size: 5px; vertical-align: top}
+/* --- 이미지 슬라이드 영역 --- */
+.an-card .row02 { margin-top: 66px; white-space: nowrap; }
+.an-card .row02 .imgs { overflow-x: scroll; overflow-y: hidden; }
+.an-card .row02 .imgs .slide-wrap { display: inline-block; width: auto; white-space: nowrap; }
+.an-card .row02 .imgs .slide-wrap .slide { position: relative; width: 300px; height: 240px; margin-right: 20px; }
+.an-card .row02 .imgs .slide-wrap .slide:last-child { margin-right: 0; }
+/* --- 확대보기 --- */
+.an-card .zoom { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.45); cursor: pointer; text-align: center;}
+.an-card .row01 .thumbnail:hover .zoom { display: block; }
+.an-card .row02 .imgs .slide-wrap .slide:hover .zoom { display: block; }
+.an-card .zoom span { display: block; width: 100%;  position: relative; top: calc(50% - 15px); left: 0; color: #fff; text-align: center;}
+.an-card .zoom span::before { display: inline-block; width: 20px; height: 20px; margin-right: 15px; content: ""; background: url(../images/sub/icon_zoomGlass.png) 50% 50% no-repeat; transform: translateY(3px); }
+/* --- 안내 영역 --- */
+.an-inform { padding: 70px 10px; margin-bottom: 30px; text-align: center; }
+.an-inform .mobile{ display: none; }
+.an-inform .icon { display: inline-block; width: 60px; height: 60px; margin-bottom: 50px; background: url(../images/sub/icon_smile.svg) 50% 50% no-repeat; }
+.an-inform_p { height: 90px; line-height: 90px; text-align: center; color: #fff; }
+.an-inform_p span::before { display: inline-block; width: 24px; height: 24px; margin-right: 16px; vertical-align: middle; content: ""; background: url(../images/sub/icon_smile_wh.png) 50% 50% no-repeat; background-size: cover; }
+/* --- 차트 안내 영역 --- */
+.an-charts { margin-bottom: 30px; }
+.an-charts .inform { width: 100%; height: auto; padding: 2.9758% 4.0322%; color: #fff; } /*padding: 29px 50px;*/
+.an-charts .inform .tit { line-height: 32px; }
+.an-charts .inform .tit::before { display: inline-block; position: relative; top: 6px; width: 24px; height: 24px; margin-right: 16px; content: ""; background: url(../images/sub/icon_smile_wh.png) 50% 50% no-repeat; background-size: cover; }
+.an-charts .inform .wrap span { display: inline-block; height: 32px; padding: 10px 20px; background-color: #1c2937; }
+.an-charts .inform .wrap span::before { display: inline-block; width: 12px; height: 12px; margin-right: 10px; content: ""; background-color: #7868e6; border-radius: 3px; }
+.an-charts .inform .wrap span:nth-child(2)::before { background-color: #23dc7a; }
+.an-charts .inform .wrap span:nth-child(3)::before { background-color: #ff5555; }
+/* --- 차트 영역 --- */
+.an-charts .charts { margin-top: 20px; }
+.an-charts .charts .chart { height: 700px; }
+.an-charts .charts .chart01 { width: 59.6744%; } /* 740px */
+.an-charts .charts .chart02 { width: 38.7096%; } /* 480px*/
+.an-charts .charts .chart01 .inner { height: 100%; padding: 5.4054% 5.4054% 6.7567%; } /* padding: 40px 40px 50px */
+.an-charts .charts .chart02 .inner { height: 100%; padding: 8.3333% 8.3333% 10.4166%; }
+.an-charts .charts .chart .inner .title { width: 100%; padding: 22px 0 30px; text-align: center; color: #fff; font-size: 20px; }
+.an-charts .charts .chart .inner .title::before { display: inline-block; position: relative; top: 10px; width: 32px; height: 32px; margin-right: 20px; content: ""; background: url(../images/sub/icon_chart_tag.png) 50% 50% no-repeat; background-size: cover; }
+.an-charts .charts .chart02 .inner .title::before { background: url(../images/sub/icon_chart_compass.png) 50% 50% no-repeat;  background-size: cover; }
+.an-charts .charts .chart .inner .canvas { width: 100%; margin-top: 30px; overflow: hidden; }
+.an-charts .charts .chart01 .inner .canvas { height: 490px; }
+.an-charts .charts .chart02 .inner .canvas { height: 400px; }
+.an-charts .charts .chart02 .inner .canvas canvas { position: relative; top: 0; left: -5px; width: calc(100% + 5px); }
+/* --- 차트02 라벨 영역 --- */
+.an-charts .charts .chart02 .inner .labels { width: 100%; height: 70px; }
+.an-charts .charts .chart02 .inner .label { position: relative;  float: left;  width: 33.3333%; padding-right: 5px; color: #fff; }
+.an-charts .charts .chart02 .inner .label .top { height: 24px; white-space: nowrap;}
+.an-charts .charts .chart02 .inner .label .top span { display: inline-block; width: 48.0468%; text-align: center; padding: 5px 0; font-size: 13px;}
+.an-charts .charts .chart02 .inner .label .btm { width: 100%; height: auto; margin-top: 6px; }
+.an-charts .charts .chart02 .inner .label .btm .tit { display: block; width: 100%; padding-bottom: 17px; text-align: center; background-color: #7868e6; cursor: pointer; }
+.an-charts .charts .chart02 .inner .label:nth-child(2) .btm .tit { background-color: #23dc7a;}
+.an-charts .charts .chart02 .inner .label:nth-child(3) .btm .tit { background-color: #ff5555;}
+.an-charts .charts .chart02 .inner .label .btm .tit::before { display: inline-block; position: relative; top: 10px; width: 32px; height: 32px; margin-right: 10px; content: ""; background: url(../images/sub/icon_chart_circles.png) 50% 50% no-repeat; background-size: cover;}
+.an-charts .charts .chart02 .inner .label:nth-child(2) .btm .tit::before { background: url(../images/sub/icon_chart_circleThree.png) 50% 50% no-repeat; background-size: cover; }
+.an-charts .charts .chart02 .inner .label:nth-child(3) .btm .tit::before { background: url(../images/sub/icon_chart_leaf.png) 50% 50% no-repeat; background-size: cover; }
+/* --- 차트02 라벨 설명창 --- */
+.an-charts .charts .chart02 .inner .label .btm .meta { display: none; position: absolute; top: calc(100% + 10px); width: auto; height: auto; padding: 5px 17px; background-color: #000; white-space: nowrap;}
+.an-charts .charts .chart02 .inner .label:nth-child(1) .btm .meta { left: 0; }
+.an-charts .charts .chart02 .inner .label:nth-child(2) .btm .meta { left: -50%; }
+.an-charts .charts .chart02 .inner .label:nth-child(3) .btm .meta { right: 0; }
+.an-charts .charts .chart02 .inner .label .btm .meta strong {font-weight: 600; color: #7868e6;}
+.an-charts .charts .chart02 .inner .label:nth-child(2) .btm .meta strong { color: #23dc7a;}
+.an-charts .charts .chart02 .inner .label:nth-child(3) .btm .meta strong { color: #ff5555;}
+.an-charts .charts .chart02 .inner .label:hover .btm .meta { display: inline-block; z-index: 99;}
+
+/* ===========================================================
+[서브페이지 서비스안내] 서비스 안내 박스 | 팝업 서비스
+=========================================================== */
+.service-box { width: 100%; height: auto; }
+.service-box .inner .title-wrap { position: relative; width: 100%; height: auto; padding: 90px 0 110px 10px;}
+.service-box .inner .title-wrap .title { font-size: 30px; margin-bottom: 56px;}
+.service-box .inner .title-wrap .desc { display: inline-block; width: calc(100% - 330px); font-size: 20px; word-break: keep-all; }
+.service-box .inner .title-wrap .desc span { display: inline-block; width: 100%; margin-bottom: 16px; line-height: 28px; word-break: keep-all }
+.service-box .inner .title-wrap .desc span:last-child { margin-bottom: 0; }
+.service-box .inner .title-wrap .img_area { position: absolute; top: 25px; right: 25px; width: 300px; height: 300px;}
+.service-box .inner .title-wrap .img_area img { width: 100%; height: auto; }
+/* --- 서브페이지 서비스 안내 --- */
+.sub_service .box-wrap .top-box { width: 100%; height: auto; padding: 180px 0 180px 58px; background: url(../images/sub/img_service_bg.png) 50% 50% no-repeat; background-size: cover; text-align: left;}
+.sub_service .box-wrap .top-box .title { margin-bottom: 26px; font-size: 48px; line-height: 56px; color: #263646; word-break: keep-all; }
+.sub_service .box-wrap .top-box .desc { font-size: 26px; line-height: 36px; color: rgba(0, 0, 0, .5); word-break: keep-all; }
+.sub_service .box-wrap .text-box { width: 100%; height: auto; padding: 75px 0 40px; text-align: center; border-bottom: 1px solid #c4c4c4; }
+.sub_service .box-wrap .text-box:last-child { padding-bottom: 0; border-bottom: 0;}
+.sub_service .box-wrap .text-box .title { font-size: 30px; line-height: 38px; font-weight: 800; margin-bottom: 30px; color: #263646; word-break: keep-all; }
+.sub_service .box-wrap .text-box .desc { font-size: 26px; line-height: 30px; color: rgba(0, 0, 0, .5); word-break: keep-all; }
+.sub_service .box-wrap .service-box { padding: 0 40px; margin-bottom: 0; border-bottom: 1px solid #c4c4c4; }
+
+/* ===========================================================
+[서브페이지 서비스결제]
+=========================================================== */
+/* --- 전문분석 대행  --- */
+.sub_pay .container .inner .form  {  width: 100%; padding: 0 10px 0 14px; }
+.sub_pay .container .inner .form .tit { width: 100%; margin-bottom: 35px; font-family: "GmarketSansBold"; font-size: 20px; color: #263646; }
+/* --- 토지 선택 텍스트 입력 폼 --- */
+.sub_pay .container .inner .form label { display: inline-block; width: 100%; margin-bottom: 20px; font-size: 20px; }
+.sub_pay .container .inner .form input { display: block; width: 100%; height: 50px; padding-left: 20px; border: 1px solid rgba(38, 54, 70, 0.5); border-radius: 8px; }
+.sub_pay .container .inner .form input::placeholder { color: rgba(0, 0, 0, 0.3); }
+.sub_pay .container .inner .form .info { text-align: left; margin-top: 20px; }
+.sub_pay .container .inner .form .info:first-child { margin-top: 30px; }
+/* --- 토지 선택 목록 --- */
+.sub_pay .container .inner .form .select ~ input { position: absolute; z-index: -1; width: 1px; height: 1px; opacity: 0; }
+.sub_pay .container .inner .form .select { width: 100%; height: 220px; overflow-y: scroll; overflow-x: hidden;}
+.sub_pay .container .inner .form .select::-webkit-scrollbar { width: 10px; }
+.sub_pay .container .inner .form .select::-webkit-scrollbar-thumb { background-color: #7868e6; border-radius: 100px; }
+.sub_pay .container .inner .form .select::-webkit-scrollbar-track { background-color: #f6f3ff; border-radius: 100px; }
+.sub_pay .container .inner .form .select .option { display: inline-block; width: auto; height: auto; padding: 15px 20px; margin: 5px; border-radius: 100px; background-color: #f6f4ff; color: #263646; cursor: pointer; }
+.sub_pay .container .inner .form .select .option:hover { background-color: #fff; box-shadow: 0 0 12px rgba(120, 104, 230, .4); } 
+.sub_pay .container .inner .form .select .option.selected { background-color: #7868e6; font-family: "GmarketSansBold"; color: #fff;} 
+.sub_pay .container .inner .form .select .option.selected:hover { background-color: #7868e6; box-shadow: 0 0 0 transparent;} 
+.sub_pay .container .inner .form .btn-wrap { width: 100%; margin-top: 25px; text-align: right; }
+.sub_pay .container .inner .form .btn-wrap .btn_sm { padding: 17px 25px; font-weight: 800; color: #fff; margin-bottom: 16px; }
+/* --- 토지 없음 안내 --- */
+.sub_pay .container .inner .inform-box { padding: 63px 0; text-align: center;}
+.sub_pay .container .inner .inform-box .icon { display: inline-block; margin-bottom: 36px; }
+.sub_pay .container .inner .inform-box .txt { font-size: 18px; line-height: 22px; color: #263646; }
+.sub_pay .container .inner .inform-box .txt a { font-family: "GmarketSansBold"; color: #7868e6; }
+/* --- ellipse 안내 --- */
+.sub_pay .container .inner .warn { margin-top: 55px; text-align: right; font-size: 15px; line-height: 18px; color: #263646; word-break: keep-all; }
+.sub_pay .container .inner .warn .icon { display: inline-block; width: 15px; height: 15px; margin-right: 10px; background: url(../images/sub/icon_ellipse_nv.svg); transform: translateY(2px); }
+/* ===========================================================
+[서브페이지 오시는 길] 
+=========================================================== */
+.sub.sub_map #main .main-content > .container > .inner { padding-top: 0; }
+.sub_map .cont-wrap { padding: 60px 0; border-top: 1px solid #c4c4c4; }
+.sub_map .cont-wrap .row { width: 100%; font-size: 30px; margin-bottom: 20px;}
+.sub_map .cont-wrap .row:first-child { margin-bottom: 90px;}
+.sub_map .cont-wrap .row .tit { display: inline-block; width: 160px; font-weight: 800; }
+.sub_map .cont-wrap .row .cont { font-size: 26px; font-weight: 100; }
+.sub_map .map { display: block; width: 100%;  } 
+.sub_map .map > div { display: block; width: 100%; margin: 0 auto; } 
+.sub_map .inform { margin-top: 85px; padding-top: 46px; border-top: 1px solid rgba(0,0,0,0.5); text-align: center; font-size: 30px;}
+.sub_map .inform  p:first-child { margin-bottom: 15px; font-weight: 800;}
+/* ===========================================================
+[페이지네이션]
+=========================================================== */
+.pagination { text-align: center; }
+.pagination .btn { display: inline-block; vertical-align: top;}
+.pagination .btn_prev,
+.pagination .btn_next { position: relative; top: 10px; width: 10px; height: 10px; background-color: transparent; border: 2px solid #c4cdd5; transform: rotate(45deg);}
+.pagination .btn_prev { border-right: 0; border-top: 0;}
+.pagination .btn_next { border-left: 0; border-bottom: 0;}
+.pagination .wrap { display: inline-block; margin: 0 24px;}
+.pagination .wrap .page_num {  width: 32px; height: 32px; margin: 0 4px; border: 1px solid #dfe3eb; font-size: 12px; line-height: 32px; background-color: #fff; font-family: "GmarketSansBold"; color: #212b36; }
+.pagination .page_num.on { background-color: #7868e6; color: #fff; }
+
+/* ===========================================================
+[팝업]
+=========================================================== */
+.popup { display: none; z-index: 90; position: absolute; top: 0; left: 0; width: 100%; height:100%; }
+.popup.on { display: block; }
+.popup .dim { z-index: 91 ;position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.9);}
+.popup .container { z-index: 92; position: relative; width: 100%; max-width: 1240px; height: 100%; margin: 0 auto; }
+.popup .container .inner { position: relative; width: 100%; height: 100%; }
+/* .popup .container .inner .btn_close { position: absolute; z-index: 99; top: 30px; right: 50px; width: 20px; height: 20px; background: url(../images/sub/icon_popup_close.png) 50% 50% no-repeat; cursor: pointer; } */
+.popup .container .btn_close { position: absolute; z-index: 99; top: 30px; right: 50px; width: 20px; height: 20px; background: url(../images/sub/icon_popup_close.svg) 50% 50% no-repeat; cursor: pointer; }
+/* ====== [팝업 등록 서비스] ====== */
+.popup-service { padding: 40px 0; overflow: scroll; }
+.popup-service .container { height: auto;  padding: 10px 0; background-color: #fff; box-shadow: 0 0px 8px rgba(120, 104, 230, .5);  }
+.popup-service .container .inner { height: 100%; padding: 25px; }
+.popup-service .container .inner .pr-card-wrap { width: 100%; height: auto; }
+.popup-service .container .inner .pr-card-wrap .pr-card { position: relative; float: left; width: 23.5294%;/*280/1190*/ height: 360px; margin-right: 23.333px; background-color: #f6f4ff; padding: 30px; transition: .2s ease-in-out; white-space: nowrap; }
+.popup-service .container .inner .pr-card-wrap .pr-card:last-child { margin-right: 0;}
+.popup-service .container .inner .pr-card-wrap .pr-card:hover { background-color: #fff; box-shadow: 0 10px 12px rgba(120, 104, 230, .4);}
+.popup-service .container .inner .pr-card-wrap .pr-card .top { z-index: 93; padding: 3px 0 30px; border-bottom: 2px solid rgba(120, 104, 230, .2); }
+.popup-service .container .inner .pr-card-wrap .pr-card .top .tit { font-family: "GmarketSansBold"; font-size: 15px; color: #1e1f25; }
+.popup-service .container .inner .pr-card-wrap .pr-card .top .price { font-size: 16px; }
+.popup-service .container .inner .pr-card-wrap .pr-card .top .tip-icon { display: inline-block; width: 11px; height: 11px; margin-left: 2px; background:url(../images/sub/icon_ellipse_tip.svg); cursor: pointer; }
+.popup-service .container .inner .pr-card-wrap .pr-card .top .tip { z-index: 99; position: absolute; display: inline-block; top: 16px; left: 5px; width: calc(100% - 10px); height: 23px; padding: 5px 0; background-color: #000; border-radius: 4px; text-align: center; font-size: 13px; color: #fff; opacity: 0;  }
+.popup-service .container .inner .pr-card-wrap .pr-card .top .tip-icon:hover ~ .tip { opacity: .8; }
+.popup-service .container .inner .pr-card-wrap .pr-card .info-wrap { width: 100%; height:auto; padding: 25px 0; color: #1e1f25; }
+.popup-service .container .inner .pr-card-wrap .pr-card .info-wrap .info { position: relative; padding-left: 22px; margin-bottom: 17px; font-size: 13px; opacity: 0.3; }
+.popup-service .container .inner .pr-card-wrap .pr-card .info-wrap .info::before { display: inline-block; width: 15px; height: 15px; position: absolute; top: 0; left: 0; content:""; background: url('../images/sub/icon_service_check02.png'); }
+.popup-service .container .inner .pr-card-wrap .pr-card .info-wrap .info.on { opacity: 1; }
+.popup-service .container .inner .pr-card-wrap .pr-card .info-wrap .info.on::before { background: url(../images/sub/icon_service_check.png); }
+.popup-service .container .inner .pr-card-wrap .pr-card .btn_pay { display:block; width: 100%; height: 50px; line-height: 50px; text-align: center; font-size: 15px; color: #fff; transition: .2s; }
+.popup-service .container .inner .pr-card-wrap .pr-card .btn_pay:hover { opacity: 0.7; }
+.popup-service .container .btn_close { top: 23px; right: 26px; }
+/*소규모 팝업*/
+.popup-service.small .container { width: 100%; max-width: 640px; margin: 0 auto; height: auto; }
+.popup-service.small .container .inner .pr-card-wrap .pr-card { width: 47.4576%;}
+.popup-service.small .service-box .inner .title-wrap .title { text-align: center;}
+.popup-service.small .service-box .inner .title-wrap .desc { width: 100%; text-align: center; }
+@media all and (max-width: 674px) {
+    .popup-service.small .container .inner .pr-card-wrap .pr-card { width: 100%; }
+}
+
+/* --- ellipse 안내 --- */
+.popup-service .container .inner .warn { margin-top: 55px; text-align: right; font-size: 15px; color: #263646; word-break: keep-all; word-break: keep-all }
+.popup-service .container .inner .warn .icon { display: inline-block; width: 15px; height: 15px; margin-right: 10px; background: url(../images/sub/icon_ellipse_nv.svg); transform: translateY(2px); }
+
+/* ====== [팝업 토지이용열람계획] ====== */
+.popup-inform { overflow: scroll; padding: 40px 0;}
+.popup-inform .container { height: auto;  padding: 10px 0; background-color: #fff; box-shadow: 0 0px 8px rgba(0,0,0,.2); }
+.popup-inform .container .inner { position: relative; height: 100%; padding: 56px 40px 80px; }
+.popup-inform .container .inner .title-wrap { width: 100%; padding-bottom: 30px; margin-bottom: 70px; border-bottom: 1px solid #263646;}
+.popup-inform .container .inner .title-wrap .title { font-size: 30px; font-weight: 800; margin-bottom: 36px; }
+.popup-inform .container .inner .title-wrap .desc { font-size: 20px; line-height: 30px; }
+.popup-inform .container .inner .inform-wrap { width: 100%; height: auto; margin-bottom: 120px;} 
+.popup-inform .container .inner .inform-wrap:last-child { margin-bottom: 0;} 
+.popup-inform .container .inner .inform-wrap h3 { font-size: 30px;}
+.popup-inform .container .inner .inform-wrap h3 i {  display: inline-block; width: 60px; height: 60px; margin-right: 26px; border-radius: 50%; padding: 22px 0; background-color: #7868e6; text-align: center; font-size: 20px; color: #fff;}
+.popup-inform .container .inner .inform-wrap .wrap { padding: 38px 0 0 86px;}
+.popup-inform .container .inner .inform-wrap .wrap .txt { font-size: 20px; line-height: 32px; }
+.popup-inform .container .inner .inform-wrap .wrap img { max-width: 54.7008%;}
+.popup-inform .container .inner .inform-wrap.img-over { overflow: show; }
+.popup-inform .container .inner .inform-wrap.img-over .wrap { position: relative; padding-bottom: 380px;}
+.popup-inform .container .inner .inform-wrap.img-over .wrap img { position: absolute; top: -380px; right: 0;}
+/* ====== [팝업 확대보기] ====== */
+.popup-zoom { padding: 5px 0; }
+.popup-zoom .container { max-width: 100%; }
+.popup-zoom .container .inner { position: relative; width: 100%; height: 100%; }
+.popup-zoom .container .inner .slide-container { z-index: 91; position: relative; width: 100%; height: 100%; }
+.popup-zoom .container .inner .slide-container .slide-wrap { position: relative; top: 0; left: 0; width: auto; height: auto; white-space: nowrap; }
+.popup-zoom .container .inner .slide-container .slide-wrap .slide { position: relative; display: inline-block; width: 100%; height: auto; padding: 80px 120px; overflow-y: scroll;}
+.popup-zoom .container .inner .slide-container .slide-wrap .slide img { display: block; width: 100%; height:auto; max-width: 100%; margin: 0 auto; }
+.popup-zoom .container .inner .slide-container .slide-wrap .slide .slide-num { position: relative; bottom: -30px; left: 0; padding: 10px 20px; font-size: 13px; color: #fff; }
+.popup-zoom .container .inner .btn_prev, 
+.popup-zoom .container .inner .btn_next { z-index: 92; position: absolute; top: calc(50% - 35px); width: 120px; height: 80px; padding: 40px 30px; background-color: transparent; }
+.popup-zoom .container .inner .btn_prev { left: 0; background: url(../images/sub/icon_zoom_vector.png) 50% 50% no-repeat; } 
+.popup-zoom .container .inner .btn_next { right: 0; background: url(../images/sub/icon_zoom_vector02.png) 50% 50% no-repeat; }
+/* ====== [팝업 계정 체크] ====== */
+.popup-acc .dim { background-color: transparent; }
+.popup-acc .container .inner .box { position: relative; display: inline-block; width: 768px; height: auto; position: relative; top: calc(50% - 247px); left: calc(50% - 393px); margin: 0 auto; padding: 60px; border-radius: 20px; background-color: #fff; box-shadow: 0 0 8px rgba(0,0,0,.25);}
+.popup-acc .container .inner .box .tit { font-size: 24px; margin-bottom: 68px; }
+.popup-acc .container .inner .box .txt { display: inline-block; width: 100%; padding: 66px 0; background-color: rgba(38, 54, 70, 0.1); font-size: 18px; text-align: center; color: #263646; overflow: show;}
+.popup-acc .container .inner .box .hr { display: inline-block; width: 100%; height: 1px; margin: 30px 0; background-color: #c4c4c4;}
+.popup-acc .container .inner .box .btn_sm, 
+.popup-acc .container .inner .box .btn_accept { display: inline-block; width: 100%; height: 70px; line-height: 70px; text-align: center; color: #fff;}
+.popup-acc .container .inner .box .btn_close { top: 60px; right: 60px; }
+/* --- 비밀번호 변경 --- */
+.popup-acc .container .inner .box .signup form { position: relative; }
+.popup-acc .container .inner .box .btn_cancel { display: inline-block; width: auto; height: auto; position: absolute; bottom: -20px; right: 2px; margin-bottom: 0;  background-color: transparent; color: rgba(0,0,0,.5); }
+
+
+
+
+/* --- 아이디 체크  --- */
+@keyframes loadingSpinner {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="토지 중개 플랫폼 랜드마킹입니다.">
+    <meta name="keywords" content="랜드마킹, 토지중개, 토지분석">
+    <meta name="author" content="랜드마킹">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="url">
+    <meta property="og:image" content="../images/common/icon_logo01.png">
+    <meta property="og:title" content="랜드마킹">   
+    <meta property="og:site_name" content="랜드마킹">   
+    <meta property="og:description" content="토지 중개 플랫폼 랜드마킹"> 
+    <meta property="og:locale" content="ko_KR"> 
+    <title>랜드마킹</title>
+    <!-- FAVICON-->
+
+    <!-- STYLE LINK-->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css" >
+
+    <!-- SCRIPT -->
+    <script src="../js/lib/jquery-3.6.0.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../js/lib/IE9.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <script src="../js/lib/html5shiv.min.js"></script>    
+    <script src="../js/lib/jqPIE.js"></script>    
+    <script src="../js/lib/PIE.js"></script> 
+    <![endif]-->
+</head>
+<body>
+    <div id="skipNav">
+        <a href="#hSection01">마스터 추천 토지 가기</a>
+        <a href="#hSection02">홈 메뉴 가기</a>
+        <a href="#hSection03">등록된 토지 가기</a>
+    </div>
+    <div class="popup popup-inform" data-popup="inform_analysis">
+        <div class="dim"></div>
+        <div class="container bx-round_m">
+            <div class="inner">
+                <div class="title-wrap">
+                    <h2 class="title">토지 무료 분석</h2>
+                    <p class="desc">
+                        등록된 토지를 중심으로 전문적인 분석을 받고 싶은 분들에게
+                        <br>
+                        국내 최고의 토지 전문가들이 1:1 상담을 해드립니다.
+                    </p>
+                </div>
+                <div class="inform-wrap">
+                    <h3><i>1</i>내가 등록한 토지 확인</h3>
+                    <div class="wrap clear">
+                        <p class="txt">
+                            -회원님이 등록한 내용은 전문 컨설턴트 확인
+                            <br>
+                            -가치 분석, 개발측 분석 진행
+                            <br>
+                            -토지 컨설턴트 의견 반영
+                        </p>
+                    </div>
+                </div>
+                <div class="inform-wrap img-over">
+                    <h3><i>2</i>전문 분석 요청</h3>
+                    <div class="wrap">
+                        <p class="txt">
+                            -세분화된 전문 분석 요청
+                            <br>
+                            -토지에 대한 가치를 세분화된 내용을 
+                            <br>
+                            분석하고 방문, 전화 상담의견을 전달
+                        </p>
+                        <img src="../images/sub/img_inform_an01.png" alt="토지 분석 이미지">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn_close"></button>
+        </div>
+    </div>
+    <div class="popup popup-inform" data-popup="inform_register">
+        <div class="dim"></div>
+        <div class="container bx-round_m">
+            <div class="inner">
+                <div class="title-wrap">
+                    <h2 class="title">토지 직접 등록</h2>
+                    <p class="desc">
+                        분석 받고 싶은 토지를
+                        <br>
+                        자세한 분석을 받기 위한 방법을 모르는 분들에게 최적의 콘텐츠로 등록해 드립니다.
+                    </p>
+                </div>
+                <div class="inform-wrap">
+                    <h3><i>1</i>메인 페이지 내 주소 입력</h3>
+                    <div class="wrap clear">
+                        <p class="txt l-fleft">
+                            -회원 가입 및 로그인
+                            <br>
+                            -메인 페이지 내 원하는 주소 입력
+                            <br>
+                            -입력된 주소를 확인하고 검색 버튼 클릭
+                        </p>
+                        <img class="l-fright" src="../images/sub/img_inform_rg01.png" alt="토지 등록 이미지">
+                    </div>
+                </div>
+                <div class="inform-wrap">
+                    <h3><i>2</i>등록 토지 위치 확인</h3>
+                    <div class="wrap clear">
+                        <p class="txt l-fleft">
+                        </p>
+                        <img class="l-fright" src="../images/sub/img_inform_rg02.png" alt="토지 등록 이미지">
+                    </div>
+                </div>
+                <div class="inform-wrap">
+                    <h3><i>3</i>등록 토지 작성</h3>
+                    <div class="wrap clear">
+                        <p class="txt l-fleft">
+                            - 등록자 개인정보 입력
+                            <br>
+                            - 등록 토지정보 입력
+                            <br>
+                            - 참고 이미지 등록
+                        </p>
+                        <img class="l-fright" src="../images/sub/img_inform_rg03.png" alt="필지정보이미지">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn_close"></button>
+        </div>
+    </div>
+    <div class="popup popup-service" data-popup="service_an01">
+        <div class="dim"></div>
+        <div class="container service-box bx-round_m">
+            <div class="inner">
+                <div class="title-wrap">
+                    <h2 class="title">전문 분석 대행</h2>
+                    <p class="desc">
+                        등록된 토지를 중심으로 전문적인 분석을 받고 싶은 분들에게
+                        <br>
+                        국내 최고의 토지 전문가들이 1:1 상담을 해 드립니다.
+                    </p>
+                    <div class="img_area">
+                        <img src="../images/sub/img_service04.png" alt="전문분석대행">
+                    </div>
+                </div>
+                <section class="pr-card-wrap clear">
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">전화 분석</h3>
+                            <span class="price l-fright">30,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info">주소지 만으로 토지 등록</li>
+                            <li class="info">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info on">전화를 통한 토지 전문 분석</li>
+                            <li class="info">방문을 통한 심층 상담</li>
+                            <li class="info">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="../html/sub_pay_an01.html" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">방문 분석</h3>
+                            <i class="tip-icon"></i>
+                            <span class="tip">방문 분석시 최고의 분석 서비스를 제공합니다.</span>
+                            <span class="price l-fright">200,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info">주소지 만으로 토지 등록</li>
+                            <li class="info">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info">전화를 통한 토지 전문 분석</li>
+                            <li class="info on">방문을 통한 심층 상담</li>
+                            <li class="info on">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="../html/sub_pay_an01.html" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">등록 + 전화 분석</h3>
+                            <i class="tip-icon"></i>                            
+                            <span class="tip">전화 분석시 최고의 분석 서비스를 제공합니다.</span>
+                            <span class="price l-fright">160,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info on">주소지 만으로 토지 등록</li>
+                            <li class="info on">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info on">전화를 통한 토지 전문 분석</li>
+                            <li class="info">방문을 통한 심층 상담</li>
+                            <li class="info">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="../html/sub_pay_rg02.html" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">등록 + 방문 분석</h3>
+                            <i class="tip-icon"></i>
+                            <span class="tip">방문 분석시 최고의 분석 서비스를 제공합니다.</span>
+                            <span class="price l-fright">160,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info on">주소지 만으로 토지 등록</li>
+                            <li class="info on">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info on">전화를 통한 토지 전문 분석</li>
+                            <li class="info on">방문을 통한 심층 상담</li>
+                            <li class="info on">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="../html/sub_pay_rg03.html" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                </section>
+                <p class="warn">
+                    <i class="icon"></i>
+                    등록 또는 분석이 불가능하다고 판단되는 경우, 개별 안내 후 환불 처리 됩니다.
+                </p>
+            </div>
+            <button type="button" class="btn btn_close"></button>
+        </div>
+    </div>
+    <div class="popup popup-service" data-popup="service_rg01">
+        <div class="dim"></div>
+        <div class="container service-box bx-round_m">
+            <div class="inner">
+                <div class="title-wrap">
+                    <h2 class="title">등록 대행</h2>
+                    <p class="desc">
+                        분석 받고 싶은 토지를
+                        <br>
+                        자세한 분석을 받기 위한 방법을 모르는 분들에게 최적의 콘텐츠로 등록해 드립니다.
+                    </p>
+                    <div class="img_area">
+                        <img src="../images/sub/img_service02.png" alt="전문분석대행">
+                    </div>
+                </div>
+                <section class="pr-card-wrap clear">
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">등록</h3>
+                            <span class="price l-fright">150,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info on">주소지만으로 토지 등록</li>
+                            <li class="info on">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info">전화를 통한 토지 전문 분석</li>
+                            <li class="info">방문을 통한 심층 상담</li>
+                            <li class="info">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="../html/sub_pay_rg01.html" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">등록 + 전화 분석</h3>
+                            <i class="tip-icon"></i>
+                            <span class="tip">전화 분석시 최고의 분석 서비스를 제공합니다.</span>
+                            <span class="price l-fright">160,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info on">주소지만으로 토지 등록</li>
+                            <li class="info on">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info on">전화를 통한 토지 전문 분석</li>
+                            <li class="info">방문을 통한 심층 상담</li>
+                            <li class="info">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="../html/sub_pay_rg02.html" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                    <article class="pr-card bx-round_s">
+                        <div class="top clear">
+                            <h3 class="tit l-fleft">기본 + 방문 분석</h3>
+                            <i class="tip-icon"></i>
+                            <span class="tip">방문 분석시 최고의 분석 서비스를 제공합니다.</span>
+                            <span class="price l-fright">320,000원</span>
+                        </div>
+                        <ul class="info-wrap">
+                            <li class="info on">주소지만으로 토지 등록</li>
+                            <li class="info on">직접 등록 시 놓칠 수 있는 정보 등록</li>
+                            <li class="info on">전화를 통한 토지 전문 분석</li>
+                            <li class="info on">방문을 통한 심층 상담</li>
+                            <li class="info on">현장에 대한 구체적인 정보 전달</li>
+                        </ul>
+                        <a href="../html/sub_pay_rg03.html" class="btn btn_pay bx-round_s bg_v">구매하기</a>
+                    </article>
+                </section>
+                <p class="warn">
+                    <i class="icon"></i>
+                    등록 또는 분석이 불가능하다고 판단되는 경우, 개별 안내 후 환불 처리 됩니다.
+                </p>
+            </div>
+            <button type="button" class="btn btn_close"></button>
+        </div>
+    </div>
+    <div id="wrap" class="home">
+        <header id="header" class="mobile">
+            <div class="conatiner">
+                <div class="inner clear">
+                    <h1 class="logo-wrap l-inline">
+                        <a href="../html/index.html" class="logo l-box">
+                            <img class="logo_img logo_s" src="../images/common/icon_logo_s.svg" alt="랜드마킹">
+                            <img class="logo_img logo_m" src="../images/common/icon_logo_m.svg" alt="랜드마킹">
+                            <img class="logo_img logo_mb" src="../images/common/icon_logo_mobile.svg" alt="랜드마킹">
+                        </a>
+                    </h1>
+                    <button id="navBtn" class="btn"></button>
+                    <div class="menu-wrap Clear l-inline">
+                        <div class="util l-inline">
+                            <span class="util-item"><a href="../html/sub_acc_login.html">로그인</a></span>
+                            <span class="util-item"><a href="../html/sub_acc_join.html">회원가입</a></span>
+                            <div class="util-item util-user l-inline">
+                                <span><a href="../html/sub_mp_menu.html">김토지&nbsp;</a>님,&nbsp;안녕하세요!</span>
+                                <ul class="menu_dp2 bx-round_xl bg_w">
+                                    <li class="item"><a class="bx-round_m" href="../html/sub_mp_menu.html">마이 메뉴</a></li>
+                                    <li class="item"><a class="bx-round_m" href="../html/sub_mp_list.html">내 토지 분석</a></li>
+                                    <li class="item"><a class="bx-round_m" href="../html/sub_mp_faq.html">문의하기</a></li>
+                                    <li class="item"><a class="bx-round_m" href="#none">로그아웃</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <nav class="gnb l-inline">
+                            <span class="gnb-item gnb-item_dp service l-inline">
+                                <a href="#none">서비스 소개</a>
+                                <ul class="menu_dp2 bx-round_xl bg_w">
+                                    <li class="item">
+                                        <i class="icon icon_handWaving"></i>
+                                        <a class="bx-round_m" href="../html/sub_service.html">서비스 소개</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_mapPin"></i>
+                                        <a class="bx-round_m" href="../html/sub_service_map.html">오시는 길</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_megaphone"></i>
+                                        <a class="bx-round_m" href="../html/sub_notice.html">공지사항</a>
+                                    </li>
+                                </ul>
+                            </span>
+                            <div class="gnb-item gnb-item_dp l-inline">
+                                <a href="#none" class="">토지</a>
+                                <ul class="menu_dp2 bx-round_xl bg_w">
+                                    <li class="item tit">목록</li>
+                                    <li class="item">
+                                        <i class="icon icon_medal"></i>
+                                        <a class="bx-round_m" href="../html/sub_list.html">마스터 추천 토지</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_globe"></i>
+                                        <a class="bx-round_m" href="../html/sub_list.html">등록된 토지</a>
+                                    </li>
+                                    <li class="item tit">등록</li>
+                                    <li class="item">
+                                        <i class="icon icon_pointing"></i>
+                                        <a class="btn_pop bx-round_m" href="#none" data-popup="inform_register">토지 직접 등록</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_card"></i>
+                                        <a class="bx-round_m btn_pop" href="#none" data-popup="service_rg01">토지 등록 대행</a>
+                                    </li>
+                                    <li class="item tit">분석</li>
+                                    <li class="item">
+                                        <i class="icon icon_heart"></i>
+                                        <a class="btn_pop bx-round_m" href="#none" data-popup="inform_analysis">토지 무료 분석</a>
+                                    </li>
+                                    <li class="item">
+                                        <i class="icon icon_card"></i>
+                                        <a class="bx-round_m btn_pop" href="#none" data-popup="service_an01">토지 전문 분석</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div class="main-visual">
+                <div class="inner">
+                    <div class="slide-area">
+                        <div class="slide-container l-box">
+                            <ul class="slide-wrap center">
+                                <li class="slide l-inline">
+                                    <a class="l-box bx-round_m" href="../html/sub_item.html">
+                                        <img src="../upload/img_visual01.png" alt="추천토지" class="img_f">
+                                        <span class="slide-num">
+                                            <em class="num">4</em>
+                                            <em class="nums">5</em>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="slide l-inline">
+                                    <a class="l-box bx-round_m" href="../html/sub_item.html">
+                                        <img src="../upload/img_visual01.png" alt="추천토지" class="img_f">
+                                        <span class="slide-num">
+                                            <em class="num">5</em>
+                                            <em class="nums">5</em>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="slide l-inline">
+                                    <a class="l-box bx-round_m" href="../html/sub_item.html">
+                                        <img src="../upload/img_visual01.png" alt="추천토지" class="img_f">
+                                        <span class="slide-num">
+                                            <em class="num">1</em>
+                                            <em class="nums">5</em>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="slide l-inline">
+                                    <a class="l-box bx-round_m" href="../html/sub_item.html">
+                                        <img src="../upload/img_visual01.png" alt="추천토지" class="img_f">
+                                        <span class="slide-num">
+                                            <em class="num">2</em>
+                                            <em class="nums">5</em>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="slide l-inline">
+                                    <a class="l-box bx-round_m" href="../html/sub_item.html">
+                                        <img src="../upload/img_visual01.png" alt="추천토지" class="img_f">
+                                        <span class="slide-num">
+                                            <em class="num">3</em>
+                                            <em class="nums">5</em>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn btn_prev" type="button"></button>
+                        <button class="btn btn_next" type="button"></button>
+                    </div>
+                    <div class="search-area">
+                        <form action="#none" method="get" id="quickSearch" class="search-wrap ft_m_l">
+                            <label for="addr" class="l-box">주소 입력만으로 토지를 등록해보세요!</label>
+                            <div class="input-wrap l-inline bx-round_m">
+                                <input type="text" id="addr" name="main_addr" placeholder="도로명 또는 주소를 입력해보세요">
+                                <div class="addr-list hide">
+                                    <ul>
+                                        <li class="bx-round_s"><a>서울시 마포구 양화로</a></li>
+                                        <li class="bx-round_s">경기도 안양시 만안구 양화로</li>
+                                        <li class="bx-round_s">경기도 양주시 가남읍 양화로</li>
+                                        <li class="bx-round_s">경기도 양주시 능서면 양화로</li>
+                                        <li class="bx-round_s">전라북도 완주군 고산면 양화로</li>
+                                        <li class="bx-round_s">서울시 마포구 양화로</li>
+                                        <li class="bx-round_s">경기도 안양시 만안구 양화로</li>
+                                        <li class="bx-round_s">경기도 양주시 가남읍 양화로</li>
+                                        <li class="bx-round_s">경기도 양주시 능서면 양화로</li>
+                                        <li class="bx-round_s">전라북도 완주군 고산면 양화로</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn bx-round_m bg_v">
+                                <img class="icon" src="../images/main/icon_quicksearch_pencil.svg" alt="검색">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="container">
+                <div class="inner">
+                    <section id="hSection01" class="mn-row01">
+                        <div class="mn-title">
+                            <h3 class="tit  ft_m_l "><span class="mobile">마스터 추천 토지를 </span>확인해 보세요</h3>
+                            <a href="../html/sub_list.html" class="btn btn_more">+ 더보기</a>
+                        </div>
+                        <div class="slide-wrap">
+                            <div class="recomm-wrap clear">
+                            <div class="recomm-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_itemChart.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land01.png" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">마스터 추천</span>
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="recomm-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_itemChart.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land02.jpg" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">마스터 추천</span>
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="recomm-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_itemChart.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land03.jpeg" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">마스터 추천</span>
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="recomm-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_itemChart.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land04.png" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">마스터 추천</span>
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="recomm-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_itemChart.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land05.jpeg" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">마스터 추천</span>
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="recomm-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_itemChart.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land_06.png" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">마스터 추천</span>
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="recomm-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_itemChart.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land07.jpeg" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">마스터 추천</span>
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="recomm-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_itemChart.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land08.png" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">마스터 추천</span>
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="hSection02" class="mn-row02">
+                        <h2 style="display: none">메인메뉴</h2>
+                        <div class="menu-wrap clear">
+                            <div class="col col01">
+                                <div class="col-item col01-item bx-round_m bg_n">
+                                    <span class="wrap l-box">
+                                        <img src="../images/main/icon_hm_pencil.svg" alt="토지등록" class="icon">
+                                        <span class="tit">토지 등록</span>
+                                    </span>
+                                </div>
+                                <div class="col-item col01-item bx-round_m bg_n">
+                                    <span class="wrap l-box">
+                                        <img src="../images/main/icon_hm_magnifyGlass.svg" alt="토지분석" class="icon">
+                                        <span class="tit">토지 분석</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col col02">
+                                <div class="col-item col02-item">
+                                    <div class="mn-menu bx-round_m">
+                                        <a class="wrap l-box btn_pop" href="#none" data-popup="inform_register">
+                                           <span class="tit">토지 직접 등록</span>
+                                        </a>
+                                    </div>
+                                    <div class="mn-menu bx-round_m clear">
+                                        <span class="wrap l-box">
+                                           <span class="tit">토지 등록 대행</span>
+                                           <a class="btn btn_pop bx-round_xs bg_v ft_m_s" href="#none" data-popup="service_rg01"><span class="pc">토지 등록 대행 </span>가격 보기</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-item col02-item">
+                                    <div class="mn-menu bx-round_m">
+                                        <a class="wrap l-box btn_pop" href="#none" data-popup="inform_analysis">
+                                           <span class="tit">토지 무료 분석</span>
+                                        </a>
+                                    </div>
+                                    <div class="mn-menu bx-round_m clear">
+                                        <span class="wrap l-box">
+                                           <span class="tit">토지 전문 분석</span>
+                                           <a class="btn btn_pop bx-round_xs bg_v ft_m_s" href="#none" data-popup="service_an01"><span class="pc">토지 전문 분석 </span>가격 보기</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="hSection03" class="mn-row03">
+                        <div class="mn-title">
+                            <h3 class="tit  ft_m_l "><span class="mobile">새롭게 등록된 토지들을 </span>확인해 보세요</h3>
+                            <a href="../html/sub_list.html" class="btn btn_more">+ 더보기</a>
+                        </div>
+                        <div class="latest-wrap clear">
+                            <div class="latest-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_item.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land09.png" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="latest-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_item.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land10.jpeg" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="latest-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_item.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land11.jpeg" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="latest-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_item.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land12.jpeg" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="latest-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_item.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land13.jpeg" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="latest-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_item.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land14.jpeg" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="latest-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_item.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land15.gif" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <div class="latest-card mn-card bx-round_m">
+                                <a class="l-box" href="../html/sub_item.html">
+                                <div class="card-img bx-round_m">
+                                    <img src="../upload/img_land16.png" alt="토지">
+                                    <div class="label-wrap img-label-wrap">
+                                        <span class="label label_01 l-inline bx-round_xs">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="card-info">
+                                    <div class="label-wrap info-label-wrap">
+                                        <span class="label info-label  l-inline bx-round_xs">세종특별자치시</span>
+                                        <span class="label info-label l-inline bx-round_xs">인제군</span>
+                                    </div>
+                                    <span class="info-price l-inline">
+                                        <em class="value">44,400</em>
+                                        <em class="unit"> 만 원</em>
+                                    </span>
+                                    <span class="info-tit l-box">[세종시 북부권 투자 유망지역] 전의면 읍내리 계획관리 물건지</span>
+                                    <div class="info-wrap clear">
+                                        <span class="info-size l-inline l-fleft">
+                                            <em class="value">12,231</em>
+                                            <em class="unit"> m<sup>2</sup></em>
+                                        </span>
+                                        <span class="info-views l-inline l-fright">
+                                            <em class="value">30</em>
+                                        </span>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container">
+                <div class="inner">
+                <div class="f-top">
+                    <div class="inner">
+                        <p class="row01 ft_b_s">최고의 토지 거래를 원하시나요?</p>
+                        <p class="row02">랜드마킹의 토지 분석은<br>전국 최고 수준입니다.</p>
+                        <a href="../html/sub_rg_search.html" class="row03 l-box bg_w bx-round_xs">토지 등록하기</a>
+                    </div>
+                </div>
+                <div class="f-mid l-inline clear">
+                    <div class="col02 l-inline">
+                        <div class="f-util-wrap l-inline">
+                            <p class="f-tit ft_b_s">서비스 소개</p>
+                            <div class="l-slide-wrap">
+                            <ul>
+                                <li><a href="../html/sub_rg_search.html">토지 직접 등록</a></li>
+                                <li><a class="btn_pop" href="#none" data-popup="service_rg01">토지 등록 대행</a></li>
+                                <li><a href="../html/sub_service.html#sFree">무료 분석</a></li>
+                                <li><a href="../html/sub_service.html#sPro">전문 분석</a></li>
+                                <li><a href="../html/sub_service.html#sTotal">종합 분석</a></li>
+                                <li><a href="../html/sub_service_map.html">오시는 길</a></li>
+                                <li><a href="../html/sub_notice.html">공지사항</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div class="f-util-wrap l-inline">
+                            <p class="f-tit ft_b_s">토지</p>
+                            <div class="l-slide-wrap">
+                            <ul>
+                                <li><a href="../html/sub_list.html">마스터 추천 토지</a></li>
+                                <li><a href="../html/sub_list.html">등록된 토지</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div class="f-util-wrap l-inline">
+                            <p class="f-tit ft_b_s">약관</p>
+                            <div class="l-slide-wrap">
+                            <ul>
+                                <li><a href="../html/sub_terms_use.html">이용약관</a></li>
+                                <li><a href="../html/sub_terms_privacy.html">개인정보처리방침</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f-btm">
+                    <div class="inner">
+                        <div class="info-wrap ft_m_m">
+                            <p class="f-tit ft_b_s">주식회사 알에이에스</p>
+                            <ul>
+                                <li class="f-info">대표 : 최영준</li>
+                                <li class="f-info l-inline">사업자등록번호 : 809-86-01924</li>
+                                <li class="f-info l-inline bar">통신판매업 신고번호 : 제 2021-대구중구-0434 호</li>
+                                <li class="f-info">주소 : (41951)대구광역시 중구 달구벌대로 2204, 2층 (대봉동)</li>
+                                <li class="f-info l-inline">고객센터 : 053-234-5678</li>
+                                <li class="f-info l-inline bar">contact@landmaster.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+                <div class="f-copy-wrap clear">
+                    <span class="copyright">&copy;LANDMARKING</span>
+                    <span class="f-logo"><img src="../images/common/icon_foot_logo.svg" alt="토지"></span> 
+                </div>
+            </div>
+            </div>
+        </footer>
+    </div>
+    <!-- SCRIPT -->
+    <script src="../js/main.js"></script>
+    <script>
+        window.addEventListener("load", handleImgSize);
+        window.addEventListener("resize", handleImgSize);
+
+        function handleImgSize(){
+            var $imgWrap = document.querySelectorAll('.card-img, .slide');
+            $imgWrap.forEach(function(el){
+                if(el.childElementCount <= 0) return;
+                var $wrapW = el.clientWidth,
+                    $wrapH = el.clientHeight,
+                    $img = el.querySelector('img'),
+                    $imgW = $img.naturalWidth,
+                    $imgH = $img.naturalHeight;
+                var $ratio = $wrapW / $imgW;
+                var $resizedH = $ratio*$imgH;
+            
+                if($resizedH - $wrapH > 0){
+                    var $moveY = ($resizedH - $wrapH)/2; 
+                    $img.style.transform = 'translateY(-' + $moveY + 'px)';
+                }else {
+                    var $gapRatio = ($wrapH - $resizedH) / $resizedH;
+                    var $resizedW = $wrapW + ($wrapW * $gapRatio);
+                    var $moveX = ($resizedW - $wrapW)/2;
+                    $img.style.height = $wrapH + 'px';
+                    $img.style.width = $resizedW + 'px';
+                    $img.style.transform = 'translateX(-' + $moveX + 'px)';
+                }
+            
+            });
+        };
+    </script>
+</body>
+</html>

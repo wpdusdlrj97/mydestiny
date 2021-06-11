@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* ====== ERIC MEYER RESET.CSS ====== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* ====== TAGS ====== */
+* { margin: 0; padding :0; border: 0; outline: 0; vertical-align:middle; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html, body { width: 100%; height:100%;}
+body { font-family: "GmarketSansMedium", "Noto Sans KR", sans-serif, "Nanum Gothic", sans-serif; font-size: 15px; font-weight: 400; color: #000; }
+html {overflow-y: scroll;}
+h1,h2,h3,h4,h5,h6 {font-weight: 100; font-size:1rem;}
+a {color: #000; text-decoration: none; cursor: pointer;}
+button {cursor: pointer; font-family: "GmarketSansMedium", "Noto Sans KR", sans-serif, "Nanum Gothic", sans-serif;}
+input [type="text"] {box-shadow:none;border-radius:0;appearance:none;padding:15px;width:100%;height:50px;box-sizing:border-box;border: 0; background:#fff;}
+input [type="number"] {box-shadow:none;border-radius:0;appearance:none;padding:15px;width:100%;height:50px;box-sizing:border-box;border: 0; background:#fff;}
+input [type="password"] {box-shadow:none;border-radius:0;appearance:none;padding:15px;width:100%;height:50px;box-sizing:border-box;border: 0; background:#fff;}
+input [type="email"] {box-shadow:none;border-radius:0;appearance:none;padding:15px;width:100%;height:50px;box-sizing:border-box;border: 0; background:#fff;}
+input [type="tel"] {box-shadow:none;border-radius:0;appearance:none;padding:15px;width:100%;height:50px;box-sizing:border-box;border: 0; background:#fff;}
+input[type="submit"] {box-shadow:none;border-radius:0;appearance:none;cursor:pointer;display:inline-block;padding:15px 25px;}
+textarea {resize: none;box-shadow:none;border-radius:0;appearance:none;padding:15px;width:100%;box-sizing:border-box;border:0; background:#fff;}
+select {padding:15px;width:100%;color:#000;border:1px solid #ddd;box-sizing:border-box;height:50px;appearance:none;}
+i,em,address {font-style:normal;}
+
+/* ====== SKIP ====== */
+#skipNav { z-index: 99; position: fixed; top: 0; left: 0; width: 100%; height: auto; }
+#skipNav a { display: block; width: 100%; padding: 0; font-size: 0; line-height: 0; overflow: hidden;  background:#263646; text-align: center; font-size: 15px; color:#fff;}
+#skipNav a:focus, #skipNav a:active{ position: absolute; top: 0; left: 0; height: auto; padding: 10px; font-size: 15px; line-height: 15px; }
+
+/* ====== CLASS ====== */
+/* --- layout --- */
+.hide { display:none; }
+.blind { display:block; text-indent:-2000px; overflow:hidden; }
+.clear {clear:both;}
+.clear:after { content:""; display:block; clear:both;}
+/* --- box --- */
+.l-box { display: block; width: 100%; height: 100%; }
+.l-inline { display: inline-block; width: auto; height: auto; }
+.btn { display: inline-block; }
+.img_f { position: relative; width: 100%; height: auto; }
+/* --- positon --- */
+.l-fleft { float: left; width: auto;}
+.l-fright { float: right; width: auto; }
+/* --- theme border --- */
+.bx-round_xl { border-radius: 13px; overflow: hidden; }
+.bx-round_l { border-radius: 10px; overflow: hidden; }
+.bx-round_m { border-radius: 8px; overflow: hidden; }
+.bx-round_s { border-radius: 5px; overflow: hidden; }
+.bx-round_xs { border-radius: 4px; overflow: hidden; }
+/* --- theme input --- */
+.bx-input { display: inline-block; width: 463px; height: 70px; border-radius: 10px; overflow: hidden; }
+/* --- theme bgColor --- */
+.bg_n { background-color: #263646; }
+.bg_db { background-color: #212936; }
+.bg_v { background-color: #7868e6; }
+.bg_w { background-color: #fff; }
+.bg_g { background-color: rgba(38, 54, 70, 0.05); }
+.bg_ch { background-color: #1c2937; }
+/* --- theme font --- */
+.ft_b { font-family: "GmarketSansBold"; font-size: 18px; }
+.ft_b_s { font-family: "GmarketSansBold"; font-size: 15px; }
+.ft_m_l { font-family: "GmarketSansMedium"; font-size: 18px; }
+.ft_m_m { font-family: "GmarketSansMedium"; font-size: 15px; }
+.ft_m_s { font-family: "GmarketSansMedium"; font-size: 13px; }
+.ft_l { font-family: "GmarketSansLight"; }
+
+

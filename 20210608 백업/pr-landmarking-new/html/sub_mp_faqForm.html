@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="토지 중개 플랫폼 랜드마킹입니다.">
+    <meta name="keywords" content="랜드마킹, 토지중개, 토지분석">
+    <meta name="author" content="랜드마킹">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="url">
+    <meta property="og:image" content="../images/common/icon_logo01.png">
+    <meta property="og:title" content="랜드마킹">   
+    <meta property="og:site_name" content="랜드마킹">   
+    <meta property="og:description" content="토지 중개 플랫폼 랜드마킹"> 
+    <meta property="og:locale" content="ko_KR"> 
+    <title>랜드마킹</title>
+    <!-- FAVICON-->
+
+    <!-- STYLE LINK-->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css" >
+
+    <!-- SCRIPT -->
+    <script src="../js/lib/jquery-3.6.0.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../js/lib/IE9.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <script src="../js/lib/html5shiv.min.js"></script>    
+    <script src="../js/lib/jqPIE.js"></script>    
+    <script src="../js/lib/PIE.js"></script> 
+    <![endif]-->
+</head>
+<body>
+    <div id="wrap" class="sub">
+        <main id="main">
+            <div class="main-title">
+                <div class="container">
+                    <div class="inner">
+                        <div class="tit clear">
+                            <i class="tit-icon icon_user bx-round_l"></i>
+                            <h2 class="tit-wrap l-inlinebox">
+                                <a href="../html/sub_mp_menu.html" class="tit ft_b on">마이 페이지</a>
+                                <span class="tit ft_b on">문의 등록하기</span>
+                            </h2>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="container">
+                    <div class="inner">
+                        <div class="rg-form">
+                            <form action="#none" method="post" enctype="multipart/form-data" class="ft_m_l">
+                                <fieldset>
+                                    <div class="form-wrap bx-round_l bg_g">
+                                        <label for="title" class="tit">제목</label>
+                                        <div class="input-wrap bx-round_s">
+                                            <input type="text" id="title" name="rg_title" maxlength="50" placeholder="제목을 입력해주세요">
+                                            <span class="cnt"><em class="value">0</em> / <em>50</em></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap form-wrap_t bx-round_l bg_g">
+                                        <label for="text" class="tit">본문</label>
+                                        <div class="input-wrap bx-round_s ">
+                                            <textarea id="text" name="rg_text" rows="50" cols="30" placeholder="내용을 입력해주세요"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap form-wrap_f clear bx-round_l bg_g">
+                                        <span class="tit">대표 이미지 &middot; 사진 업로드 </span>
+                                        <label for="thumbnail" class="btn btn_thumb bg_v bx-round_l">추가하기</label>
+                                        <input type="file" id="thumbnail" name="thumbnail" accept="image/* ">
+                                    </div>
+                                    <div class="form-wrap form-wrap_f clear bx-round_l bg_g">
+                                        <span class="tit">참고 이미지 &middot; 사진 업로드 </span>
+                                        <label for="images" class="btn btn_imgs bg_v bx-round_l">추가하기</label>
+                                        <input type="file" id="images" name="imgsList[]" accept="image/*" multiple>
+                                        <div class="file-wrap">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn_sm bx-round_l bg_v"> 문의 등록 하기 </button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- script -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

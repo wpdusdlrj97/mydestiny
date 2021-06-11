@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="토지 중개 플랫폼 랜드마킹입니다.">
+    <meta name="keywords" content="랜드마킹, 토지중개, 토지분석">
+    <meta name="author" content="랜드마킹">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="url">
+    <meta property="og:image" content="../images/common/icon_logo01.png">
+    <meta property="og:title" content="랜드마킹">   
+    <meta property="og:site_name" content="랜드마킹">   
+    <meta property="og:description" content="토지 중개 플랫폼 랜드마킹"> 
+    <meta property="og:locale" content="ko_KR"> 
+    <title>랜드마킹</title>
+    <!-- FAVICON-->
+
+    <!-- STYLE LINK-->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css" >
+
+    <!-- SCRIPT -->
+    <script src="../js/lib/jquery-3.6.0.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../js/lib/IE9.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <script src="../js/lib/html5shiv.min.js"></script>    
+    <script src="../js/lib/jqPIE.js"></script>    
+    <script src="../js/lib/PIE.js"></script> 
+    <![endif]-->
+</head>
+<body>
+    <div class="popup popup-acc" data-popup="editPwd">
+        <div class="dim"></div>
+        <div class="container">
+            <div class="inner">
+                <div class="box">
+                    <div class="signup acc_check">
+                        <form>
+                            <div class="row row_tit clear">
+                                <span class="join_tit">변경 할 비밀번호를 입력해 주세요.</span>
+                            </div>
+                            <div class="row row_pwd clear">
+                                <label for="userpwd">비밀번호</label>
+                                <div class="bx-input">
+                                    <input type="password" id="userpwd" name="userpwd" required placeholder="4~16자 비밀번호를 입력해주세요(영문·숫자)">
+                                    <span class="pwdBtns">
+                                        <i class="btn_closed"></i>
+                                        <i class="btn_open"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row row_pwd row_hr clear">
+                                <label for="userpwd">비밀번호 확인</label>
+                                <div class="bx-input">
+                                    <input type="password" id="userpwd" name="userpwd" required placeholder="4~16자 비밀번호를 입력해주세요(영문·숫자)">
+                                    <span class="pwdBtns">
+                                        <i class="btn_closed"></i>
+                                        <i class="btn_open"></i>
+                                    </span>
+                                </div>
+                            </div>    
+                            <div class="row row_sm">
+                                <button type="submit" class="row btn btn_sm bg_v bx-round_l">비밀번호 변경하기</button>
+                                <a class="btn_cancel" href="#none">취소하고 돌아가기</a>
+                            </div>
+                        </form>
+                        <button type="button" class="row btn btn_close btn_pop bg_v bx-round_l"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrap" class="sub mypage_edit">
+        <main id="main">
+            <div class="main-title">
+                <div class="container">
+                    <div class="inner">
+                        <div class="tit clear">
+                            <i class="tit-icon icon_user bx-round_l"></i>
+                            <h2 class="tit-wrap l-inline ft_b"><span class="tit on">마이 페이지</span></h2>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="container">
+                    <div class="inner">
+                        <div class="user-wrap">
+                            <span><em class="name">김토지</em><span class="name_desc"> 님 안녕하세요</span></span>
+                        </div>
+                        <div class="signup">
+                            <form action="">
+                                <div class="row clear">
+                                    <label for="email" class="ft_m_l">ID<i class="details">이메일주소</i></label>
+                                    <div class="bx-input fn l-inline bx-round_l">
+                                        <input type="email" id="email" name="user_email" value="landmarking@tojitoji.com" readonly placeholder="이메일주소를 입력해주세요">
+                                    </div>
+                                    <span class="check l-inline ft_m_m">로그인 ID로 사용되며, 변경 할 수 없습니다.</span>
+                                </div>
+                                <div class="row clear">
+                                    <label for="name" class="ft_m_l">성명</label>
+                                    <div class="bx-input l-inline bx-round_l">
+                                        <input type="text" id="name" name="user_name" required placeholder="이름을 입력해주세요">
+                                    </div>
+                                    <span class="check pc l-inline ft_m_m">원활한 서비스 이용을 위해 실명을 기입해 주세요.</span>
+                                    <span class="check mobile l-inline ft_m_m">실명을 사용해 주세요.</span>
+                                </div>
+                                <div class="row clear">
+                                    <label for="nick" class="ft_m_l">닉네임</label>
+                                    <div class="bx-input l-inline bx-round_l">
+                                        <input type="text" id="nick" name="user_nick" required placeholder="닉네임을 입력해주세요">
+                                    </div>
+                                    <span class="check pc l-inline ft_m_m">서비스 운영에 문제가 있는 닉네임은 변경됩니다.</span>
+                                </div>
+                                <div class="row row_hr claer">
+                                    <label for="tel" class="ft_m_l">휴대전화 번호</label>
+                                    <div class="bx-input l-inline bx-round_l">
+                                        <input type="tel" id="tel" name="user_tel" required placeholder="휴대전화 번호를 입력해주세요">
+                                    </div>
+                                    <span class="check pc l-inline ft_m_m">연락 가능한 휴대전화 번호를 기입해주세요.</span>
+                                </div>
+                                <div class="row row_sm clear">
+                                    <button type="submit" class="btn btn_sm bx-round_l bg_v item">변경<span class="pc">사항 적용</span>하기</button>
+                                    <a class="item btn_pop" href="../html/sub_mp_menu.html" data-popup="editPwd">비밀번호 변경하기</a>
+                                    <a class="item btn_cancel" href="../html/sub_mp_menu.html">취소하고 돌아가기</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- script -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
